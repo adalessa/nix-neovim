@@ -2,8 +2,13 @@
   description = "A nixvim configuration";
 
   inputs = {
-    nixvim.url = "github:nix-community/nixvim";
+    nixvim.url = "github:adalessa/nixvim";
     flake-utils.url = "github:numtide/flake-utils";
+
+    plugin-enfocado = {
+      url = "github:wuelnerdotexe/vim-enfocado";
+      flake = false;
+    };
   };
 
   outputs =
@@ -18,7 +23,19 @@
     flake-utils.lib.eachDefaultSystem (system:
     let
       nixvimLib = nixvim.lib.${system};
-      pkgs = import nixpkgs { inherit system; };
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [
+          (final: prev: {
+            vimPlugins = prev.vimPlugins // {
+              enfocado = prev.vimUtils.buildVimPlugin {
+                name = "enfocado";
+                src = inputs.plugin-enfocado;
+              };
+            };
+          })
+        ];
+      };
       nixvim' = nixvim.legacyPackages.${system};
       nvim = nixvim'.makeNixvimWithModule {
         inherit pkgs;

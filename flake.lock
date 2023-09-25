@@ -169,16 +169,32 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1695625700,
-        "narHash": "sha256-lphJKrXUebw8LXkBZ2XMTvXO7fCoEJsWQ4HYebyqre0=",
-        "owner": "nix-community",
+        "lastModified": 1695672264,
+        "narHash": "sha256-zMpaY4rOdjtYRxtrzFM/Ulo10thVWHD/fxq0eecWEPQ=",
+        "owner": "adalessa",
         "repo": "nixvim",
-        "rev": "4316099f050112ca1377d9d2a274de3c744746dc",
+        "rev": "cf2126943bbe5f17b9c244b5c028099c1b2cdb68",
         "type": "github"
       },
       "original": {
-        "owner": "nix-community",
+        "owner": "adalessa",
         "repo": "nixvim",
+        "type": "github"
+      }
+    },
+    "plugin-enfocado": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1689708146,
+        "narHash": "sha256-MNWWiCaj4/nz2mQw5ilKFu90d2o65SqDUAXCCVEG5rQ=",
+        "owner": "wuelnerdotexe",
+        "repo": "vim-enfocado",
+        "rev": "845835a58d285eb8c1ced5dba83bfdec6e40d828",
+        "type": "github"
+      },
+      "original": {
+        "owner": "wuelnerdotexe",
+        "repo": "vim-enfocado",
         "type": "github"
       }
     },
@@ -238,7 +254,8 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs",
-        "nixvim": "nixvim"
+        "nixvim": "nixvim",
+        "plugin-enfocado": "plugin-enfocado"
       }
     },
     "systems": {
