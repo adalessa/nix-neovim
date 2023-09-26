@@ -1,4 +1,11 @@
-{
+let 
+  keymap = {action, desc}: {
+    lua = true;
+    silent = true;
+    desc = desc;
+    action = "function() ${action} end";
+  };
+in{
   plugins.telescope = {
     enable = true;
     extensions = {
@@ -31,14 +38,9 @@
       silent = true;
       action = ":Telescope file_browser path=%:p:h select_buffer=true<CR>";
     };
-    normal."<leader>pw" = {
-      silent = true;
-      lua = true;
-      action = ''
-        function ()
-          require('telescope.builtin').grep_string { search = vim.fn.expand '<cword>' }
-        end
-      '';
+    normal."<leader>pw" = keymap {
+      action = "require('telescope.builtin').grep_string { search = vim.fn.expand '<cword>' }";
+      desc = "Grep current word";
     };
     normal."<leader>ps" = {
       silent = true;

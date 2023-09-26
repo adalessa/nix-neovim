@@ -16,6 +16,7 @@
       gd = "definition";
       gi = "implementation";
       gt = "type_definition";
+      "<leader>vrn" = "rename";
     };
 
     onAttach = ''

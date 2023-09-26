@@ -5,6 +5,7 @@
     ./colorscheme.nix
     ./comment.nix
     ./database.nix
+    ./fugitive.nix
     ./harpoon.nix
     ./lsp
     ./lualine.nix
@@ -17,7 +18,6 @@
   globals.mapleader = " ";
   clipboard.register = "unnamedplus";
 
-  plugins.fugitive.enable = true;
   plugins.surround.enable = true;
   plugins.nvim-autopairs.enable = true;
   plugins.todo-comments.enable = true;
