@@ -1,17 +1,17 @@
 { pkgs, ... }: {
   # Import all your configuration modules here
   imports = [
-    ./colorscheme.nix
-    ./options.nix
-    ./neorg.nix
-    ./harpoon.nix
     ./cmp.nix
-    ./lsp
-    ./worktree.nix
-    ./telescope.nix
+    ./colorscheme.nix
     ./comment.nix
-    ./lualine.nix
     ./database.nix
+    ./harpoon.nix
+    ./lsp
+    ./lualine.nix
+    ./neorg.nix
+    ./options.nix
+    ./telescope.nix
+    ./worktree.nix
   ];
 
   globals.mapleader = " ";
@@ -37,6 +37,12 @@
   plugins.treesitter = {
     enable = true;
     indent = true;
+  };
+
+  plugins.emmet = {
+    enable = true;
+    leader = "<leader>e";
+    mode = ["i"];
   };
 
   extraPlugins = with pkgs.vimPlugins; [

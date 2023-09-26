@@ -3,6 +3,7 @@
     ./phpactor.nix
   ];
 
+  plugins.fidget.enable = true;
   plugins.lsp = {
     enable = true;
     keymaps.diagnostic = {
@@ -23,8 +24,14 @@
       end)
     '';
     servers = {
-      rnix-lsp.enable = true;
+      nil_ls.enable = true;
       lua-ls.enable = true;
+      gopls.enable = true;
+      html.enable = true;
+      jsonls.enable = true;
+      rust-analyzer.enable = true;
+      volar.enable = true;
+      tsserver.enable = true;
     };
   };
 }
