@@ -3,7 +3,7 @@
     vim-easy-align
   ];
 
-  map.normalVisualOp.ga = {
+  maps.normalVisualOp.ga = {
     action = "<Plug>(EasyAlign)";
     desc = "EasyAlign";
   };
