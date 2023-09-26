@@ -19,8 +19,8 @@
     };
   };
 
-  maps = {
-    normal."<leader>st" = {
+  maps.normal = {
+    "<leader>st" = {
       lua = true;
       action = ''
         function ()

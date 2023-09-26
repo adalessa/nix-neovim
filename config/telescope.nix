@@ -1,10 +1,5 @@
 let 
-  keymap = {action, desc}: {
-    lua = true;
-    silent = true;
-    desc = desc;
-    action = "function() ${action} end";
-  };
+  helper = import ../helper.nix;
 in{
   plugins.telescope = {
     enable = true;
@@ -21,14 +16,11 @@ in{
       fzf-native.enable = true;
     };
     keymaps = {
-      "<leader>pp" = {
-        action = "git_files";
-        desc = "Telescope Git Files";
-      };
-      "<leader>fg" = "live_grep";
-      "<leader>ph" = "help_tags";
-      "<leader>pe" = "buffers";
-      "<leader>pr" = "treesitter";
+      "<leader>pp" = {action = "git_files"; desc = "Telescope Git Files";};
+      "<leader>fg" = {action = "live_grep"; desc = "Telescope Live Greoup";};
+      "<leader>ph" = {action = "help_tags"; desc = "Telescope Help";};
+      "<leader>pe" = {action = "buffers"; desc = "Telescope Buffers";};
+      "<leader>pr" = {action = "treesitter"; desc = "Telescope Treesitter";};
     };
   };
 
@@ -36,12 +28,13 @@ in{
     "<leader>bb" = {
       silent = true;
       action = ":Telescope file_browser path=%:p:h select_buffer=true<CR>";
+      desc = "Telescope File Browser";
     };
-    "<leader>pw" = keymap {
+    "<leader>pw" = helper.mkLuaKeymap {
       action = "require('telescope.builtin').grep_string { search = vim.fn.expand '<cword>' }";
       desc = "Grep current word";
     };
-    "<leader>ps" = keymap {
+    "<leader>ps" = helper.mkLuaKeymap {
       action = ''
         vim.ui.input({ prompt = "Grep for > " }, function(input)
           if input == nil then

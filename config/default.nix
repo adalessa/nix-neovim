@@ -5,6 +5,7 @@
     ./colorscheme.nix
     ./comment.nix
     ./database.nix
+    ./easy-align.nix
     ./fugitive.nix
     ./harpoon.nix
     ./lsp
@@ -41,7 +42,7 @@
 
   plugins.emmet = {
     enable = true;
-    leader = "<c-y>";
+    leader = "<c-,>";
     mode = "i";
   };
 
