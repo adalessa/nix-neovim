@@ -34,7 +34,11 @@
     normal."<leader>pw" = {
       silent = true;
       lua = true;
-      action = "require('telescope.builtin').grep_string { search = vim.fn.expand '<cword>' }";
+      action = ''
+        function ()
+          require('telescope.builtin').grep_string { search = vim.fn.expand '<cword>' }
+        end
+      '';
     };
     normal."<leader>ps" = {
       silent = true;
