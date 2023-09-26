@@ -8,6 +8,8 @@
     ./cmp.nix
     ./lsp.nix
     ./telescope.nix
+    ./comment.nix
+    ./lualine.nix
   ];
 
   globals.mapleader = " ";
@@ -36,6 +38,6 @@
     nvim-web-devicons
   ];
 
-  extraPackages = with pkgs; [
-  ];
+  # extraPackages = with pkgs; [
+  # ];
 }
