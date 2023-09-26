@@ -45,6 +45,8 @@
     mode = "i";
   };
 
+  maps.terminal."<esc><esc>" = "<C-\\><C-n>";
+
   extraPlugins = with pkgs.vimPlugins; [
     vim-eunuch
     direnv-vim

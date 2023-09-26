@@ -11,7 +11,6 @@ in{
     extensions = {
       file_browser = {
         enable = true;
-        hijackNetrw = true;
         path = "%:p:h";
         mappings = {
           "i" = {
@@ -33,28 +32,25 @@ in{
     };
   };
 
-  maps = {
-    normal."<leader>bb" = {
+  maps.normal = {
+    "<leader>bb" = {
       silent = true;
       action = ":Telescope file_browser path=%:p:h select_buffer=true<CR>";
     };
-    normal."<leader>pw" = keymap {
+    "<leader>pw" = keymap {
       action = "require('telescope.builtin').grep_string { search = vim.fn.expand '<cword>' }";
       desc = "Grep current word";
     };
-    normal."<leader>ps" = {
-      silent = true;
-      lua = true;
+    "<leader>ps" = keymap {
       action = ''
-        function()
-          vim.ui.input({ prompt = "Grep for > " }, function(input)
-            if input == nil then
-              return
-            end
-            require("telescope.builtin").grep_string { search = input }
-          end)
-        end
+        vim.ui.input({ prompt = "Grep for > " }, function(input)
+          if input == nil then
+            return
+          end
+          require("telescope.builtin").grep_string { search = input }
+        end)
       '';
+      desc = "Grep in project";
     };
   };
 }
