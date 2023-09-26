@@ -1,4 +1,8 @@
-{
+{ pkgs, ... }: {
+  imports = [
+    ./phpactor.nix
+  ];
+
   plugins.lsp = {
     enable = true;
     keymaps.diagnostic = {
@@ -21,7 +25,6 @@
     servers = {
       rnix-lsp.enable = true;
       lua-ls.enable = true;
-      phpactor.enable = true;
     };
   };
 }

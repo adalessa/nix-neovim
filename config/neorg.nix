@@ -2,7 +2,9 @@
   plugins.neorg = {
     enable = true;
     modules = {
-      "core.defauls" = { };
+      "core.defaults" = { 
+        __empty =  null;
+      };
       "core.concealer" = { };
       "core.dirman" = {
         config = {

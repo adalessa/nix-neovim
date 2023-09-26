@@ -18,4 +18,17 @@
       };
     };
   };
+
+  maps = {
+    normal."<leader>st" = {
+      lua = true;
+      action = ''
+        function ()
+          vim.api.nvim_command [[vsplit]]
+          require("harpoon.term").gotoTerminal(1)
+          vim.api.nvim_command [[startinsert]]
+        end
+      '';
+    };
+  };
 }
