@@ -22,6 +22,7 @@
       "<leader>fg" = "live_grep";
       "<leader>ph" = "help_tags";
       "<leader>pe" = "buffers";
+      "<leader>pr" = "treesitter";
     };
   };
 
@@ -29,6 +30,25 @@
     normal."<leader>bb" = {
       silent = true;
       action = ":Telescope file_browser path=%:p:h select_buffer=true<CR>";
+    };
+    normal."<leader>pw" = {
+      silent = true;
+      lua = true;
+      action = "require('telescope.builtin').grep_string { search = vim.fn.expand '<cword>' }";
+    };
+    normal."<leader>ps" = {
+      silent = true;
+      lua = true;
+      action = ''
+        function()
+          vim.ui.input({ prompt = "Grep for > " }, function(input)
+            if input == nil then
+              return
+            end
+            require("telescope.builtin").grep_string { search = input }
+          end)
+        end
+      '';
     };
   };
 }

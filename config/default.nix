@@ -41,8 +41,8 @@
 
   plugins.emmet = {
     enable = true;
-    leader = "<leader>e";
-    mode = ["i"];
+    leader = "<c-y>";
+    mode = "i";
   };
 
   extraPlugins = with pkgs.vimPlugins; [
