@@ -14,17 +14,5 @@
         };
       }
     ];
-    sections.lualine_x = [
-      "diagnostics"
-      "diff"
-    ];
-
-    sections.lualine_y = [
-      "filetype"
-    ];
-
-    sections.lualine_z = [
-      "location"
-    ];
   };
 }

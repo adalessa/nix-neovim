@@ -1,12 +1,12 @@
 { pkgs, ... }:
 let
-  toLua = str: "lua <<EOF\n${str}\nEOF\n";
+  helper = import ../helper.nix;
 in
 {
   extraPlugins = with pkgs.vimPlugins; [
     {
       plugin = git-worktree-nvim;
-      config = toLua ''
+      config = helper.toLua ''
         require("git-worktree").setup({})
         require("telescope").load_extension("git_worktree")
       '';

@@ -1,6 +1,6 @@
 let 
   helper = import ../helper.nix;
-in{
+in {
   plugins.telescope = {
     enable = true;
     extensions = {
@@ -44,6 +44,19 @@ in{
         end)
       '';
       desc = "Grep in project";
+    };
+    "<leader>gc" = helper.mkLuaKeymap {
+      action = ''
+        local actions = require "telescope.actions"
+        require("telescope.builtin").git_branches {
+          attach_mappings = function(_, map)
+            map("i", "<c-j>", actions.git_create_branch)
+            map("n", "<c-j>", actions.git_create_branch)
+            return true
+          end,
+        }
+      '';
+      desc = "Telescope Git Branches";
     };
   };
 }

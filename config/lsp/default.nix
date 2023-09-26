@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{
   imports = [
     ./phpactor.nix
   ];
@@ -17,6 +17,7 @@
       gi = "implementation";
       gt = "type_definition";
       "<leader>vrn" = "rename";
+      "<leader>vca" = "code_action";
     };
 
     onAttach = ''

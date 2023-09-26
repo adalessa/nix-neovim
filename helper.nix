@@ -5,4 +5,6 @@
     desc = desc;
     action = "function() ${action} end";
   };
+
+  toLua = str: "lua <<EOF\n${str}\nEOF\n";
 }

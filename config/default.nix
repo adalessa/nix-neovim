@@ -5,6 +5,7 @@
     ./colorscheme.nix
     ./comment.nix
     ./database.nix
+    ./dressing.nix
     ./easy-align.nix
     ./fugitive.nix
     ./harpoon.nix
