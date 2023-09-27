@@ -12,6 +12,7 @@
     ./harpoon.nix
     ./lsp
     ./lualine.nix
+    ./luasnip.nix
     ./neorg.nix
     ./options.nix
     ./telescope.nix
@@ -21,6 +22,7 @@
   globals.mapleader = " ";
   clipboard.register = "unnamedplus";
 
+  plugins.nvim-colorizer.enable = true;
   plugins.surround.enable = true;
   plugins.nvim-autopairs.enable = true;
   plugins.todo-comments.enable = true;
@@ -42,6 +44,10 @@
   };
 
   maps.terminal."<esc><esc>" = "<C-\\><C-n>";
+  maps.normal = {
+    "<c-j>" = ":cnext<CR>zz";
+    "<c-k>" = ":cprev<CR>zz";
+  };
 
   extraPlugins = with pkgs.vimPlugins; [
     vim-eunuch
