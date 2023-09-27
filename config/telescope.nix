@@ -1,4 +1,4 @@
-let 
+let
   helper = import ../helper.nix;
 in {
   plugins.telescope = {
@@ -16,7 +16,6 @@ in {
       fzf-native.enable = true;
     };
     keymaps = {
-      "<leader>pp" = {action = "git_files"; desc = "Telescope Git Files";};
       "<leader>fg" = {action = "live_grep"; desc = "Telescope Live Greoup";};
       "<leader>ph" = {action = "help_tags"; desc = "Telescope Help";};
       "<leader>pe" = {action = "buffers"; desc = "Telescope Buffers";};
@@ -25,6 +24,16 @@ in {
   };
 
   maps.normal = {
+    "<leader>pp" = helper.mkLuaKeymap {
+      action = ''
+        local opts = { show_untracked = true }
+        local ok = pcall(require("telescope.builtin").git_files, opts)
+        if not ok then
+          require("telescope.builtin").find_files(opts)
+        end
+      '';
+      desc = "Telescope Git Files";
+    };
     "<leader>bb" = {
       silent = true;
       action = ":Telescope file_browser path=%:p:h select_buffer=true<CR>";

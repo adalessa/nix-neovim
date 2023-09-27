@@ -12,6 +12,7 @@
     ./harpoon.nix
     ./lsp
     ./lualine.nix
+    ./laravel.nix
     ./luasnip.nix
     ./neorg.nix
     ./options.nix

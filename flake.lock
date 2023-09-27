@@ -198,6 +198,23 @@
         "type": "github"
       }
     },
+    "plugin-laravel": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1695625033,
+        "narHash": "sha256-VPNAT+/YpFMrIrp8XUpRAk45SBWuwSVkj3elHn156ps=",
+        "owner": "adalessa",
+        "repo": "laravel.nvim",
+        "rev": "090f2666a5741098903a96f04094f32dcf8e5320",
+        "type": "github"
+      },
+      "original": {
+        "owner": "adalessa",
+        "ref": "v2",
+        "repo": "laravel.nvim",
+        "type": "github"
+      }
+    },
     "poetry2nix": {
       "inputs": {
         "flake-utils": [
@@ -255,7 +272,8 @@
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
-        "plugin-enfocado": "plugin-enfocado"
+        "plugin-enfocado": "plugin-enfocado",
+        "plugin-laravel": "plugin-laravel"
       }
     },
     "systems": {
