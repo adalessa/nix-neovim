@@ -8,6 +8,7 @@
     ./dressing.nix
     ./easy-align.nix
     ./fugitive.nix
+    ./gitsigns.nix
     ./harpoon.nix
     ./lsp
     ./lualine.nix
@@ -28,13 +29,6 @@
     backgroundColour = "#000000";
   };
   plugins.nix.enable = true;
-
-  plugins.gitsigns = {
-    enable = true;
-    linehl = false;
-    signcolumn = false;
-    numhl = true;
-  };
 
   plugins.treesitter = {
     enable = true;
