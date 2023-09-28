@@ -8,12 +8,12 @@
     {
       event = [ "FileType" ];
       pattern = [
+        "git"
         "qf"
         "help"
         "man"
         "notify"
         "fugitive"
-        "gitcommit"
         "lspinfo"
         "spectre_panel"
         "startuptime"
