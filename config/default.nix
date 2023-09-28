@@ -21,6 +21,7 @@
     ./worktree.nix
   ];
 
+
   globals.mapleader = " ";
   clipboard.register = "unnamedplus";
 
@@ -28,6 +29,11 @@
   plugins.surround.enable = true;
   plugins.nvim-autopairs.enable = true;
   plugins.todo-comments.enable = true;
+  plugins.nvim-lightbulb = {
+    enable = true;
+    virtualText.enabled = true; 
+  };
+
   plugins.notify = {
     enable = true;
     backgroundColour = "#000000";
