@@ -1,17 +1,13 @@
 { pkgs, ... }:
-let
-  helper = import ../helper.nix;
-in
-{
-  extraPlugins = with pkgs.vimPlugins; [
-    {
-      plugin = git-worktree-nvim;
-      config = helper.toLua ''
-        require("git-worktree").setup({})
-        require("telescope").load_extension("git_worktree")
-      '';
-    }
-  ];
+let helper = import ../helper.nix;
+in {
+  extraPlugins = with pkgs.vimPlugins; [{
+    plugin = git-worktree-nvim;
+    config = helper.toLua ''
+      require("git-worktree").setup({})
+      require("telescope").load_extension("git_worktree")
+    '';
+  }];
 
   maps.normal = {
     "<leader>gt" = {
@@ -19,7 +15,8 @@ in
       lua = true;
     };
     "<leader>gn" = {
-      action = "require('telescope').extensions.git_worktree.create_git_worktree";
+      action =
+        "require('telescope').extensions.git_worktree.create_git_worktree";
       lua = true;
     };
   };

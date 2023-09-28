@@ -1,5 +1,4 @@
-let
-  helper = import ../helper.nix;
+let helper = import ../helper.nix;
 in {
   plugins.telescope = {
     enable = true;
@@ -7,19 +6,27 @@ in {
       file_browser = {
         enable = true;
         path = "%:p:h";
-        mappings = {
-          "i" = {
-            "<c-y>" = "create_from_prompt";
-          };
-        };
+        mappings = { "i" = { "<c-y>" = "create_from_prompt"; }; };
       };
       fzf-native.enable = true;
     };
     keymaps = {
-      "<leader>fg" = {action = "live_grep"; desc = "Telescope Live Greoup";};
-      "<leader>ph" = {action = "help_tags"; desc = "Telescope Help";};
-      "<leader>pe" = {action = "buffers"; desc = "Telescope Buffers";};
-      "<leader>pr" = {action = "treesitter"; desc = "Telescope Treesitter";};
+      "<leader>fg" = {
+        action = "live_grep";
+        desc = "Telescope Live Greoup";
+      };
+      "<leader>ph" = {
+        action = "help_tags";
+        desc = "Telescope Help";
+      };
+      "<leader>pe" = {
+        action = "buffers";
+        desc = "Telescope Buffers";
+      };
+      "<leader>pr" = {
+        action = "treesitter";
+        desc = "Telescope Treesitter";
+      };
     };
   };
 
@@ -40,7 +47,8 @@ in {
       desc = "Telescope File Browser";
     };
     "<leader>pw" = helper.mkLuaKeymap {
-      action = "require('telescope.builtin').grep_string { search = vim.fn.expand '<cword>' }";
+      action =
+        "require('telescope.builtin').grep_string { search = vim.fn.expand '<cword>' }";
       desc = "Grep current word";
     };
     "<leader>ps" = helper.mkLuaKeymap {

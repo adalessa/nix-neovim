@@ -24,7 +24,5 @@
     };
   };
 
-  extraPackages = with pkgs; [
-    php82Packages.phpstan
-  ];
+  extraPackages = with pkgs; [ php82Packages.phpstan ];
 }

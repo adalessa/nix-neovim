@@ -1,7 +1,5 @@
-{pkgs,...}: {
-  extraPlugins = with pkgs.vimPlugins; [
-    vim-easy-align
-  ];
+{ pkgs, ... }: {
+  extraPlugins = with pkgs.vimPlugins; [ vim-easy-align ];
 
   maps.normalVisualOp.ga = {
     action = "<Plug>(EasyAlign)";

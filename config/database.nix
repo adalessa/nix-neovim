@@ -17,13 +17,9 @@
         Count = "select count(1) from {optional_schema}{table}";
         Explain = "EXPLAIN {last_query}";
       };
-      sqlite = {
-        Describe = "PRAGMA table_info({table})";
-      };
+      sqlite = { Describe = "PRAGMA table_info({table})"; };
     };
   };
 
-  maps = {
-    normal."<leader><leader>db" = ":DBUI<cr>";
-  };
+  maps = { normal."<leader><leader>db" = ":DBUI<cr>"; };
 }

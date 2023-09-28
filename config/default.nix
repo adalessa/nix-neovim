@@ -15,6 +15,7 @@
     ./laravel.nix
     ./luasnip.nix
     ./neorg.nix
+    ./null-ls.nix
     ./options.nix
     ./telescope.nix
     ./worktree.nix

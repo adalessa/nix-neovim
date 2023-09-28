@@ -10,10 +10,24 @@
       panel.enabled = false;
       suggestion.enabled = false;
     };
+    lspkind = {
+      enable = true;
+      cmp.enable = true;
+      cmp.menu = {
+        buffer = "[buf]";
+        nvim_lsp = "[ ]";
+        nvim_lua = "[api]";
+        path = "[path]";
+        luasnip = "[snip]";
+        copilot = "[ﮧ]";
+        "vim-dadbod-completion" = "[DB]";
+      };
+    };
     nvim-cmp = {
       enable = true;
       mapping = {
-        "<c-y>" = "cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert })";
+        "<c-y>" =
+          "cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert })";
         "<c-d>" = "cmp.mapping.scroll_docs(-4)";
         "<c-f>" = "cmp.mapping.scroll_docs(4)";
         "<c-space>" = "cmp.mapping.complete()";

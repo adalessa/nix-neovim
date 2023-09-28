@@ -1,7 +1,5 @@
 {
-  imports = [
-    ./phpactor.nix
-  ];
+  imports = [ ./phpactor.nix ];
 
   plugins.fidget.enable = true;
   plugins.lsp = {

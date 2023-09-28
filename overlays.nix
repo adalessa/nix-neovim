@@ -1,4 +1,5 @@
-{inputs}: (final: prev: {
+{ inputs }:
+(final: prev: {
   vimPlugins = prev.vimPlugins // {
     enfocado = prev.vimUtils.buildVimPlugin {
       name = "enfocado";
