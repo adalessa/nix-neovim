@@ -4,6 +4,12 @@
     cmp-path.enable = true;
     cmp-nvim-lsp.enable = true;
     cmp_luasnip.enable = true;
+    copilot-cmp.enable = true;
+    copilot-lua = {
+      enable = true;
+      panel.enabled = false;
+      suggestion.enabled = false;
+    };
     nvim-cmp = {
       enable = true;
       mapping = {
@@ -46,6 +52,7 @@
         { name = "path"; }
         { name = "buffer"; }
         { name = "luasnip"; }
+        { name = "copilot"; }
       ];
     };
   };
