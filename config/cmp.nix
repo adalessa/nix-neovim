@@ -25,6 +25,7 @@
     };
     nvim-cmp = {
       enable = true;
+      snippet.expand = "luasnip";
       mapping = {
         "<c-y>" =
           "cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert })";
