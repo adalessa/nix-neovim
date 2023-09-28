@@ -8,7 +8,6 @@
     {
       event = [ "FileType" ];
       pattern = [
-        "git"
         "qf"
         "help"
         "man"
