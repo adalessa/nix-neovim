@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   # Import all your configuration modules here
   imports = [
+    ./autocmd.nix
     ./cmp.nix
     ./colorscheme.nix
     ./comment.nix
@@ -21,7 +22,6 @@
     ./worktree.nix
   ];
 
-
   globals.mapleader = " ";
   clipboard.register = "unnamedplus";
 
@@ -31,7 +31,7 @@
   plugins.todo-comments.enable = true;
   plugins.nvim-lightbulb = {
     enable = true;
-    virtualText.enabled = true; 
+    virtualText.enabled = true;
   };
 
   plugins.notify = {
