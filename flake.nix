@@ -2,7 +2,7 @@
   description = "A nixvim configuration";
 
   inputs = {
-    nixvim.url = "github:nix-community/nixvim";
+    nixvim.url = "git+file:/home/alpha/code/nix/nixvim?branch=fix-autocommand-description";
     flake-utils.url = "github:numtide/flake-utils";
 
     plugin-enfocado = {

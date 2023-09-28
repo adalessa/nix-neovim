@@ -169,17 +169,16 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1695711035,
-        "narHash": "sha256-zMpaY4rOdjtYRxtrzFM/Ulo10thVWHD/fxq0eecWEPQ=",
-        "owner": "nix-community",
-        "repo": "nixvim",
-        "rev": "70b5f969ca5e235ff47c989f4a244eba5c0b8f3b",
-        "type": "github"
+        "dirtyRev": "9e448b7ff002505774c53b815726edbb677afea6-dirty",
+        "dirtyShortRev": "9e448b7-dirty",
+        "lastModified": 1695804493,
+        "narHash": "sha256-21+rQ5QGdO00nujpnXIh2eTAMIm7fsfEowc42RY/LuE=",
+        "type": "git",
+        "url": "file:/home/alpha/code/nix/nixvim?branch=fix-autocommand-description"
       },
       "original": {
-        "owner": "nix-community",
-        "repo": "nixvim",
-        "type": "github"
+        "type": "git",
+        "url": "file:/home/alpha/code/nix/nixvim?branch=fix-autocommand-description"
       }
     },
     "plugin-enfocado": {
