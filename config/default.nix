@@ -19,6 +19,7 @@
     ./null-ls.nix
     ./options.nix
     ./telescope.nix
+    ./treesitter
     ./worktree.nix
   ];
 
@@ -40,14 +41,9 @@
   };
   plugins.nix.enable = true;
 
-  plugins.treesitter = {
-    enable = true;
-    indent = true;
-  };
-
   plugins.emmet = {
     enable = true;
-    leader = "<c-,>";
+    leader = "<c-l>";
     mode = "i";
   };
 

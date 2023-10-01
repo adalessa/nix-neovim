@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   plugins.lsp.servers.phpactor = {
     enable = true;
+    filetypes = [ "php" "blade" ];
     extraOptions = {
       init_options = {
         "language_server_worse_reflection.inlay_hints.enable" = true;
