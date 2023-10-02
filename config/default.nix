@@ -19,6 +19,7 @@
     ./null-ls.nix
     ./options.nix
     ./telescope.nix
+    ./test.nix
     ./treesitter
     ./worktree.nix
   ];

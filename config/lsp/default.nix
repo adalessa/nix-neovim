@@ -1,5 +1,5 @@
 {
-  imports = [ ./phpactor.nix ];
+  imports = [ ./phpactor.nix ./lua-ls.nix ];
 
   plugins.fidget.enable = true;
   plugins.lsp = {
@@ -25,7 +25,6 @@
     '';
     servers = {
       nil_ls.enable = true;
-      lua-ls.enable = true;
       gopls.enable = true;
       html.enable = true;
       jsonls.enable = true;
