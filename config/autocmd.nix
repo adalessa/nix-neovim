@@ -2,7 +2,7 @@
   autoCmd = [
     {
       event = [ "BufWritePre" ];
-      description = "Remove trailing whitespace";
+      desc = "Remove trailing whitespace";
       command = ":%s/\\s\\+$//e";
     }
     {
