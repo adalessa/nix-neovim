@@ -21,5 +21,9 @@
     };
   };
 
-  maps = { normal."<leader><leader>db" = ":DBUI<cr>"; };
+  keymaps = [{
+    mode = "n";
+    key = "<leader><leader>db";
+    action = ":DBUIToggle<cr>";
+  }];
 }

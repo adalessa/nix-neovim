@@ -15,6 +15,7 @@ in{
   extraFiles = {
     "queries/blade/highlights.scm" = builtins.readFile "${tree-sitter-blade}/queries/highlights.scm";
     "queries/blade/injections.scm" = builtins.readFile "${tree-sitter-blade}/queries/injections.scm";
+    "queries/nix/injections.scm" = builtins.readFile ./queires/nix/injections.scm;
   };
 
   filetype.pattern.".*%.blade%.php" = "blade";

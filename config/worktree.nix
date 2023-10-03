@@ -1,23 +1,24 @@
-{ pkgs, ... }:
-let helper = import ../helper.nix;
-in {
-  extraPlugins = with pkgs.vimPlugins; [{
-    plugin = git-worktree-nvim;
-    config = helper.toLua ''
-      require("git-worktree").setup({})
-      require("telescope").load_extension("git_worktree")
-    '';
-  }];
+{ pkgs, ... }: {
+  extraPlugins = with pkgs.vimPlugins; [ git-worktree-nvim ];
 
-  maps.normal = {
-    "<leader>gt" = {
+  extraConfigLua = ''
+    require("git-worktree").setup({})
+    require("telescope").load_extension("git_worktree")
+  '';
+
+  keymaps = [
+    {
+      mode = "n";
+      key = "<leader>gt";
       action = "require('telescope').extensions.git_worktree.git_worktrees";
       lua = true;
-    };
-    "<leader>gn" = {
+    }
+    {
+      mode = "n";
+      key = "<leader>gn";
       action =
         "require('telescope').extensions.git_worktree.create_git_worktree";
       lua = true;
-    };
-  };
+    }
+  ];
 }

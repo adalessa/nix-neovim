@@ -1,5 +1,9 @@
-let helper = import ../helper.nix;
+let
+  helper = import ../helper.nix;
+  luaAction = helper.luaAction;
 in {
+  imports = [ ./telescope-ui.nix ];
+
   plugins.telescope = {
     enable = true;
     extensions = {
@@ -30,29 +34,40 @@ in {
     };
   };
 
-  maps.normal = {
-    "<leader>pp" = helper.mkLuaKeymap {
-      action = ''
+  keymaps = [
+    {
+      mode = "n";
+      key = "<leader>pp";
+      options.desc = "Telescope Git Files";
+      lua = true;
+      action = luaAction ''
         local opts = { show_untracked = true }
         local ok = pcall(require("telescope.builtin").git_files, opts)
         if not ok then
           require("telescope.builtin").find_files(opts)
         end
       '';
-      desc = "Telescope Git Files";
-    };
-    "<leader>bb" = {
-      silent = true;
+    }
+    {
+      mode = "n";
+      key = "<leader>bb";
+      options.desc = "Telescope File Browser";
       action = ":Telescope file_browser path=%:p:h select_buffer=true<CR>";
-      desc = "Telescope File Browser";
-    };
-    "<leader>pw" = helper.mkLuaKeymap {
-      action =
+    }
+    {
+      mode = "n";
+      key = "<leader>pw";
+      options.desc = "Grep current word";
+      lua = true;
+      action = luaAction
         "require('telescope.builtin').grep_string { search = vim.fn.expand '<cword>' }";
-      desc = "Grep current word";
-    };
-    "<leader>ps" = helper.mkLuaKeymap {
-      action = ''
+    }
+    {
+      mode = "n";
+      key = "<leader>ps";
+      options.desc = "Grep in project";
+      lua = true;
+      action = luaAction ''
         vim.ui.input({ prompt = "Grep for > " }, function(input)
           if input == nil then
             return
@@ -60,10 +75,13 @@ in {
           require("telescope.builtin").grep_string { search = input }
         end)
       '';
-      desc = "Grep in project";
-    };
-    "<leader>gc" = helper.mkLuaKeymap {
-      action = ''
+    }
+    {
+      mode = "n";
+      key = "<leader>gc";
+      options.desc = "Telescope Git Branches";
+      lua = true;
+      action = luaAction ''
         local actions = require "telescope.actions"
         require("telescope.builtin").git_branches {
           attach_mappings = function(_, map)
@@ -73,7 +91,6 @@ in {
           end,
         }
       '';
-      desc = "Telescope Git Branches";
-    };
-  };
+    }
+  ];
 }

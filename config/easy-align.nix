@@ -1,8 +1,10 @@
 { pkgs, ... }: {
   extraPlugins = with pkgs.vimPlugins; [ vim-easy-align ];
 
-  maps.normalVisualOp.ga = {
+  keymaps = [{
+    mode = [ "n" "v" ];
+    key = "ga";
     action = "<Plug>(EasyAlign)";
-    desc = "EasyAlign";
-  };
+    options.desc = "EasyAlign";
+  }];
 }

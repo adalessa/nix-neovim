@@ -14,7 +14,7 @@
     ./lsp
     ./lualine.nix
     ./laravel.nix
-    ./luasnip.nix
+    ./luasnip
     ./neorg.nix
     ./null-ls.nix
     ./options.nix
@@ -48,11 +48,33 @@
     mode = "i";
   };
 
-  maps.terminal."<esc><esc>" = "<C-\\><C-n>";
-  maps.normal = {
-    "<c-j>" = ":cnext<CR>zz";
-    "<c-k>" = ":cprev<CR>zz";
-  };
+  keymaps = [
+    {
+      mode = "t";
+      key = "<esc><esc>";
+      action = "<C-\\><C-n>";
+    }
+    {
+      mode = "n";
+      key = "<c-j>";
+      action = ":cnext<CR>zz";
+    }
+    {
+      mode = "n";
+      key = "<c-k>";
+      action = ":cprev<CR>zz";
+    }
+    {
+      mode = "n";
+      key = "<c-c><c-c>";
+      action = ":cclose<cr>";
+    }
+    {
+      mode = "n";
+      key = "<c-c><c-o>";
+      action = ":copen<cr>";
+    }
+  ];
 
   extraPlugins = with pkgs.vimPlugins; [
     vim-eunuch

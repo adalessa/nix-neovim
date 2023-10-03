@@ -1,4 +1,7 @@
-{
+let
+  helper = import ../helper.nix;
+  luaAction = helper.luaAction;
+in{
   plugins.harpoon = {
     enable = true;
     keymaps = {
@@ -19,16 +22,14 @@
     };
   };
 
-  maps.normal = {
-    "<leader>st" = {
-      lua = true;
-      action = ''
-        function ()
-          vim.api.nvim_command [[vsplit]]
-          require("harpoon.term").gotoTerminal(1)
-          vim.api.nvim_command [[startinsert]]
-        end
-      '';
-    };
-  };
+  keymaps = [{
+    mode = "n";
+    key = "<leader>st";
+    lua = true;
+    action = luaAction ''
+      vim.api.nvim_command [[vsplit]]
+      require("harpoon.term").gotoTerminal(1)
+      vim.api.nvim_command [[startinsert]]
+    '';
+  }];
 }

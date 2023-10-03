@@ -1,16 +1,20 @@
-{ pkgs, ... }:
-let helper = import ../helper.nix;
-in {
-  extraPlugins = with pkgs.vimPlugins; [
-    nui-nvim
+{ pkgs, ... }: {
+  extraPlugins = with pkgs.vimPlugins; [ nui-nvim laravel ];
+
+  extraConfigLua = ''
+    require('laravel').setup()
+  '';
+
+  keymaps = [
     {
-      plugin = laravel;
-      config = helper.toLua "require('laravel').setup()";
+      mode = "n";
+      key = "<leader>la";
+      action = ":Laravel artisan<cr>";
+    }
+    {
+      mode = "n";
+      key = "<leader>lr";
+      action = ":Laravel routes<cr>";
     }
   ];
-
-  maps.normal = {
-    "<leader>la" = ":Laravel artisan<cr>";
-    "<leader>lr" = ":Laravel routes<cr>";
-  };
 }

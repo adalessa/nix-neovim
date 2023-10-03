@@ -5,10 +5,5 @@
     desc = desc;
     action = "function() ${action} end";
   };
-
-  toLua = str: ''
-    lua <<EOF
-    ${str}
-    EOF
-  '';
+  luaAction = str: "function() ${str} end";
 }
