@@ -19,7 +19,6 @@ in {
       if queryPath ~= "" then
         table.insert(files, vim.fn.getcwd() .. "/" .. queryPath)
       end
-      print(vim.inspect(files))
       if #files == 0 then
         print("No mutation or query found")
         return
