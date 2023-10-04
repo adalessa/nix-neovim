@@ -6,7 +6,6 @@
     ./colorscheme.nix
     ./comment.nix
     ./database.nix
-    ./dashboard.nix
     ./dressing.nix
     ./easy-align.nix
     ./fugitive.nix
