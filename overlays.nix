@@ -5,9 +5,17 @@
       name = "enfocado";
       src = inputs.plugin-enfocado;
     };
+    php-lsp-utils = prev.vimUtils.buildVimPlugin {
+      name = "php-lsp-utils";
+      src = inputs.plugin-php-lsp-utils;
+    };
     laravel = prev.vimUtils.buildVimPlugin {
       name = "laravel";
       src = inputs.plugin-laravel;
+    };
+    telescope-graphql = prev.vimUtils.buildVimPlugin {
+      name = "telescope-graphql";
+      src = inputs.plugin-telescope-graphql;
     };
   };
 })

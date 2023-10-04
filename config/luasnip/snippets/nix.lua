@@ -4,7 +4,7 @@ local i = ls.insert_node
 
 local M = {}
 
-M.keymaps = fmt("keymaps = [{}];", { i("") })
+M.keymaps = fmt("keymaps = [{}];", { i(1, "") })
 
 M.keymap = fmt(
   [[{{

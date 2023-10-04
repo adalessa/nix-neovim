@@ -2,7 +2,7 @@ let
   helper = import ../helper.nix;
   luaAction = helper.luaAction;
 in {
-  imports = [ ./telescope-ui.nix ];
+  imports = [ ./telescope-ui.nix ./telescope-graphql.nix ];
 
   plugins.telescope = {
     enable = true;

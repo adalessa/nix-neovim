@@ -9,8 +9,16 @@
       url = "github:wuelnerdotexe/vim-enfocado";
       flake = false;
     };
+    plugin-php-lsp-utils = {
+      url = "github:adalessa/php-lsp-utils";
+      flake = false;
+    };
     plugin-laravel = {
       url = "github:adalessa/laravel.nvim/v2";
+      flake = false;
+    };
+    plugin-telescope-graphql = {
+      url = "github:adalessa/telescope-graphql";
       flake = false;
     };
   };

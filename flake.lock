@@ -215,6 +215,38 @@
         "type": "github"
       }
     },
+    "plugin-php-lsp-utils": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1696425701,
+        "narHash": "sha256-SDIuh0cngigs14V5MBPU+oCxyqaO5MgbEHzRfscz/is=",
+        "owner": "adalessa",
+        "repo": "php-lsp-utils",
+        "rev": "650e4fefd7f22d6b1b075d14aac666d008679c88",
+        "type": "github"
+      },
+      "original": {
+        "owner": "adalessa",
+        "repo": "php-lsp-utils",
+        "type": "github"
+      }
+    },
+    "plugin-telescope-graphql": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1696426060,
+        "narHash": "sha256-+GSWeqOrRhwrmJjODIW3xdXSbsBP1Kzo4KGmxKT/f70=",
+        "owner": "adalessa",
+        "repo": "telescope-graphql",
+        "rev": "2a7a8c1052820b920af513120b3142b943f322f4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "adalessa",
+        "repo": "telescope-graphql",
+        "type": "github"
+      }
+    },
     "poetry2nix": {
       "inputs": {
         "flake-utils": [
@@ -273,7 +305,9 @@
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
         "plugin-enfocado": "plugin-enfocado",
-        "plugin-laravel": "plugin-laravel"
+        "plugin-laravel": "plugin-laravel",
+        "plugin-php-lsp-utils": "plugin-php-lsp-utils",
+        "plugin-telescope-graphql": "plugin-telescope-graphql"
       }
     },
     "systems": {
