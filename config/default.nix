@@ -12,6 +12,7 @@
     ./fugitive.nix
     ./gitsigns.nix
     ./harpoon.nix
+    ./keymaps.nix
     ./lsp
     ./lualine.nix
     ./laravel.nix
@@ -48,34 +49,6 @@
     leader = "<c-l>";
     mode = "i";
   };
-
-  keymaps = [
-    {
-      mode = "t";
-      key = "<esc><esc>";
-      action = "<C-\\><C-n>";
-    }
-    {
-      mode = "n";
-      key = "<c-j>";
-      action = ":cnext<CR>zz";
-    }
-    {
-      mode = "n";
-      key = "<c-k>";
-      action = ":cprev<CR>zz";
-    }
-    {
-      mode = "n";
-      key = "<c-c><c-c>";
-      action = ":cclose<cr>";
-    }
-    {
-      mode = "n";
-      key = "<c-c><c-o>";
-      action = ":copen<cr>";
-    }
-  ];
 
   extraPlugins = with pkgs.vimPlugins; [
     vim-eunuch
