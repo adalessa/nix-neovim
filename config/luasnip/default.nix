@@ -1,4 +1,8 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+let
+  helper = import ../helper.nix;
+  luaAction = helper.luaAction;
+in {
   extraPlugins = with pkgs.vimPlugins; [ luasnip ];
 
   extraFiles = {
@@ -20,12 +24,10 @@
       mode = [ "i" "s" ];
       key = "<c-k>";
       lua = true;
-      action = ''
-        function()
-          local ls = require('luasnip')
-          if ls.expand_or_jumpable() then
-            ls.expand_or_jump()
-          end
+      action = luaAction ''
+        local ls = require('luasnip')
+        if ls.expand_or_jumpable() then
+          ls.expand_or_jump()
         end
       '';
       options.silent = true;
@@ -34,12 +36,10 @@
       mode = [ "i" "s" ];
       key = "<c-j>";
       lua = true;
-      action = ''
-        function()
-          local ls = require('luasnip')
-          if ls.jumpable(-1) then
-            ls.jump(-1)
-          end
+      action = luaAction ''
+        local ls = require('luasnip')
+        if ls.jumpable(-1) then
+          ls.jump(-1)
         end
       '';
       options.silent = true;
@@ -48,12 +48,10 @@
       mode = [ "i" "s" ];
       key = "<c-l>";
       lua = true;
-      action = ''
-        function()
-          local ls = require('luasnip')
-          if ls.choice_active() then
-            ls.change_choice(1)
-          end
+      action = luaAction ''
+        local ls = require('luasnip')
+        if ls.choice_active() then
+          ls.change_choice(1)
         end
       '';
       options.silent = true;
