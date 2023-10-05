@@ -20,6 +20,7 @@
     ./neorg.nix
     ./null-ls.nix
     ./options.nix
+    ./scratch.nix
     ./telescope.nix
     ./test.nix
     ./treesitter

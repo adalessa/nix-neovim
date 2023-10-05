@@ -231,6 +231,22 @@
         "type": "github"
       }
     },
+    "plugin-scratch": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1696534690,
+        "narHash": "sha256-d6/u+7lKTCYHdu+MTSlwlQaRqWsRCxmaA/AJwt8BzvI=",
+        "owner": "adalessa",
+        "repo": "scratch.nvim",
+        "rev": "c1d12519691e8c324a57937ac457117c5207b985",
+        "type": "github"
+      },
+      "original": {
+        "owner": "adalessa",
+        "repo": "scratch.nvim",
+        "type": "github"
+      }
+    },
     "plugin-telescope-graphql": {
       "flake": false,
       "locked": {
@@ -307,6 +323,7 @@
         "plugin-enfocado": "plugin-enfocado",
         "plugin-laravel": "plugin-laravel",
         "plugin-php-lsp-utils": "plugin-php-lsp-utils",
+        "plugin-scratch": "plugin-scratch",
         "plugin-telescope-graphql": "plugin-telescope-graphql"
       }
     },

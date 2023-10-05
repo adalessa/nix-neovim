@@ -17,6 +17,10 @@
       url = "github:adalessa/laravel.nvim/v2";
       flake = false;
     };
+    plugin-scratch = {
+      url = "github:adalessa/scratch.nvim";
+      flake = false;
+    };
     plugin-telescope-graphql = {
       url = "github:adalessa/telescope-graphql";
       flake = false;

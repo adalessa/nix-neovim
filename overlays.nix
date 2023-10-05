@@ -13,6 +13,10 @@
       name = "laravel";
       src = inputs.plugin-laravel;
     };
+    scratch = prev.vimUtils.buildVimPlugin {
+      name = "scratch";
+      src = inputs.plugin-scratch;
+    };
     telescope-graphql = prev.vimUtils.buildVimPlugin {
       name = "telescope-graphql";
       src = inputs.plugin-telescope-graphql;
