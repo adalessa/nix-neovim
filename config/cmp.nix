@@ -4,6 +4,8 @@
     cmp-path.enable = true;
     cmp-nvim-lsp.enable = true;
     cmp_luasnip.enable = true;
+    cmp-cmdline.enable = true;
+    cmp-git.enable = true;
     copilot-cmp.enable = true;
     copilot-lua = {
       enable = true;
@@ -32,34 +34,8 @@
         "<c-d>" = "cmp.mapping.scroll_docs(-4)";
         "<c-f>" = "cmp.mapping.scroll_docs(4)";
         "<c-space>" = "cmp.mapping.complete()";
-        "<c-e>" = {
-          action = ''
-            function(fallback)
-              if cmp.visible() then
-                cmp.close()
-              elseif luasnip.expand_or_jumpable() then
-                luasnip.expand_or_jump()
-              else
-                fallback()
-              end
-            end
-          '';
-          modes = [ "i" "s" ];
-        };
-        "<c-n>" = {
-          action = ''
-            function(fallback)
-              if cmp.visible() then
-                cmp.select_next_item()
-              elseif luasnip.choice_active() then
-                luasnip.change_choice(1)
-              else
-                fallback()
-              end
-            end
-          '';
-          modes = [ "i" "s" ];
-        };
+        "<c-e>" = "cmp.mapping.abort()";
+        "<c-n>" = "cmp.mapping.select_next_item()";
         "<c-p>" = "cmp.mapping.select_prev_item()";
       };
       sources = [
@@ -71,4 +47,46 @@
       ];
     };
   };
+
+  extraConfigLuaPost = ''
+    local cmp = require "cmp"
+    -- Set configuration for specific filetype.
+    ---@diagnostic disable-next-line: missing-fields
+    cmp.setup.filetype("gitcommit", {
+      sources = cmp.config.sources({
+        { name = "cmp_git" }, -- You can specify the `cmp_git` source if you were installed it.
+      }, {
+        { name = "buffer" },
+      }),
+    })
+
+    -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
+    ---@diagnostic disable-next-line: missing-fields
+    cmp.setup.cmdline({"/", "?"}, {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = {
+        { name = "buffer" },
+      },
+    })
+
+    -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+    ---@diagnostic disable-next-line: missing-fields
+    cmp.setup.cmdline(":", {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = cmp.config.sources({
+        { name = "path" },
+      }, {
+        { name = "cmdline" },
+      }),
+    })
+
+    ---@diagnostic disable-next-line: missing-fields
+    cmp.setup.filetype({ "sql", "mysql", "plsql" }, {
+      sources = cmp.config.sources({
+        { name = "vim-dadbod-completion" },
+      }, {
+        { name = "buffer" },
+      }),
+    })
+  '';
 }
