@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  helper = import ../helper.nix;
+  helper = import ../../helper.nix;
   luaAction = helper.luaAction;
 in {
   extraPlugins = with pkgs.vimPlugins; [ luasnip ];
