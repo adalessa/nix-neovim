@@ -8,13 +8,14 @@
     ./database.nix
     ./dressing.nix
     ./easy-align.nix
+    ./ftplugins
     ./fugitive.nix
     ./gitsigns.nix
     ./harpoon.nix
     ./keymaps.nix
+    ./laravel.nix
     ./lsp
     ./lualine.nix
-    ./laravel.nix
     ./luasnip
     ./neorg.nix
     ./null-ls.nix

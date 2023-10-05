@@ -1,9 +1,7 @@
 { pkgs, ... }: {
   plugins.telescope.extensionConfig = {
     "ui-select" = {
-      __raw = ''
-        require("telescope.themes").get_dropdown { }
-      '';
+      __raw = "require('telescope.themes').get_dropdown({})";
     };
   };
 
