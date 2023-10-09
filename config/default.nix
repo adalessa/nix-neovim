@@ -21,6 +21,7 @@
     ./null-ls.nix
     ./options.nix
     ./scratch.nix
+    ./soundboard.nix
     ./telescope.nix
     ./test.nix
     ./treesitter
