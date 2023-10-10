@@ -182,6 +182,23 @@
         "type": "github"
       }
     },
+    "phpactor": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1695552818,
+        "narHash": "sha256-HWWs44gItSQYxrroDY+q9e7uERf0ChSAliqArAUNaJs=",
+        "owner": "phpactor",
+        "repo": "phpactor",
+        "rev": "aa0f667e59ba4c5db624bcf83c3bea91015b0e77",
+        "type": "github"
+      },
+      "original": {
+        "owner": "phpactor",
+        "ref": "2023.09.24.0",
+        "repo": "phpactor",
+        "type": "github"
+      }
+    },
     "plugin-enfocado": {
       "flake": false,
       "locked": {
@@ -320,6 +337,7 @@
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
+        "phpactor": "phpactor",
         "plugin-enfocado": "plugin-enfocado",
         "plugin-laravel": "plugin-laravel",
         "plugin-php-lsp-utils": "plugin-php-lsp-utils",

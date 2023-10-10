@@ -25,14 +25,7 @@
   phpactor = prev.php.buildComposerProject (finalAttrs: {
     pname = "phpactor";
     version = "2023.09.24.0";
-
-    src = prev.fetchFromGitHub {
-      owner = "phpactor";
-      repo = "phpactor";
-      rev = finalAttrs.version;
-      hash = "sha256-HWWs44gItSQYxrroDY+q9e7uERf0ChSAliqArAUNaJs=";
-    };
-
+    src = inputs.phpactor;
     vendorHash = "sha256-YQbYBj9l9FDFFVQ0PtoIp4b6myAPEr2Iit7ZI40C4zg=";
   });
 })

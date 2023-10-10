@@ -25,6 +25,10 @@
       url = "github:adalessa/telescope-graphql";
       flake = false;
     };
+    phpactor = {
+      url = "github:phpactor/phpactor?ref=2023.09.24.0";
+      flake = false;
+    };
   };
 
   outputs = { nixpkgs, nixvim, flake-utils, ... }@inputs:
