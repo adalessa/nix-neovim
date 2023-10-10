@@ -13,7 +13,7 @@
       gD = "references";
       gd = "definition";
       gi = "implementation";
-      gt = "type_definition";
+      gT = "type_definition";
       "<leader>vrn" = "rename";
       "<leader>vca" = "code_action";
     };
