@@ -9,7 +9,7 @@
     ./dressing.nix
     ./easy-align.nix
     ./ftplugins
-    ./fugitive.nix
+    # ./fugitive.nix
     ./gitsigns.nix
     ./harpoon.nix
     ./keymaps.nix
@@ -17,6 +17,7 @@
     ./lsp
     ./lualine.nix
     ./luasnip
+    ./neogit.nix
     ./neorg.nix
     ./null-ls.nix
     ./options.nix
