@@ -21,6 +21,10 @@
       name = "telescope-graphql";
       src = inputs.plugin-telescope-graphql;
     };
+    transparent = prev.vimUtils.buildVimPlugin {
+      name = "transparent";
+      src = inputs.plugin-transparent;
+    };
   };
   phpactor = prev.php.buildComposerProject (finalAttrs: {
     pname = "phpactor";

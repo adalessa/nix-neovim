@@ -280,6 +280,22 @@
         "type": "github"
       }
     },
+    "plugin-transparent": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1693733176,
+        "narHash": "sha256-1JyfwHBCtNCPmsOLzJRWBtg1u9uApQZY4fn2mTL3NZ4=",
+        "owner": "xiyaowong",
+        "repo": "nvim-transparent",
+        "rev": "3af6232c8d39d51062702e875ff6407c1eeb0391",
+        "type": "github"
+      },
+      "original": {
+        "owner": "xiyaowong",
+        "repo": "nvim-transparent",
+        "type": "github"
+      }
+    },
     "poetry2nix": {
       "inputs": {
         "flake-utils": [
@@ -342,7 +358,8 @@
         "plugin-laravel": "plugin-laravel",
         "plugin-php-lsp-utils": "plugin-php-lsp-utils",
         "plugin-scratch": "plugin-scratch",
-        "plugin-telescope-graphql": "plugin-telescope-graphql"
+        "plugin-telescope-graphql": "plugin-telescope-graphql",
+        "plugin-transparent": "plugin-transparent"
       }
     },
     "systems": {

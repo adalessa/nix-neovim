@@ -25,6 +25,7 @@
     ./soundboard.nix
     ./telescope.nix
     ./test.nix
+    ./transparent.nix
     ./treesitter
     ./worktree.nix
   ];
