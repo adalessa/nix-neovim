@@ -14,6 +14,7 @@
     ./harpoon.nix
     ./keymaps.nix
     ./laravel.nix
+    ./leetcode.nix
     ./lsp
     ./lualine.nix
     ./luasnip

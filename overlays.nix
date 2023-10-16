@@ -29,6 +29,10 @@
       name = "ultimate-autopairs";
       src = inputs.plugin-ultimate-autopairs;
     };
+    leetcode = prev.vimUtils.buildVimPlugin {
+      name = "leetcode";
+      src = inputs.plugin-leetcode;
+    };
   };
   phpactor = prev.php.buildComposerProject (finalAttrs: {
     pname = "phpactor";

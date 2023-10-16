@@ -232,6 +232,22 @@
         "type": "github"
       }
     },
+    "plugin-leetcode": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1697481078,
+        "narHash": "sha256-hHhIjOOlOKooeoTkyVsti/tv/x6Vxaw0hm9Pi3Im/Jk=",
+        "owner": "kawre",
+        "repo": "leetcode.nvim",
+        "rev": "37dc7af13661d015419e3b69fdf5f9c8c83d16ab",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kawre",
+        "repo": "leetcode.nvim",
+        "type": "github"
+      }
+    },
     "plugin-php-lsp-utils": {
       "flake": false,
       "locked": {
@@ -372,6 +388,7 @@
         "phpactor": "phpactor",
         "plugin-enfocado": "plugin-enfocado",
         "plugin-laravel": "plugin-laravel",
+        "plugin-leetcode": "plugin-leetcode",
         "plugin-php-lsp-utils": "plugin-php-lsp-utils",
         "plugin-scratch": "plugin-scratch",
         "plugin-telescope-graphql": "plugin-telescope-graphql",

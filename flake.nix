@@ -33,6 +33,10 @@
       url = "github:altermo/ultimate-autopair.nvim";
       flake = false;
     };
+    plugin-leetcode = {
+      url = "github:kawre/leetcode.nvim";
+      flake = false;
+    };
     phpactor = {
       url = "github:phpactor/phpactor?ref=2023.09.24.0";
       flake = false;
