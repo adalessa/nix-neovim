@@ -16,7 +16,6 @@
       gT = "type_definition";
       "<leader>vrn" = "rename";
       "<leader>vca" = "code_action";
-      "<leader>pd" = "lsp_document_symbols";
     };
 
     onAttach = ''
