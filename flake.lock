@@ -296,6 +296,22 @@
         "type": "github"
       }
     },
+    "plugin-ultimate-autopairs": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1697227434,
+        "narHash": "sha256-s/lMCSBn59i330y6RdhUkjoTvxlnEkuV8Wo2ssvJ9cU=",
+        "owner": "altermo",
+        "repo": "ultimate-autopair.nvim",
+        "rev": "e8e7f3ff115786c6dce6107c8ad1e47e57a626aa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "altermo",
+        "repo": "ultimate-autopair.nvim",
+        "type": "github"
+      }
+    },
     "poetry2nix": {
       "inputs": {
         "flake-utils": [
@@ -359,7 +375,8 @@
         "plugin-php-lsp-utils": "plugin-php-lsp-utils",
         "plugin-scratch": "plugin-scratch",
         "plugin-telescope-graphql": "plugin-telescope-graphql",
-        "plugin-transparent": "plugin-transparent"
+        "plugin-transparent": "plugin-transparent",
+        "plugin-ultimate-autopairs": "plugin-ultimate-autopairs"
       }
     },
     "systems": {

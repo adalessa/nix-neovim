@@ -25,6 +25,10 @@
       name = "transparent";
       src = inputs.plugin-transparent;
     };
+    ultimate-autopairs = prev.vimUtils.buildVimPlugin {
+      name = "ultimate-autopairs";
+      src = inputs.plugin-ultimate-autopairs;
+    };
   };
   phpactor = prev.php.buildComposerProject (finalAttrs: {
     pname = "phpactor";

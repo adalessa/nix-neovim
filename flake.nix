@@ -29,6 +29,10 @@
       url = "github:xiyaowong/nvim-transparent";
       flake = false;
     };
+    plugin-ultimate-autopairs = {
+      url = "github:altermo/ultimate-autopair.nvim";
+      flake = false;
+    };
     phpactor = {
       url = "github:phpactor/phpactor?ref=2023.09.24.0";
       flake = false;

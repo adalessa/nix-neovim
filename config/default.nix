@@ -27,6 +27,7 @@
     ./test.nix
     ./transparent.nix
     ./treesitter
+    ./ultimate-autopairs.nix
     ./worktree.nix
   ];
 
@@ -35,7 +36,6 @@
 
   plugins.nvim-colorizer.enable = true;
   plugins.surround.enable = true;
-  plugins.nvim-autopairs.enable = true;
   plugins.todo-comments.enable = true;
   plugins.nvim-lightbulb = {
     enable = true;
