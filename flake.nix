@@ -37,6 +37,10 @@
       url = "github:kawre/leetcode.nvim";
       flake = false;
     };
+    plugin-harpoon = {
+      url = "github:ThePrimeagen/harpoon";
+      flake = false;
+    };
     plugin-clear-action = {
       url = "github:luckasRanarison/clear-action.nvim";
       flake = false;

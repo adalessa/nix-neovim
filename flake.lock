@@ -117,11 +117,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1696234590,
-        "narHash": "sha256-mgOzQYTvaTT4bFopVOadlndy2RPwLy60rDjIWOGujwo=",
+        "lastModified": 1697379843,
+        "narHash": "sha256-RcnGuJgC2K/UpTy+d32piEoBXq2M+nVFzM3ah/ZdJzg=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "f902cb49892d300ff15cb237e48aa1cad79d68c3",
+        "rev": "12bdeb01ff9e2d3917e6a44037ed7df6e6c3df9d",
         "type": "github"
       },
       "original": {
@@ -169,11 +169,11 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1696253034,
-        "narHash": "sha256-yt3tZYzoMx+NqtJLRLQYJsB/LSGEL00T+YxJnBQUQr0=",
+        "lastModified": 1697534983,
+        "narHash": "sha256-BRFBhLehpdoxtaRpPUzwSpZuVMjcmbhozhMNbeoDslk=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "05b77732e3babaa95d73cbffca83029784a64cdd",
+        "rev": "465d09849a600f90e55f8a0f898fd11c2e292207",
         "type": "github"
       },
       "original": {
@@ -231,14 +231,30 @@
         "type": "github"
       }
     },
+    "plugin-harpoon": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1696945578,
+        "narHash": "sha256-pSnFx5fg1llNlpTCV4hoo3Pf1KWnAJDRVSe+88N4HXM=",
+        "owner": "ThePrimeagen",
+        "repo": "harpoon",
+        "rev": "c1aebbad9e3d13f20bedb8f2ce8b3a94e39e424a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ThePrimeagen",
+        "repo": "harpoon",
+        "type": "github"
+      }
+    },
     "plugin-laravel": {
       "flake": false,
       "locked": {
-        "lastModified": 1696227798,
-        "narHash": "sha256-kdIBLmk+xmJ/QizvQv6Poom0YMJSfmEPGH/wQOZvYIM=",
+        "lastModified": 1696966256,
+        "narHash": "sha256-/KeFcAmfs0NQhUbqGKVZ9kinBOeQSU5kst8ehfLiuKA=",
         "owner": "adalessa",
         "repo": "laravel.nvim",
-        "rev": "b972ca03daf4459ce4b16815b35f637a5c70c35a",
+        "rev": "8547706214871123b5d49be58bb8952eea2edc11",
         "type": "github"
       },
       "original": {
@@ -251,11 +267,11 @@
     "plugin-leetcode": {
       "flake": false,
       "locked": {
-        "lastModified": 1697481078,
-        "narHash": "sha256-hHhIjOOlOKooeoTkyVsti/tv/x6Vxaw0hm9Pi3Im/Jk=",
+        "lastModified": 1697559287,
+        "narHash": "sha256-pWI+g+5l/erDdfhS4HWlF0GvwdRzoDHTBJJJ0wuAHCU=",
         "owner": "kawre",
         "repo": "leetcode.nvim",
-        "rev": "37dc7af13661d015419e3b69fdf5f9c8c83d16ab",
+        "rev": "2d685b50330ee117022eb8aa25ca8a1d93d06651",
         "type": "github"
       },
       "original": {
@@ -404,6 +420,7 @@
         "phpactor": "phpactor",
         "plugin-clear-action": "plugin-clear-action",
         "plugin-enfocado": "plugin-enfocado",
+        "plugin-harpoon": "plugin-harpoon",
         "plugin-laravel": "plugin-laravel",
         "plugin-leetcode": "plugin-leetcode",
         "plugin-php-lsp-utils": "plugin-php-lsp-utils",

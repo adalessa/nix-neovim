@@ -33,6 +33,10 @@
       name = "clear-action";
       src = inputs.plugin-clear-action;
     };
+    harpoon = prev.vimUtils.buildVimPlugin {
+      name = "harpoon";
+      src = inputs.plugin-harpoon;
+    };
     leetcode = prev.vimUtils.buildVimPlugin {
       name = "leetcode";
       src = inputs.plugin-leetcode;
