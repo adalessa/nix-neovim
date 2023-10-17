@@ -199,6 +199,22 @@
         "type": "github"
       }
     },
+    "plugin-clear-action": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1697107835,
+        "narHash": "sha256-WkXOJQO410mkEFK3waYqekXwJJENSwtpMnXQoLdNdck=",
+        "owner": "luckasRanarison",
+        "repo": "clear-action.nvim",
+        "rev": "e36fad3b9ebb85acdd5c41651b51a3cf70991323",
+        "type": "github"
+      },
+      "original": {
+        "owner": "luckasRanarison",
+        "repo": "clear-action.nvim",
+        "type": "github"
+      }
+    },
     "plugin-enfocado": {
       "flake": false,
       "locked": {
@@ -386,6 +402,7 @@
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
         "phpactor": "phpactor",
+        "plugin-clear-action": "plugin-clear-action",
         "plugin-enfocado": "plugin-enfocado",
         "plugin-laravel": "plugin-laravel",
         "plugin-leetcode": "plugin-leetcode",

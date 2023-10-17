@@ -29,6 +29,10 @@
       name = "ultimate-autopairs";
       src = inputs.plugin-ultimate-autopairs;
     };
+    clear-action = prev.vimUtils.buildVimPlugin {
+      name = "clear-action";
+      src = inputs.plugin-clear-action;
+    };
     leetcode = prev.vimUtils.buildVimPlugin {
       name = "leetcode";
       src = inputs.plugin-leetcode;

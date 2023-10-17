@@ -2,6 +2,7 @@
   # Import all your configuration modules here
   imports = [
     ./autocmd.nix
+    ./clear-action.nix
     ./cmp.nix
     ./colorscheme.nix
     ./comment.nix
@@ -9,7 +10,6 @@
     ./dressing.nix
     ./easy-align.nix
     ./ftplugins
-    # ./fugitive.nix
     ./gitsigns.nix
     ./harpoon.nix
     ./keymaps.nix
