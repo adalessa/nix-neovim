@@ -8,5 +8,6 @@
     local test_setup = function()
       ${builtins.readFile ./test.lua}
     end
+    test_setup()
   '';
 }
