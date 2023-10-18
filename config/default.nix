@@ -25,7 +25,7 @@
     ./scratch.nix
     ./soundboard.nix
     ./telescope.nix
-    ./test.nix
+    ./test
     ./transparent.nix
     ./treesitter
     ./ultimate-autopairs.nix
