@@ -41,10 +41,6 @@
       url = "github:ThePrimeagen/harpoon";
       flake = false;
     };
-    plugin-clear-action = {
-      url = "github:luckasRanarison/clear-action.nvim";
-      flake = false;
-    };
     phpactor = {
       url = "github:phpactor/phpactor?ref=2023.09.24.0";
       flake = false;

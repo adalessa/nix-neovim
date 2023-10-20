@@ -29,10 +29,6 @@
       name = "ultimate-autopairs";
       src = inputs.plugin-ultimate-autopairs;
     };
-    clear-action = prev.vimUtils.buildVimPlugin {
-      name = "clear-action";
-      src = inputs.plugin-clear-action;
-    };
     harpoon = prev.vimUtils.buildVimPlugin {
       name = "harpoon";
       src = inputs.plugin-harpoon;

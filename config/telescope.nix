@@ -55,13 +55,13 @@ in {
       action = ":Telescope file_browser path=%:p:h select_buffer=true<CR>";
     }
     {
-        mode = "n";
-        key = "<leader>pd";
-        options.desc = "Telescope Document symbol";
-        lua = true;
-        action = luaAction ''
-          require('telescope.builtin').lsp_document_symbols()
-        '';
+      mode = "n";
+      key = "<leader>pd";
+      options.desc = "Telescope Document symbol";
+      lua = true;
+      action = luaAction ''
+        require('telescope.builtin').lsp_document_symbols()
+      '';
     }
     {
       mode = "n";
@@ -99,6 +99,15 @@ in {
             return true
           end,
         }
+      '';
+    }
+    {
+      mode = "n";
+      key = "<leader>gs";
+      options.desc = "Telescope Git Status";
+      lua = true;
+      action = luaAction ''
+        require("telescope.builtin").git_status()
       '';
     }
   ];
