@@ -1,6 +1,6 @@
 local ls = require "luasnip"
 local types = require "luasnip.util.types"
-ls.config.set_config {
+ls.setup({
   -- This tells LuaSnip to remember to keep around the last snippet.
   -- You can jump back into even if you move outside of the selection
   history = true,
@@ -15,7 +15,7 @@ ls.config.set_config {
       },
     },
   },
-}
+})
 
 local shortcut = function(val)
   if type(val) == "string" then
