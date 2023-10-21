@@ -50,7 +50,7 @@
 
   plugins.emmet = {
     enable = true;
-    leader = "<c-m>";
+    leader = "<c-g>";
     mode = "i";
   };
 

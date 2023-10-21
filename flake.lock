@@ -117,11 +117,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1697379843,
-        "narHash": "sha256-RcnGuJgC2K/UpTy+d32piEoBXq2M+nVFzM3ah/ZdJzg=",
+        "lastModified": 1697793076,
+        "narHash": "sha256-02e7sCuqLtkyRgrZmdOyvAcQTQdcXj+vpyp9bca6cY4=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "12bdeb01ff9e2d3917e6a44037ed7df6e6c3df9d",
+        "rev": "038b2922be3fc096e1d456f93f7d0f4090628729",
         "type": "github"
       },
       "original": {
@@ -169,11 +169,11 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1697534983,
-        "narHash": "sha256-BRFBhLehpdoxtaRpPUzwSpZuVMjcmbhozhMNbeoDslk=",
+        "lastModified": 1697791149,
+        "narHash": "sha256-TIaeuL66wrzgADq6m3crtT87Z8KT4ZzhZ6eYkckQHio=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "465d09849a600f90e55f8a0f898fd11c2e292207",
+        "rev": "9832bc3f545fc1364a8bcb630cef808dc8a85797",
         "type": "github"
       },
       "original": {
@@ -202,11 +202,11 @@
     "plugin-enfocado": {
       "flake": false,
       "locked": {
-        "lastModified": 1689708146,
-        "narHash": "sha256-MNWWiCaj4/nz2mQw5ilKFu90d2o65SqDUAXCCVEG5rQ=",
+        "lastModified": 1697862550,
+        "narHash": "sha256-s+6f//aZFeaKLNN9cOXEexiPUO7ocZ/docL2fBBdLMc=",
         "owner": "wuelnerdotexe",
         "repo": "vim-enfocado",
-        "rev": "845835a58d285eb8c1ced5dba83bfdec6e40d828",
+        "rev": "2a8fffdff1a20473f0fbacef10f2fb356e039b31",
         "type": "github"
       },
       "original": {
@@ -251,11 +251,11 @@
     "plugin-leetcode": {
       "flake": false,
       "locked": {
-        "lastModified": 1697559287,
-        "narHash": "sha256-pWI+g+5l/erDdfhS4HWlF0GvwdRzoDHTBJJJ0wuAHCU=",
+        "lastModified": 1697831391,
+        "narHash": "sha256-McFuqOJpOF/69ZJ8NwfI7PC3NtmGqzeAJo3HUxZ+gSw=",
         "owner": "kawre",
         "repo": "leetcode.nvim",
-        "rev": "2d685b50330ee117022eb8aa25ca8a1d93d06651",
+        "rev": "d88172de5b697ded02146fc108336f6e0c7e414b",
         "type": "github"
       },
       "original": {
@@ -331,11 +331,11 @@
     "plugin-ultimate-autopairs": {
       "flake": false,
       "locked": {
-        "lastModified": 1697227434,
-        "narHash": "sha256-s/lMCSBn59i330y6RdhUkjoTvxlnEkuV8Wo2ssvJ9cU=",
+        "lastModified": 1697608473,
+        "narHash": "sha256-mElrJn3FkyFg2VSHiNiaaOBIlr+K3mpnO2apoAzmGuo=",
         "owner": "altermo",
         "repo": "ultimate-autopair.nvim",
-        "rev": "e8e7f3ff115786c6dce6107c8ad1e47e57a626aa",
+        "rev": "ded1b64e26fcc708837a8391e0f385c4b87ca09b",
         "type": "github"
       },
       "original": {
