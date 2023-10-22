@@ -19,7 +19,7 @@
     ./luasnip
     ./neogit.nix
     ./neorg.nix
-    ./null-ls.nix
+    ./none-ls.nix
     ./options.nix
     ./scratch.nix
     ./soundboard.nix

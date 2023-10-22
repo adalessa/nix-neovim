@@ -5,7 +5,6 @@ in{
   plugins.harpoon = {
     enable = true;
     package = pkgs.vimPlugins.harpoon;
-    enableTelescope = true;
     keymaps = {
       addFile = "<leader>sa";
       toggleQuickMenu = "<leader>ss";
