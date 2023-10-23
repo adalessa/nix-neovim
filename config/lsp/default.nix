@@ -25,14 +25,7 @@
     '';
 
     servers = {
-      nil_ls = {
-        enable = true;
-        extraOptions = {
-          init_options = {
-            autoArchive = true;
-          };
-        };
-      };
+      nil_ls.enable = true;
       gopls.enable = true;
       html.enable = true;
       jsonls.enable = true;

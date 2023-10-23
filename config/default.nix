@@ -6,6 +6,7 @@
     ./colorscheme.nix
     ./comment.nix
     ./database.nix
+    ./dap
     ./dressing.nix
     ./easy-align.nix
     ./ftplugins

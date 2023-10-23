@@ -45,6 +45,9 @@
       url = "github:phpactor/phpactor?ref=2023.09.24.0";
       flake = false;
     };
+    php-debug-adapter = {
+      url = "git+https://gitea.ad-impeldown.synology.me/alpha/php-debug-adapter-flake.git";
+    };
   };
 
   outputs = { nixpkgs, nixvim, flake-utils, ... }@inputs:
@@ -56,7 +59,7 @@
         nixvimLib = nixvim.lib.${system};
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [ overlays ];
+          overlays = [ overlays inputs.php-debug-adapter.overlay ];
         };
         nixvim' = nixvim.legacyPackages.${system};
         nvim = nixvim'.makeNixvimWithModule {

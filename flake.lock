@@ -93,6 +93,24 @@
         "type": "github"
       }
     },
+    "flake-utils_4": {
+      "inputs": {
+        "systems": "systems_4"
+      },
+      "locked": {
+        "lastModified": 1694529238,
+        "narHash": "sha256-zsNZZGTGnMOf9YpHKJqMSsa0dXbfmxeoJ7xHlrt+xmY=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "ff7b65b44d01cf9ba6a71320833626af21126384",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
     "gitignore": {
       "inputs": {
         "nixpkgs": [
@@ -161,6 +179,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1697723726,
+        "narHash": "sha256-SaTWPkI8a5xSHX/rrKzUe+/uVNy6zCGMXgoeMb7T9rg=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "7c9cc5a6e5d38010801741ac830a3f8fd667a7a0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixvim": {
       "inputs": {
         "beautysh": "beautysh",
@@ -169,17 +203,36 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1697928654,
-        "narHash": "sha256-dyMe4/EhJhqZICJ06HkhA6DIBK5z8vRtwreGgfhLMFU=",
+        "lastModified": 1698063089,
+        "narHash": "sha256-fJRcsO+KHf0K04fRHIS6HETJRWMakTNbUaWx8WeYHX4=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "56f46166f998d4adddb1c43dbf54d4c0604eef29",
+        "rev": "0c5dcb56d105addedd001f043e6a32ab9f1abe92",
         "type": "github"
       },
       "original": {
         "owner": "nix-community",
         "repo": "nixvim",
         "type": "github"
+      }
+    },
+    "php-debug-adapter": {
+      "inputs": {
+        "flake-utils": "flake-utils_4",
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1698262481,
+        "narHash": "sha256-qmX11pXXbdIPWCcsotwEZMA6MCYb+MP0m1+tuqQWbZ0=",
+        "ref": "refs/heads/main",
+        "rev": "809d451e4ce72628f64fcd22155021fcce895280",
+        "revCount": 2,
+        "type": "git",
+        "url": "https://gitea.ad-impeldown.synology.me/alpha/php-debug-adapter-flake.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitea.ad-impeldown.synology.me/alpha/php-debug-adapter-flake.git"
       }
     },
     "phpactor": {
@@ -251,11 +304,11 @@
     "plugin-leetcode": {
       "flake": false,
       "locked": {
-        "lastModified": 1697831391,
-        "narHash": "sha256-McFuqOJpOF/69ZJ8NwfI7PC3NtmGqzeAJo3HUxZ+gSw=",
+        "lastModified": 1697985873,
+        "narHash": "sha256-BX9yr9xiUllyBW9Z5kxKXxCrKMbOU8VFtQdESMB8XP4=",
         "owner": "kawre",
         "repo": "leetcode.nvim",
-        "rev": "d88172de5b697ded02146fc108336f6e0c7e414b",
+        "rev": "22a899ce96cbffc49de92959ae602dd053f4e325",
         "type": "github"
       },
       "original": {
@@ -401,6 +454,7 @@
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
+        "php-debug-adapter": "php-debug-adapter",
         "phpactor": "phpactor",
         "plugin-enfocado": "plugin-enfocado",
         "plugin-harpoon": "plugin-harpoon",
@@ -444,6 +498,21 @@
       }
     },
     "systems_3": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_4": {
       "locked": {
         "lastModified": 1681028828,
         "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
