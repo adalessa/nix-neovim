@@ -10,14 +10,14 @@
           request = "launch";
           name = "Laravel";
           port = 9003;
-          pathMappings = { "/var/www/html" = "\${workspaceFolder}"; };
+          pathMappings = { "/var/www/html" = ''''${workspaceFolder}''; };
         }
         {
           type = "php";
           request = "launch";
           name = "Symfony";
           port = 9003;
-          pathMappings = { "/app" = "\${workspaceFolder}"; };
+          pathMappings = { "/app" = ''''${workspaceFolder}''; };
         }
       ];
     };
