@@ -37,12 +37,12 @@
       url = "github:kawre/leetcode.nvim";
       flake = false;
     };
-    plugin-harpoon = {
-      url = "github:ThePrimeagen/harpoon";
-      flake = false;
-    };
     blade-treesitter = {
       url = "github:EmranMR/tree-sitter-blade";
+      flake = false;
+    };
+    php-treesitter = {
+      url = "github:CalebDW/tree-sitter-php/common_parser";
       flake = false;
     };
     phpactor = {

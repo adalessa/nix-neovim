@@ -16,7 +16,7 @@
     "queries/blade/injections.scm" =
       builtins.readFile "${pkgs.tree-sitter.blade}/queries/injections.scm";
     "queries/nix/injections.scm" =
-      builtins.readFile ./queires/nix/injections.scm;
+      builtins.readFile ./queries/nix/injections.scm;
   };
 
   filetype.pattern.".*%.blade%.php" = "blade";

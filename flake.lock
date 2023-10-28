@@ -251,6 +251,23 @@
         "url": "https://gitea.ad-impeldown.synology.me/alpha/php-debug-adapter-flake.git"
       }
     },
+    "php-treesitter": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1698072751,
+        "narHash": "sha256-4//ZhomF+gy30wQ+Revq3Nzq468fjy2EDqZOS9Ecmw8=",
+        "owner": "CalebDW",
+        "repo": "tree-sitter-php",
+        "rev": "5cbcad33d77bb02a72455569295bf5acda351741",
+        "type": "github"
+      },
+      "original": {
+        "owner": "CalebDW",
+        "ref": "common_parser",
+        "repo": "tree-sitter-php",
+        "type": "github"
+      }
+    },
     "phpactor": {
       "flake": false,
       "locked": {
@@ -281,22 +298,6 @@
       "original": {
         "owner": "wuelnerdotexe",
         "repo": "vim-enfocado",
-        "type": "github"
-      }
-    },
-    "plugin-harpoon": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1696945578,
-        "narHash": "sha256-pSnFx5fg1llNlpTCV4hoo3Pf1KWnAJDRVSe+88N4HXM=",
-        "owner": "ThePrimeagen",
-        "repo": "harpoon",
-        "rev": "c1aebbad9e3d13f20bedb8f2ce8b3a94e39e424a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ThePrimeagen",
-        "repo": "harpoon",
         "type": "github"
       }
     },
@@ -472,9 +473,9 @@
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
         "php-debug-adapter": "php-debug-adapter",
+        "php-treesitter": "php-treesitter",
         "phpactor": "phpactor",
         "plugin-enfocado": "plugin-enfocado",
-        "plugin-harpoon": "plugin-harpoon",
         "plugin-laravel": "plugin-laravel",
         "plugin-leetcode": "plugin-leetcode",
         "plugin-php-lsp-utils": "plugin-php-lsp-utils",

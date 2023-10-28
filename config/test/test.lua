@@ -47,7 +47,7 @@ local hydra = require "hydra"
 
 local hint = [[
      Vim Tests
-     _n_: Near test   _h_: Harpoon ^
+     _n_: Near test   ^
      _f_: Current file   _s_: Test Suit ^
      _l_: Test Last  _g_: Visit
      _w_: Watch last Test  _p_: stop watch
@@ -83,7 +83,6 @@ hydra {
     body = "<leader>t",
     heads = {
         { "n",     ":TestNearest<CR>" },
-        { "h",     ":TestNearest -strategy=harpoon<CR>" },
         { "f",     ":TestFile<CR>" },
         { "s",     ":TestSuit<CR>" },
         { "l",     ":TestLast<CR>" },
