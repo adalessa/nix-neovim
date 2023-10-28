@@ -14,7 +14,7 @@
         "php_code_sniffer.bin" = "phpcs";
       };
       handlers = {
-        "textDocument/inlayHint" = ''
+        "textDocument/inlayHint".__raw = ''
           function(err, result, ...)
             for _, res in ipairs(result) do
               res.label = res.label .. ": "
