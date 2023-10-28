@@ -38,6 +38,14 @@
       src = inputs.plugin-leetcode;
     };
   };
+  tree-sitter = prev.tree-sitter // {
+    blade = prev.tree-sitter.buildGrammar {
+      language = "blade";
+      version = "0.7.0";
+      src = inputs.blade-treesitter;
+    };
+  };
+
   phpactor = prev.php.buildComposerProject (finalAttrs: {
     pname = "phpactor";
     version = "2023.09.24.0";

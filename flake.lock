@@ -23,6 +23,22 @@
         "type": "github"
       }
     },
+    "blade-treesitter": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1695162772,
+        "narHash": "sha256-DSDiY6C8zfEE0BTOlbne15cqmPcNdTsl9Cp1huuAqRE=",
+        "owner": "EmranMR",
+        "repo": "tree-sitter-blade",
+        "rev": "a87e20810a71537f42e8eeb11722a19ac6051d1e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "EmranMR",
+        "repo": "tree-sitter-blade",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -451,6 +467,7 @@
     },
     "root": {
       "inputs": {
+        "blade-treesitter": "blade-treesitter",
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
