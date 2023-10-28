@@ -24,6 +24,12 @@
         '';
       };
     };
+
+    onAttach.function = ''
+      vim.api.nvim_buf_create_user_command(bufnr, "LspPhpactorReindex", function()
+        vim.lsp.buf_notify(bufnr, "phpactor/index/reindex", {})
+      end, {})
+    '';
   };
 
   extraPackages = with pkgs; [ php82Packages.phpstan php82Packages.phpcs ];
