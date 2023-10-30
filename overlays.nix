@@ -33,12 +33,12 @@
       name = "leetcode";
       src = inputs.plugin-leetcode;
     };
-  };
-  tree-sitter = prev.tree-sitter // {
-    blade = prev.tree-sitter.buildGrammar {
-      language = "blade";
-      version = "0.7.0";
-      src = inputs.blade-treesitter;
+    nvim-treesitter-parsers = prev.vimPlugins.nvim-treesitter-parsers // {
+      blade = prev.tree-sitter.buildGrammar {
+        language = "blade";
+        version = "0.7.0";
+        src = inputs.blade-treesitter;
+      };
     };
   };
 
