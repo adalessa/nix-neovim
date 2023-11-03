@@ -1,7 +1,9 @@
 {
   plugins.neogit = {
     enable = true;
+    integrations.diffview = true;
   };
+
   keymaps = [
     {
         mode = "n";
