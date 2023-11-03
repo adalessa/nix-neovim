@@ -1,6 +1,8 @@
 { pkgs, ... }: {
   extraPlugins = with pkgs.vimPlugins; [ nui-nvim laravel ];
 
+  extraPackages = [pkgs.fd];
+
   extraConfigLua = ''
     require('laravel').setup()
   '';

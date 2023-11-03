@@ -1,8 +1,10 @@
-let
+{pkgs, ...}: let
   helper = import ../helper.nix;
   luaAction = helper.luaAction;
 in {
   imports = [ ./telescope-ui.nix ./telescope-graphql.nix ];
+
+  extraPackages = [pkgs.fd];
 
   plugins.telescope = {
     enable = true;
