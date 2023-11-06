@@ -12,6 +12,12 @@
         "language_server_phpstan.level" = 7;
         "language_server_phpstan.bin" = "phpstan";
         "php_code_sniffer.bin" = "phpcs";
+        "indexer.exclude_patterns" = [
+          "/vendor/**/Tests/**/*"
+          "/vendor/**/tests/**/*"
+          "/var/cache/**/*"
+          "/vendor/composer/**/*"
+        ];
       };
       handlers = {
         "textDocument/inlayHint".__raw = ''
