@@ -312,11 +312,11 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1698063089,
-        "narHash": "sha256-fJRcsO+KHf0K04fRHIS6HETJRWMakTNbUaWx8WeYHX4=",
+        "lastModified": 1699308475,
+        "narHash": "sha256-sFHOFiE+GV1JkwDmHi0LLJLSRyggdIK1Yra02oj2eZg=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "0c5dcb56d105addedd001f043e6a32ab9f1abe92",
+        "rev": "6b93c8fa6db999320d53f13e0ebd555e33f86577",
         "type": "github"
       },
       "original": {
@@ -414,11 +414,11 @@
     "plugin-leetcode": {
       "flake": false,
       "locked": {
-        "lastModified": 1697985873,
-        "narHash": "sha256-BX9yr9xiUllyBW9Z5kxKXxCrKMbOU8VFtQdESMB8XP4=",
+        "lastModified": 1699648026,
+        "narHash": "sha256-RAOzdVYi/lzGtelAJOU7dDd162i9imkMt4nRDXsVle4=",
         "owner": "kawre",
         "repo": "leetcode.nvim",
-        "rev": "22a899ce96cbffc49de92959ae602dd053f4e325",
+        "rev": "0a0ab1a67fa96ff82f16c44febb4786bb0cf288d",
         "type": "github"
       },
       "original": {
@@ -494,11 +494,11 @@
     "plugin-ultimate-autopairs": {
       "flake": false,
       "locked": {
-        "lastModified": 1697608473,
-        "narHash": "sha256-mElrJn3FkyFg2VSHiNiaaOBIlr+K3mpnO2apoAzmGuo=",
+        "lastModified": 1699108133,
+        "narHash": "sha256-mx8swITSvf+2QYQnenN4Q8VGbpdQmZYQZAJaiDsOEUo=",
         "owner": "altermo",
         "repo": "ultimate-autopair.nvim",
-        "rev": "ded1b64e26fcc708837a8391e0f385c4b87ca09b",
+        "rev": "6fd0d6aa976a97dd6f1bed4d46be1b437613a52f",
         "type": "github"
       },
       "original": {
@@ -546,11 +546,11 @@
         "nixpkgs-stable": "nixpkgs-stable_2"
       },
       "locked": {
-        "lastModified": 1697746376,
-        "narHash": "sha256-gu77VkgdfaHgNCVufeb6WP9oqFLjwK4jHcoPZmBVF3E=",
+        "lastModified": 1698852633,
+        "narHash": "sha256-Hsc/cCHud8ZXLvmm8pxrXpuaPEeNaaUttaCvtdX/Wug=",
         "owner": "cachix",
         "repo": "pre-commit-hooks.nix",
-        "rev": "8cc349bfd082da8782b989cad2158c9ad5bd70fd",
+        "rev": "dec10399e5b56aa95fcd530e0338be72ad6462a0",
         "type": "github"
       },
       "original": {
