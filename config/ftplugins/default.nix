@@ -5,6 +5,5 @@
     "ftplugin/go.lua" = builtins.readFile ./go.lua;
     "ftplugin/json.vim" = builtins.readFile ./json.vim;
     "ftplugin/nix.lua" = builtins.readFile ./nix.lua;
-    "ftplugin/rust.lua" = builtins.readFile ./rust.lua;
   };
 }

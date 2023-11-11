@@ -1,0 +1,34 @@
+{
+  imports = [
+    ./core
+
+    ./autocmd.nix
+    ./cmp.nix
+    ./colorscheme.nix
+    ./comment.nix
+    ./database.nix
+    ./dap
+    ./dressing.nix
+    ./easy-align.nix
+    ./ftplugins
+    ./gitsigns.nix
+    ./harpoon.nix
+    ./keymaps.nix
+    ./laravel.nix
+    ./leetcode.nix
+    ./lsp
+    ./lualine.nix
+    ./luasnip
+    ./neogit.nix
+    ./neorg.nix
+    ./none-ls.nix
+    ./scratch.nix
+    ./soundboard.nix
+    ./telescope.nix
+    ./test
+    ./transparent.nix
+    ./treesitter
+    ./ultimate-autopairs.nix
+    ./worktree.nix
+  ];
+}

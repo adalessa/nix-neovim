@@ -1,20 +1,20 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   plugins.treesitter = {
     enable = true;
     indent = true;
 
     languageRegister.blade = "blade";
 
-    grammarPackages = pkgs.vimPlugins.nvim-treesitter.passthru.allGrammars
-      ++ [ pkgs.vimPlugins.nvim-treesitter-parsers.blade ];
+    grammarPackages =
+      pkgs.vimPlugins.nvim-treesitter.passthru.allGrammars
+      ++ [pkgs.extraVimPlugins.nvim-treesitter-parsers.blade];
   };
 
   extraFiles = {
     "queries/blade/highlights.scm" =
-      builtins.readFile "${pkgs.vimPlugins.nvim-treesitter-parsers.blade}/queries/highlights.scm";
+      builtins.readFile "${pkgs.extraVimPlugins.nvim-treesitter-parsers.blade}/queries/highlights.scm";
     "queries/blade/injections.scm" =
-      builtins.readFile "${pkgs.vimPlugins.nvim-treesitter-parsers.blade}/queries/injections.scm";
+      builtins.readFile "${pkgs.extraVimPlugins.nvim-treesitter-parsers.blade}/queries/injections.scm";
     "queries/nix/injections.scm" =
       builtins.readFile ./queries/nix/injections.scm;
   };

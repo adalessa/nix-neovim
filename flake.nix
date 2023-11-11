@@ -1,9 +1,20 @@
 {
-  description = "A nixvim configuration";
+  description = "Alpha's Neovim configuration";
 
   inputs = {
-    nixvim.url = "github:nix-community/nixvim";
-    flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.05";
+    flake-parts.url = "github:hercules-ci/flake-parts";
+
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    pre-commit-hooks = {
+      url = "github:cachix/pre-commit-hooks.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     plugin-enfocado = {
       url = "github:wuelnerdotexe/vim-enfocado";
@@ -54,34 +65,59 @@
     };
   };
 
-  outputs = { nixpkgs, nixvim, flake-utils, ... }@inputs:
-    let
-      config = import ./config; # import the module directly
-      overlays = import ./overlays.nix { inherit inputs; };
-    in flake-utils.lib.eachDefaultSystem (system:
-      let
-        nixvimLib = nixvim.lib.${system};
-        pkgs = import nixpkgs {
-          inherit system;
-          overlays = [ overlays inputs.php-debug-adapter.overlay ];
-        };
+  outputs = {
+    nixpkgs,
+    nixvim,
+    flake-parts,
+    ...
+  } @ inputs:
+    flake-parts.lib.mkFlake {inherit inputs;} {
+      systems = ["aarch64-linux" "x86_64-linux" "aarch64-darwin" "x86_64-darwin"];
+
+      perSystem = {
+        system,
+        pkgs,
+        self',
+        ...
+      }: let
         nixvim' = nixvim.legacyPackages.${system};
         nvim = nixvim'.makeNixvimWithModule {
           inherit pkgs;
-          module = config;
+          module = ./config/full.nix;
         };
       in {
-        checks = {
-          # Run `nix flake check .` to verify that your config is not broken
-          default = nixvimLib.check.mkTestDerivationFromNvim {
-            inherit nvim;
-            name = "A nixvim configuration";
+        _module.args.pkgs = import inputs.nixpkgs {
+          inherit system;
+          overlays = builtins.attrValues {
+            default = import ./overlay {inherit inputs;};
           };
         };
 
-        packages = {
-          # Lets you run `nix run .` to start nixvim
-          default = nvim;
+        checks = {
+          default = pkgs.nixvimLib.check.mkTestDerivationFromNvim {
+            inherit nvim;
+            name = "A nixvim configuration";
+          };
+          pre-commit-check = inputs.pre-commit-hooks.lib.${system}.run {
+            src = ./.;
+            hooks = {
+              statix.enable = true;
+              alejandra.enable = true;
+            };
+          };
         };
-      });
+
+        formatter = pkgs.alejandra;
+
+        packages = rec {
+          default = full;
+          full = nvim;
+        };
+
+        devShells = {
+          default = with pkgs;
+            mkShell {inherit (self'.checks.pre-commit-check) shellHook;};
+        };
+      };
+    };
 }

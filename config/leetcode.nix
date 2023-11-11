@@ -1,5 +1,5 @@
-{ pkgs, ... }: {
-  extraPlugins = with pkgs.vimPlugins; [ leetcode ];
+{pkgs, ...}: {
+  extraPlugins = with pkgs.extraVimPlugins; [leetcode];
   extraConfigLua = ''
     require('leetcode').setup()
   '';

@@ -1,6 +1,6 @@
 let
   helper = import ../helper.nix;
-  luaAction = helper.luaAction;
+  inherit (helper) luaAction;
 in {
   keymaps = [
     {
@@ -60,15 +60,13 @@ in {
     {
       mode = "n";
       key = "n";
-      options.desc =
-        "Goes to next result on the search and put the cursor in the middle";
+      options.desc = "Goes to next result on the search and put the cursor in the middle";
       action = "nzzzv";
     }
     {
       mode = "n";
       key = "N";
-      options.desc =
-        "Goes to prev result on the search and put the cursor in the middle";
+      options.desc = "Goes to prev result on the search and put the cursor in the middle";
       action = "Nzzzv";
     }
   ];

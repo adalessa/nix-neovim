@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   # Import all your configuration modules here
   imports = [
     ./autocmd.nix
@@ -34,25 +34,26 @@
 
   globals.mapleader = " ";
   clipboard.register = "unnamedplus";
+  plugins = {
+    nvim-colorizer.enable = true;
+    surround.enable = true;
+    todo-comments.enable = true;
+    nvim-lightbulb = {
+      enable = true;
+      virtualText.enabled = true;
+    };
 
-  plugins.nvim-colorizer.enable = true;
-  plugins.surround.enable = true;
-  plugins.todo-comments.enable = true;
-  plugins.nvim-lightbulb = {
-    enable = true;
-    virtualText.enabled = true;
-  };
+    notify = {
+      enable = true;
+      backgroundColour = "#000000";
+    };
+    nix.enable = true;
 
-  plugins.notify = {
-    enable = true;
-    backgroundColour = "#000000";
-  };
-  plugins.nix.enable = true;
-
-  plugins.emmet = {
-    enable = true;
-    leader = "<c-g>";
-    mode = "i";
+    emmet = {
+      enable = true;
+      leader = "<c-g>";
+      mode = "i";
+    };
   };
 
   extraPlugins = with pkgs.vimPlugins; [

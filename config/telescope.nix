@@ -1,8 +1,8 @@
 {pkgs, ...}: let
   helper = import ../helper.nix;
-  luaAction = helper.luaAction;
+  inherit (helper) luaAction;
 in {
-  imports = [ ./telescope-ui.nix ./telescope-graphql.nix ];
+  imports = [./telescope-ui.nix ./telescope-graphql.nix];
 
   extraPackages = [pkgs.fd];
 
@@ -12,7 +12,7 @@ in {
       file_browser = {
         enable = true;
         path = "%:p:h";
-        mappings = { "i" = { "<c-y>" = "create_from_prompt"; }; };
+        mappings = {"i" = {"<c-y>" = "create_from_prompt";};};
       };
       fzf-native.enable = true;
     };
@@ -70,7 +70,8 @@ in {
       key = "<leader>pw";
       options.desc = "Grep current word";
       lua = true;
-      action = luaAction
+      action =
+        luaAction
         "require('telescope.builtin').grep_string { search = vim.fn.expand '<cword>' }";
     }
     {

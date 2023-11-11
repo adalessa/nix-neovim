@@ -1,5 +1,5 @@
-{ pkgs, ... }: {
-  extraPlugins = with pkgs.vimPlugins; [ nui-nvim laravel ];
+{pkgs, ...}: {
+  extraPlugins = [pkgs.vimPlugins.nui-nvim pkgs.extraVimPlugins.laravel];
 
   extraPackages = [pkgs.fd];
 

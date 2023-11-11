@@ -1,9 +1,8 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   helper = import ../../helper.nix;
-  luaAction = helper.luaAction;
+  inherit (helper) luaAction;
 in {
-  extraPlugins = with pkgs.vimPlugins; [ luasnip ];
+  extraPlugins = with pkgs.vimPlugins; [luasnip];
 
   extraFiles = {
     "lua/alpha/snippets/php.lua" = builtins.readFile ./snippets/php.lua;
@@ -21,7 +20,7 @@ in {
 
   keymaps = [
     {
-      mode = [ "i" "s" ];
+      mode = ["i" "s"];
       key = "<c-k>";
       lua = true;
       action = luaAction ''
@@ -33,7 +32,7 @@ in {
       options.silent = true;
     }
     {
-      mode = [ "i" "s" ];
+      mode = ["i" "s"];
       key = "<c-j>";
       lua = true;
       action = luaAction ''
@@ -45,7 +44,7 @@ in {
       options.silent = true;
     }
     {
-      mode = [ "i" "s" ];
+      mode = ["i" "s"];
       key = "<c-l>";
       lua = true;
       action = luaAction ''

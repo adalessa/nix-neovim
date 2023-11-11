@@ -1,5 +1,5 @@
-{ pkgs, ... }: {
-  extraPlugins = with pkgs.vimPlugins; [ transparent ];
+{pkgs, ...}: {
+  extraPlugins = with pkgs.extraVimPlugins; [transparent];
   extraConfigLua = ''
     require('transparent').setup()
   '';
