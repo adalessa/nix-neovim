@@ -312,11 +312,11 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1699308475,
-        "narHash": "sha256-sFHOFiE+GV1JkwDmHi0LLJLSRyggdIK1Yra02oj2eZg=",
+        "lastModified": 1699721903,
+        "narHash": "sha256-ghsMr6EqRNCRJtzNokmqeyA3soMjl7bc+/TN7LX/Izc=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "6b93c8fa6db999320d53f13e0ebd555e33f86577",
+        "rev": "1286a0f41e37b2bb94f2eb87a7f4efde727f8e87",
         "type": "github"
       },
       "original": {
@@ -446,11 +446,11 @@
     "plugin-scratch": {
       "flake": false,
       "locked": {
-        "lastModified": 1696534690,
-        "narHash": "sha256-d6/u+7lKTCYHdu+MTSlwlQaRqWsRCxmaA/AJwt8BzvI=",
+        "lastModified": 1699726500,
+        "narHash": "sha256-yBWqmdI64ldWJp4ZwftNwPYqAmQg3AW5seEs3oCyxJU=",
         "owner": "adalessa",
         "repo": "scratch.nvim",
-        "rev": "c1d12519691e8c324a57937ac457117c5207b985",
+        "rev": "a4374b62b5e5a4d2b4f6e9d89d974b8257dc19f1",
         "type": "github"
       },
       "original": {
@@ -546,11 +546,11 @@
         "nixpkgs-stable": "nixpkgs-stable_2"
       },
       "locked": {
-        "lastModified": 1698852633,
-        "narHash": "sha256-Hsc/cCHud8ZXLvmm8pxrXpuaPEeNaaUttaCvtdX/Wug=",
+        "lastModified": 1699271226,
+        "narHash": "sha256-8Jt1KW3xTjolD6c6OjJm9USx/jmL+VVmbooADCkdDfU=",
         "owner": "cachix",
         "repo": "pre-commit-hooks.nix",
-        "rev": "dec10399e5b56aa95fcd530e0338be72ad6462a0",
+        "rev": "ea758da1a6dcde6dc36db348ed690d09b9864128",
         "type": "github"
       },
       "original": {
