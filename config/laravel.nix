@@ -18,5 +18,10 @@
       key = "<leader>lr";
       action = ":Laravel routes<cr>";
     }
+    {
+      mode = "n";
+      key = "<leader>lh";
+      action = ":Artisan docs<cr>";
+    }
   ];
 }
