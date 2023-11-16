@@ -1,5 +1,5 @@
 {
-  imports = [ ./phpactor.nix ./lua-ls.nix ];
+  imports = [./phpactor.nix ./lua-ls.nix ./htmx.nix];
 
   plugins.fidget.enable = true;
   plugins.lsp = {

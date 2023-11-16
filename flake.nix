@@ -16,6 +16,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    htmx-lsp = {
+      url = "github:/ThePrimeagen/htmx-lsp";
+      flake = false;
+    };
+
     plugin-enfocado = {
       url = "github:wuelnerdotexe/vim-enfocado";
       flake = false;

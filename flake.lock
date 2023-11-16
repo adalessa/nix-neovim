@@ -204,6 +204,22 @@
         "type": "github"
       }
     },
+    "htmx-lsp": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1700096796,
+        "narHash": "sha256-7HNcmSd7y82HYWf7CVbWsANIUUq/YVU5HZNZKY1hgvA=",
+        "owner": "ThePrimeagen",
+        "repo": "htmx-lsp",
+        "rev": "b39031a2b1cf2f07ecbd29f61f889e887a5355b0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ThePrimeagen",
+        "repo": "htmx-lsp",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1699099776,
@@ -587,6 +603,7 @@
       "inputs": {
         "blade-treesitter": "blade-treesitter",
         "flake-parts": "flake-parts",
+        "htmx-lsp": "htmx-lsp",
         "nixpkgs": "nixpkgs",
         "nixpkgs-stable": "nixpkgs-stable",
         "nixvim": "nixvim",
