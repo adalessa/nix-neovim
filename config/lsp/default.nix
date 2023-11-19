@@ -22,6 +22,10 @@
       vim.keymap.set('n', '<leader>vf', function()
         vim.lsp.buf.format({async = true})
       end)
+
+      vim.keymap.set('i', '<c-k>', function()
+        vim.lsp.buf.signature_help()
+      end)
     '';
 
     servers = {
