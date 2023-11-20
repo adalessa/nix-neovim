@@ -7,7 +7,6 @@
     ./comment.nix
     ./database.nix
     ./dap
-    ./diagnostic.nix
     ./dressing.nix
     ./easy-align.nix
     ./ftplugins
