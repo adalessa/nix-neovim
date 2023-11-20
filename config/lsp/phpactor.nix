@@ -8,6 +8,7 @@
         "language_server_worse_reflection.inlay_hints.params" = true;
         "language_server_configuration.auto_config" = false;
         "code_transform.import_globals" = true;
+        "prophecy.enabled" = true;
         "language_server_phpstan.enabled" = true;
         "language_server_phpstan.level" = 7;
         "language_server_phpstan.bin" = "phpstan";
