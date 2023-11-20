@@ -23,7 +23,7 @@
         vim.lsp.buf.format({async = true})
       end)
 
-      vim.keymap.set('i', '<c-i>', function()
+      vim.keymap.set('i', '<c-y>', function()
         vim.lsp.buf.signature_help()
       end)
     '';
