@@ -1,5 +1,8 @@
 {pkgs, ...}: {
-  imports = [./core.nix];
+  imports = [
+    ./core.nix
+    ./autocmd.nix
+  ];
 
   globals.mapleader = " ";
   clipboard.register = "unnamedplus";

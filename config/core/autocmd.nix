@@ -1,12 +1,12 @@
 {
   autoCmd = [
     {
-      event = [ "BufWritePre" ];
+      event = ["BufWritePre"];
       desc = "Remove trailing whitespace";
       command = ":%s/\\s\\+$//e";
     }
     {
-      event = [ "FileType" ];
+      event = ["FileType"];
       pattern = [
         "git"
         "qf"

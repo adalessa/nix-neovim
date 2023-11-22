@@ -2,7 +2,6 @@
   imports = [
     ./core
 
-    ./autocmd.nix
     ./cmp.nix
     ./colorscheme.nix
     ./comment.nix
