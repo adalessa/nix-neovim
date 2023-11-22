@@ -30,8 +30,7 @@
       enable = true;
       snippet.expand = "luasnip";
       mapping = {
-        "<c-y>" =
-          "cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert })";
+        "<c-y>" = "cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert })";
         "<c-d>" = "cmp.mapping.scroll_docs(-4)";
         "<c-f>" = "cmp.mapping.scroll_docs(4)";
         "<c-space>" = "cmp.mapping.complete()";
@@ -40,54 +39,56 @@
         "<c-p>" = "cmp.mapping.select_prev_item()";
       };
       sources = [
-        { name = "nvim_lsp"; }
-        { name = "path"; }
-        { name = "buffer"; }
-        { name = "luasnip"; }
+        {name = "nvim_lsp";}
+        {name = "path";}
+        {name = "buffer";}
+        {name = "luasnip";}
         # { name = "copilot"; }
       ];
     };
   };
 
   extraConfigLuaPost = ''
-    local cmp = require "cmp"
-    -- Set configuration for specific filetype.
-    ---@diagnostic disable-next-line: missing-fields
-    cmp.setup.filetype("gitcommit", {
-      sources = cmp.config.sources({
-        { name = "cmp_git" }, -- You can specify the `cmp_git` source if you were installed it.
-      }, {
-        { name = "buffer" },
-      }),
-    })
+    do
+      local cmp = require "cmp"
+      -- Set configuration for specific filetype.
+      ---@diagnostic disable-next-line: missing-fields
+      cmp.setup.filetype("gitcommit", {
+        sources = cmp.config.sources({
+          { name = "cmp_git" }, -- You can specify the `cmp_git` source if you were installed it.
+        }, {
+          { name = "buffer" },
+        }),
+      })
 
-    -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
-    ---@diagnostic disable-next-line: missing-fields
-    cmp.setup.cmdline({"/", "?"}, {
-      mapping = cmp.mapping.preset.cmdline(),
-      sources = {
-        { name = "buffer" },
-      },
-    })
+      -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
+      ---@diagnostic disable-next-line: missing-fields
+      cmp.setup.cmdline({"/", "?"}, {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = {
+          { name = "buffer" },
+        },
+      })
 
-    -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-    ---@diagnostic disable-next-line: missing-fields
-    cmp.setup.cmdline(":", {
-      mapping = cmp.mapping.preset.cmdline(),
-      sources = cmp.config.sources({
-        { name = "path" },
-      }, {
-        { name = "cmdline" },
-      }),
-    })
+      -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+      ---@diagnostic disable-next-line: missing-fields
+      cmp.setup.cmdline(":", {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = cmp.config.sources({
+          { name = "path" },
+        }, {
+          { name = "cmdline" },
+        }),
+      })
 
-    ---@diagnostic disable-next-line: missing-fields
-    cmp.setup.filetype({ "sql", "mysql", "plsql" }, {
-      sources = cmp.config.sources({
-        { name = "vim-dadbod-completion" },
-      }, {
-        { name = "buffer" },
-      }),
-    })
+      ---@diagnostic disable-next-line: missing-fields
+      cmp.setup.filetype({ "sql", "mysql", "plsql" }, {
+        sources = cmp.config.sources({
+          { name = "vim-dadbod-completion" },
+        }, {
+          { name = "buffer" },
+        }),
+      })
+    end
   '';
 }

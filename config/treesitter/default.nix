@@ -22,10 +22,12 @@
   filetype.pattern.".*%.blade%.php" = "blade";
 
   extraConfigLua = ''
-    local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-    parser_config.blade = {
-      filetype = "blade"
-    }
+    do
+      local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+      parser_config.blade = {
+        filetype = "blade"
+      }
+    end
   '';
 
   plugins.treesitter-context.enable = true;

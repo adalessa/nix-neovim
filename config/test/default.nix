@@ -5,9 +5,8 @@
   ];
 
   extraConfigLua = ''
-    local test_setup = function()
+    do
       ${builtins.readFile ./test.lua}
     end
-    test_setup()
   '';
 }

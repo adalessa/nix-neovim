@@ -12,10 +12,9 @@ in {
   };
 
   extraConfigLua = ''
-    local luasnip_setup = function()
+    do
       ${builtins.readFile ./luasnip.lua}
     end
-    luasnip_setup()
   '';
 
   keymaps = [
