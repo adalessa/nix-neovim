@@ -1,5 +1,5 @@
 {
-  imports = [./phpactor.nix ./lua-ls.nix ./htmx.nix];
+  imports = [./htmx.nix];
 
   plugins.fidget.enable = true;
   plugins.lsp = {
@@ -25,11 +25,8 @@
     '';
 
     servers = {
-      nil_ls.enable = true;
-      gopls.enable = true;
       html.enable = true;
       jsonls.enable = true;
-      rust-analyzer.enable = true;
       volar.enable = true;
       tsserver.enable = true;
       tailwindcss = {

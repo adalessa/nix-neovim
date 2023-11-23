@@ -1,5 +1,5 @@
 let
-  helper = import ../helper.nix;
+  helper = import ../../helper.nix;
   inherit (helper) luaAction;
 in {
   keymaps = [

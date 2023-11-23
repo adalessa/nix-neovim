@@ -2,6 +2,7 @@
   imports = [
     ./core.nix
     ./autocmd.nix
+    ./keymaps.nix
   ];
 
   globals.mapleader = " ";
@@ -20,15 +21,12 @@
       enable = true;
       backgroundColour = "#000000";
     };
-    nix.enable = true;
 
     emmet = {
       enable = true;
       leader = "<c-g>";
       mode = "i";
     };
-
-    rust-tools.enable = true;
   };
 
   extraPlugins = with pkgs.vimPlugins; [

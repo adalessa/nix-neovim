@@ -1,7 +1,7 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   plugins.lsp.servers.phpactor = {
     enable = true;
-    filetypes = [ "php" "blade" ];
+    filetypes = ["php" "blade"];
     extraOptions = {
       init_options = {
         "language_server_worse_reflection.inlay_hints.enable" = true;
@@ -39,5 +39,5 @@
     '';
   };
 
-  extraPackages = with pkgs; [ php82Packages.phpstan php82Packages.phpcs ];
+  extraPackages = with pkgs; [php82Packages.phpstan php82Packages.phpcs];
 }
