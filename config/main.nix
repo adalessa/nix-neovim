@@ -15,6 +15,7 @@
     ./frameworks/htmx
     ./frameworks/tailwindcss
     ./frameworks/vue
+    ./frameworks/svelte
 
     ./modules/database
     ./modules/debug
