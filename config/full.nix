@@ -2,51 +2,31 @@
   imports = [
     ./core
 
-    # Others should be part of the core
-    # Core plugins & configs should not be related to an specific language
-    # If so should go to the specific module
+    ./languages/go
+    ./languages/html
+    ./languages/json
+    ./languages/lua
+    ./languages/nix
+    ./languages/php
+    ./languages/rust
+    ./languages/typescript
 
-    # Create another configs Full is of course all, but have something like Symfony or work or similar without what I don't need
-    # To start I need 2
+    ./frameworks/laravel
+    ./frameworks/symfony
+    ./frameworks/htmx
+    ./frameworks/tailwindcss
+    ./frameworks/vue
 
-    # make a module per language where it makes sense
-    # PHP
-    # Laravel
-    # Symfony
-    # Javascript
-    # Vue
-    # React
-    # Golang
-    # Rust
-    ./modules/nix
-    ./modules/rust
-    ./modules/laravel
-    ./modules/symfony
+    ./modules/database
+    ./modules/debug
+    ./modules/git
+    ./modules/notes
+    ./modules/tests
+    ./modules/ui
 
-    ./cmp.nix
-    ./colorscheme.nix
-    ./comment.nix
-    ./database.nix
-    ./dap
-    ./diagnostic.nix
-    ./dressing.nix
-    ./easy-align.nix
-    ./gitsigns.nix
-    ./harpoon.nix
-    ./leetcode.nix
-    ./lsp
-    ./lualine.nix
-    ./luasnip
-    ./neogit.nix
-    ./neorg.nix
-    ./none-ls.nix
-    ./scratch.nix
-    ./soundboard.nix
-    ./telescope.nix
-    ./test
-    ./transparent.nix
-    ./treesitter
-    ./ultimate-autopairs.nix
-    ./worktree.nix
+    ./tools/harpoon.nix
+    ./tools/leetcode.nix
+    ./tools/scratch.nix
+    ./tools/todo-comments.nix
   ];
 }
