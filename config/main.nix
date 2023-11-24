@@ -12,7 +12,6 @@
     ./languages/typescript
 
     ./frameworks/laravel
-    ./frameworks/symfony
     ./frameworks/htmx
     ./frameworks/tailwindcss
     ./frameworks/vue

@@ -88,7 +88,7 @@
         nixvim' = nixvim.legacyPackages.${system};
         nvim = nixvim'.makeNixvimWithModule {
           inherit pkgs;
-          module = ./config/full.nix;
+          module = ./config/main.nix;
         };
         work' = nixvim'.makeNixvimWithModule {
           inherit pkgs;
@@ -119,8 +119,8 @@
         formatter = pkgs.alejandra;
 
         packages = rec {
-          default = full;
-          full = nvim;
+          default = main;
+          main = nvim;
           work = work';
         };
 
