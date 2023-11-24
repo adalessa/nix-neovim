@@ -4,7 +4,7 @@
 in {
   imports = [./telescope-ui.nix];
 
-  extraPackages = [pkgs.fd];
+  extraPackages = [pkgs.fd pkgs.ripgrep];
 
   plugins.telescope = {
     enable = true;
