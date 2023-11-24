@@ -10,6 +10,10 @@
     };
   };
 
+  extraFiles = {
+    "luasnippets/nix/nix.lua" = builtins.readFile ./snippets.lua;
+  };
+
   autoCmd = [
     {
       event = ["FileType"];

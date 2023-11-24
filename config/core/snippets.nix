@@ -1,25 +1,18 @@
-{pkgs, ...}: let
-  helper = import ../../../helper.nix;
+let
+  helper = import ../../helper.nix;
   inherit (helper) luaAction;
 in {
-  extraPlugins = with pkgs.vimPlugins; [luasnip];
+  plugins.luasnip = {
+    enable = true;
 
-  # TODO: can refactor with the new api.
-  # can have all and have the languages add the files
-  # This have to have the all
+    extraConfig = {
+      history = true;
+      updateevents = "TextChanged,TextChangedI";
+      enable_autosnippets = true;
+    };
 
-  extraFiles = {
-    "lua/alpha/snippets/php.lua" = builtins.readFile ./snippets/php.lua;
-    "lua/alpha/snippets/lua.lua" = builtins.readFile ./snippets/lua.lua;
-    "lua/alpha/snippets/go.lua" = builtins.readFile ./snippets/go.lua;
-    "lua/alpha/snippets/nix.lua" = builtins.readFile ./snippets/nix.lua;
+    fromLua = [{}];
   };
-
-  extraConfigLua = ''
-    do
-      ${builtins.readFile ./luasnip.lua}
-    end
-  '';
 
   keymaps = [
     {

@@ -3,6 +3,10 @@
 
   imports = [../../languages/php ./telescope-graphql.nix];
 
+  extraFiles = {
+    "luasnippets/php/symfony.lua" = builtins.readFile ./snippets.lua;
+  };
+
   plugins.dap = {
     adapters.executables = {php = {command = "php-debug-adapter";};};
     configurations = {

@@ -8,7 +8,7 @@
     ./easy-align.nix
     ./keymaps.nix
     ./lsp.nix
-    ./luasnip
+    ./snippets.nix
     ./telescope
     ./transparent.nix
     ./treesitter.nix

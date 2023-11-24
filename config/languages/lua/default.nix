@@ -6,6 +6,10 @@
     require('neodev').setup()
   '';
 
+  extraFiles = {
+    "luasnippets/lua/lua.lua" = builtins.readFile ./snippets.lua;
+  };
+
   plugins.lsp.servers.lua-ls.enable = true;
 
   autoCmd = [
