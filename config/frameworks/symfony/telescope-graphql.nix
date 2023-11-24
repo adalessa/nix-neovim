@@ -29,6 +29,7 @@ in {
         require('telescope').extensions.graphql.definitions({
           files = files,
           attach_mappings = function(prompt_bufnr, map)
+            -- TODO: Add action to do a search base on the selected name <c-f>
             map("i", "<c-o>", function()
               actions.close(prompt_bufnr)
               local selection = action_state.get_selected_entry()
