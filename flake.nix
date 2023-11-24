@@ -90,6 +90,10 @@
           inherit pkgs;
           module = ./config/full.nix;
         };
+        work' = nixvim'.makeNixvimWithModule {
+          inherit pkgs;
+          module = ./config/work.nix;
+        };
       in {
         _module.args.pkgs = import inputs.nixpkgs {
           inherit system;
@@ -117,6 +121,7 @@
         packages = rec {
           default = full;
           full = nvim;
+          work = work';
         };
 
         devShells = {
