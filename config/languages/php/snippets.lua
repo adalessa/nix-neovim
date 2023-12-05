@@ -68,8 +68,20 @@ public function it_{}(): void
 ]],
       { i(1, ""), i(0, "") }
     )),
+  s(
+    { trig = "fn", desc = "Creates a function" },
+    fmt(
+      [[{} function {}({}): {}
+{{
+  {}
+}}]],
+      { visibility(1, "public"), i(2), i(3), i(4, "void"), i(0) }
+    )),
+
+
 
 }, {
+  -- AUTOTRIGGER
   s(
     { trig = "_p", desc = "Creates a constructor for promoted properties" },
     fmt(
@@ -99,16 +111,6 @@ public function it_{}(): void
     { trig = "strict", desc = "Sets the declare strict" },
     t "declare(strict_types=1);"
   ),
-
-  s(
-    { trig = "fn", desc = "Creates a function" },
-    fmt(
-      [[{} function {}({}): {}
-{{
-  {}
-}}]],
-      { visibility(1, "public"), i(2), i(3), i(4, "void"), i(0) }
-    )),
 
   s(
     { trig = "sfn", desc = "Creates an static function" }, fmt(
