@@ -1,7 +1,13 @@
 {pkgs, ...}: {
   extraPackages = [pkgs.php-debug-adapter];
 
-  imports = [../../languages/php ./telescope-graphql.nix];
+  imports = [
+    ../../languages/php
+    ../../languages/php/phpactor/phpstan.nix
+    ../../languages/php/phpactor/phpcs.nix
+
+    ./telescope-graphql.nix
+  ];
 
   extraFiles = {
     "luasnippets/php/symfony.lua" = builtins.readFile ./snippets.lua;

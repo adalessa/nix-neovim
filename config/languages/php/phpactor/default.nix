@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   plugins.lsp.servers.phpactor = {
     enable = true;
     filetypes = ["php" "blade"];
@@ -9,11 +9,6 @@
         "language_server_worse_reflection.inlay_hints.params" = true;
         "code_transform.import_globals" = true;
         "prophecy.enabled" = true;
-        "language_server_phpstan.enabled" = true;
-        "language_server_phpstan.level" = "7";
-        "language_server_phpstan.bin" = "phpstan";
-        "php_code_sniffer.enabled" = true;
-        "php_code_sniffer.bin" = "phpcs";
         "indexer.exclude_patterns" = [
           "/vendor/**/Tests/**/*"
           "/vendor/**/tests/**/*"
@@ -39,6 +34,4 @@
       end, {})
     '';
   };
-
-  extraPackages = with pkgs; [php82Packages.phpstan php82Packages.phpcs];
 }

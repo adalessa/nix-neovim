@@ -1,5 +1,11 @@
 {pkgs, ...}: {
-  imports = [../../languages/php ./blade.nix];
+  imports = [
+    ../../languages/php
+
+    ../../languages/php/phpactor/phpstan.nix
+
+    ./blade.nix
+  ];
 
   plugins.none-ls.enable = true;
 
