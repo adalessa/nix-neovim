@@ -4,13 +4,13 @@
     filetypes = ["php" "blade"];
     extraOptions = {
       init_options = {
+        "language_server_configuration.auto_config" = false;
         "language_server_worse_reflection.inlay_hints.enable" = true;
         "language_server_worse_reflection.inlay_hints.params" = true;
-        "language_server_configuration.auto_config" = false;
         "code_transform.import_globals" = true;
         "prophecy.enabled" = true;
         "language_server_phpstan.enabled" = true;
-        "language_server_phpstan.level" = 7;
+        "language_server_phpstan.level" = "7";
         "language_server_phpstan.bin" = "phpstan";
         "php_code_sniffer.enabled" = true;
         "php_code_sniffer.bin" = "phpcs";
