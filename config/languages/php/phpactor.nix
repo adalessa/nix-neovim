@@ -12,6 +12,7 @@
         "language_server_phpstan.enabled" = true;
         "language_server_phpstan.level" = 7;
         "language_server_phpstan.bin" = "phpstan";
+        "php_code_sniffer.enabled" = true;
         "php_code_sniffer.bin" = "phpcs";
         "indexer.exclude_patterns" = [
           "/vendor/**/Tests/**/*"

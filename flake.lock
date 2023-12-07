@@ -380,16 +380,16 @@
     "phpactor": {
       "flake": false,
       "locked": {
-        "lastModified": 1695552818,
-        "narHash": "sha256-HWWs44gItSQYxrroDY+q9e7uERf0ChSAliqArAUNaJs=",
+        "lastModified": 1701608143,
+        "narHash": "sha256-zLSGzaUzroWkvFNCj3uA9KdZ3K/EIQOZ7HzV6Ms5/BE=",
         "owner": "phpactor",
         "repo": "phpactor",
-        "rev": "aa0f667e59ba4c5db624bcf83c3bea91015b0e77",
+        "rev": "1dcb8b2c589912ca8712a75c0a214d365de331fc",
         "type": "github"
       },
       "original": {
         "owner": "phpactor",
-        "ref": "2023.09.24.0",
+        "ref": "2023.12.03.0",
         "repo": "phpactor",
         "type": "github"
       }

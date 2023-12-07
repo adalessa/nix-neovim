@@ -62,7 +62,7 @@
       flake = false;
     };
     phpactor = {
-      url = "github:phpactor/phpactor?ref=2023.09.24.0";
+      url = "github:phpactor/phpactor?ref=2023.12.03.0";
       flake = false;
     };
     php-debug-adapter = {

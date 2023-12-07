@@ -7,6 +7,11 @@
     "luasnippets/php/symfony.lua" = builtins.readFile ./snippets.lua;
   };
 
+  plugins.none-ls = {
+    enable = true;
+    sources.formatting.phpcbf.enable = true;
+  };
+
   plugins.dap = {
     adapters.executables = {php = {command = "php-debug-adapter";};};
     configurations = {
