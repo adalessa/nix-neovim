@@ -9,6 +9,7 @@
         "language_server_worse_reflection.inlay_hints.params" = true;
         "code_transform.import_globals" = true;
         "prophecy.enabled" = true;
+        "phpunit.enabled" = true;
         "indexer.exclude_patterns" = [
           "/vendor/**/Tests/**/*"
           "/vendor/**/tests/**/*"
