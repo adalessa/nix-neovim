@@ -78,10 +78,6 @@ public function it_{}(): void
       { visibility(1, "public"), i(2), i(3), i(4, "void"), i(0) }
     )),
 
-
-
-}, {
-  -- AUTOTRIGGER
   s(
     { trig = "_p", desc = "Creates a constructor for promoted properties" },
     fmt(
@@ -120,4 +116,6 @@ public function it_{}(): void
 }}]],
       { visibility(1, "public"), i(2), i(3), i(4, "void"), i(0) }
     )),
+}, {
+  -- AUTOTRIGGER
 }
