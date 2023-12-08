@@ -9,7 +9,6 @@
       gi = "implementation";
       gT = "type_definition";
       "<leader>vrn" = "rename";
-      "<leader>vca" = "code_action";
     };
 
     onAttach = ''
@@ -20,6 +19,8 @@
       vim.keymap.set('i', '<c-t>', function()
         vim.lsp.buf.signature_help()
       end)
+
+      vim.keymap.set({'v', 'n'}, '<leader>vca', vim.lsp.buf.code_action)
     '';
   };
 }
