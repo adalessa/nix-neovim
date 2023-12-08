@@ -17,6 +17,7 @@
     ./modules/tests
     ./modules/ui
 
+    ./tools/oil.nix
     ./tools/harpoon.nix
     ./tools/make-runner.nix
     ./tools/scratch.nix

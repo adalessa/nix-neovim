@@ -24,6 +24,7 @@
     ./modules/tests
     ./modules/ui
 
+    ./tools/oil.nix
     ./tools/harpoon.nix
     ./tools/leetcode.nix
     ./tools/make-runner.nix
