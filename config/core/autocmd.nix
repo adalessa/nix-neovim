@@ -8,18 +8,18 @@
     {
       event = ["FileType"];
       pattern = [
+        "dbout"
+        "fugitive"
         "git"
-        "qf"
         "help"
+        "lspinfo"
         "man"
         "notify"
-        "fugitive"
-        "lspinfo"
-        "dbout"
+        "PlenaryTestPopup"
+        "qf"
         "spectre_panel"
         "startuptime"
         "tsplayground"
-        "PlenaryTestPopup"
       ];
       callback = {
         __raw = ''
