@@ -1,9 +1,10 @@
-let
+{pkgs, ...}: let
   helper = import ../../helper.nix;
   inherit (helper) luaAction;
 in {
   plugins.harpoon = {
     enable = true;
+    package = pkgs.extraVimPlugins.harpoon;
     keymaps = {
       addFile = "<leader>sa";
       toggleQuickMenu = "<leader>ss";

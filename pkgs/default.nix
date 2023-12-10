@@ -46,6 +46,10 @@
       name = "leetcode";
       src = inputs.plugin-leetcode;
     };
+    harpoon = pkgs.vimUtils.buildVimPlugin {
+      name = "harpoon";
+      src = inputs.plugin-harpoon;
+    };
     nvim-treesitter-parsers =
       pkgs.vimPlugins.nvim-treesitter-parsers
       // {

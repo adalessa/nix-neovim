@@ -41,6 +41,10 @@
       url = "github:adalessa/telescope-graphql";
       flake = false;
     };
+    plugin-harpoon = {
+      url = "github:ThePrimeagen/harpoon";
+      flake = false;
+    };
     plugin-transparent = {
       url = "github:xiyaowong/nvim-transparent";
       flake = false;
