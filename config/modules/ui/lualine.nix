@@ -1,49 +1,55 @@
-{pkgs, ...}: {
-  extraPlugins = [pkgs.vimPlugins.lualine-nvim];
+{
+  plugins.lualine = {
+    enable = true;
+    globalstatus = true;
+    iconsEnabled = true;
+    theme = "auto";
+    extensions = ["quickfix"];
 
-  extraConfigLua = ''
-    require("lualine").setup({
-      options = {
-        theme = "auto",
-        icons_enabled = true,
-        globalstatus = true,
-      },
-      extensions = { "quickfix" },
-      sections = {
-        lualine_a = { { "mode", upper = true } },
-        lualine_b = { { "branch", icon = "" }, "db_ui#statusline" },
-        lualine_c = { { "filename", file_status = true, path = 1 } },
-        lualine_x = {
-          "diagnostics",
-          "diff",
-          {
-            "require('laravel.status').get('php')",
-            icon = {" ", color = { fg = "5e79be" }, },
-          },
-          {
-            "require('laravel.status').get('laravel')",
-            icon = {" ", color = { fg = "f9322c" }, },
-          },
-        },
-        lualine_y = { "filetype" },
-        lualine_z = { "location" },
-      },
-      winbar = {
-        lualine_a = {},
-        lualine_b = {},
-        lualine_c = {},
-        lualine_x = {},
-        lualine_y = {},
-        lualine_z = {},
-      },
-      inactive_winbar = {
-        lualine_a = {},
-        lualine_b = {},
-        lualine_c = { { "filename", file_status = true, path = 1 } },
-        lualine_x = {},
-        lualine_y = {},
-        lualine_z = {},
-      },
-    })
-  '';
+    sections = {
+      lualine_a = [
+        {
+          name = "mode";
+          extraConfig = {
+            upper = true;
+          };
+        }
+      ];
+      lualine_b = [
+        {
+          name = "branch";
+          icon = "";
+        }
+        "db_ui#statusline"
+      ];
+      lualine_c = [
+        {
+          name = "filename";
+          extraConfig = {
+            file_status = true;
+            path = 1;
+          };
+        }
+      ];
+
+      lualine_x = [
+        "diagnostics"
+        "diff"
+      ];
+
+      lualine_y = ["filetype"];
+      lualine_z = ["location"];
+    };
+    inactiveWinbar = {
+      lualine_c = [
+        {
+          name = "filename";
+          extraConfig = {
+            file_status = true;
+            path = 1;
+          };
+        }
+      ];
+    };
+  };
 }

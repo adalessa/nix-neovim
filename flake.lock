@@ -199,11 +199,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1701718080,
-        "narHash": "sha256-6ovz0pG76dE0P170pmmZex1wWcQoeiomUZGggfH9XPs=",
+        "lastModified": 1702151865,
+        "narHash": "sha256-9VAt19t6yQa7pHZLDbil/QctAgVsA66DLnzdRGqDisg=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "2c7f3c0fb7c08a0814627611d9d7d45ab6d75335",
+        "rev": "666fc80e7b2afb570462423cb0e1cf1a3a34fedd",
         "type": "github"
       },
       "original": {
@@ -304,11 +304,11 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1702157149,
-        "narHash": "sha256-R/DJp9s4EPjNYsquuBkFmLm9NGlFQrZ+T+Gkyr9pYBE=",
+        "lastModified": 1702228270,
+        "narHash": "sha256-pmhnEHGnP5n7UrWcOx/qEI0jjAhzbEianKdMqbI7gWg=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "430c8f672bcaf811aaae8b7856fcca481b7064e5",
+        "rev": "c1cbb0012685b69fc6391f93d279975032b37dcf",
         "type": "github"
       },
       "original": {
@@ -502,11 +502,11 @@
     "plugin-ultimate-autopairs": {
       "flake": false,
       "locked": {
-        "lastModified": 1701152061,
-        "narHash": "sha256-GrfyuGfDlvYFmlv9/gXgAkxGJbrCBxHRKIaw1ofRDlI=",
+        "lastModified": 1702208082,
+        "narHash": "sha256-V2pFjC5GmyJGOEY00xN2svCbJjF3fjl7zA6mvUpNvs4=",
         "owner": "altermo",
         "repo": "ultimate-autopair.nvim",
-        "rev": "3b8c8b153b54b2cb86dc6fcc547264a84c31f775",
+        "rev": "41d8b52183df39096d5a2918467cd6266282f64b",
         "type": "github"
       },
       "original": {

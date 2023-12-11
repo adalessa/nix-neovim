@@ -7,8 +7,6 @@
     ./blade.nix
   ];
 
-  plugins.none-ls.enable = true;
-
   extraPlugins = with pkgs; [
     extraVimPlugins.laravel
     vimPlugins.nui-nvim
@@ -16,17 +14,43 @@
   ];
 
   extraPackages = [pkgs.fd pkgs.php-debug-adapter];
+  plugins = {
+    none-ls.enable = true;
 
-  plugins.dap = {
-    adapters.executables = {php = {command = "php-debug-adapter";};};
-    configurations = {
-      php = [
+    dap = {
+      adapters.executables = {php = {command = "php-debug-adapter";};};
+      configurations = {
+        php = [
+          {
+            type = "php";
+            request = "launch";
+            name = "Laravel";
+            port = 9003;
+            pathMappings = {"/var/www/html" = ''''${workspaceFolder}'';};
+          }
+        ];
+      };
+    };
+
+    lualine.sections = {
+      lualine_x = [
         {
-          type = "php";
-          request = "launch";
-          name = "Laravel";
-          port = 9003;
-          pathMappings = {"/var/www/html" = ''''${workspaceFolder}'';};
+          name = "require('laravel.status').get('php')";
+          icon = {
+            icon = " ";
+            color = {
+              fg = "5e79be";
+            };
+          };
+        }
+        {
+          name = "require('laravel.status').get('laravel')";
+          icon = {
+            icon = " ";
+            color = {
+              fg = "f9322c";
+            };
+          };
         }
       ];
     };
