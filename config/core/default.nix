@@ -1,5 +1,9 @@
 {pkgs, ...}: {
   imports = [
+    #nix-modules
+    ../../modules
+
+    #config
     ./core.nix
 
     ./autocmd.nix

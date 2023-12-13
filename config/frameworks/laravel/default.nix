@@ -5,10 +5,6 @@
     ./blade.nix
   ];
 
-  languages.php.phpactor = {
-    phpstan.enable = true;
-  };
-
   extraPlugins = with pkgs; [
     extraVimPlugins.laravel
     vimPlugins.nui-nvim

@@ -8,8 +8,17 @@
   ];
 
   languages.php.phpactor = {
-    phpcs.enable = true;
-    phpstan.enable = true;
+    phpunit.enable = true;
+    prophecy.enable = true;
+    phpcs = {
+      enable = true;
+      bin = "%project_root%\/bin\/phpcs";
+    };
+    phpstan = {
+      enable = true;
+      bin = "%project_root%\/bin\/phpstan";
+      level = "7";
+    };
   };
 
   extraFiles = {
