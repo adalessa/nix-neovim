@@ -2,10 +2,12 @@
   imports = [
     ../../languages/php
 
-    ../../languages/php/phpactor/phpstan.nix
-
     ./blade.nix
   ];
+
+  languages.php.phpactor = {
+    phpstan.enable = true;
+  };
 
   extraPlugins = with pkgs; [
     extraVimPlugins.laravel

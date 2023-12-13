@@ -3,11 +3,14 @@
 
   imports = [
     ../../languages/php
-    ../../languages/php/phpactor/phpstan.nix
-    ../../languages/php/phpactor/phpcs.nix
 
     ./telescope-graphql.nix
   ];
+
+  languages.php.phpactor = {
+    phpcs.enable = true;
+    phpstan.enable = true;
+  };
 
   extraFiles = {
     "luasnippets/php/symfony.lua" = builtins.readFile ./snippets.lua;
