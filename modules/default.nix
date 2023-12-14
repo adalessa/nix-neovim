@@ -1,3 +1,3 @@
 {
-  imports = [./phactor.nix];
+  imports = [./phpactor.nix];
 }
