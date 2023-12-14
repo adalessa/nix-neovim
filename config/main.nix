@@ -23,6 +23,7 @@
     ./modules/notes
     ./modules/tests
     ./modules/ui
+    ./modules/terminal
 
     ./tools/oil.nix
     ./tools/harpoon.nix
