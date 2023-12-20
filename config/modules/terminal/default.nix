@@ -12,27 +12,33 @@
     }
     {
       mode = "t";
-      key = "<c-q>";
+      key = "<c-h>";
       options.desc = "";
-      action = "<c-\\><c-n>:FloatermToggle<cr>";
+      action = "<Cmd>:FloatermHide<cr>";
+    }
+    {
+      mode = "t";
+      key = "<c-w>";
+      options.desc = "";
+      action = "<Cmd>:FloatermKill<cr>";
     }
     {
       mode = "t";
       key = "<c-t>";
       options.desc = "";
-      action = "<c-\\><c-n>:FloatermNew<cr>";
+      action = "<Cmd>:FloatermNew<cr>";
     }
     {
       mode = "t";
-      key = "<c-n>";
+      key = "<c-j>";
       options.desc = "";
-      action = "<c-\\><c-n>:FloatermNext<cr>";
+      action = "<Cmd>:FloatermNext<cr>";
     }
     {
       mode = "t";
-      key = "<c-p>";
+      key = "<c-k>";
       options.desc = "";
-      action = "<c-\\><c-n>:FloatermPrev<cr>";
+      action = "<Cmd>:FloatermPrev<cr>";
     }
   ];
 }
