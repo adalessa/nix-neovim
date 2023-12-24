@@ -13,7 +13,10 @@
 
   extraPackages = [pkgs.fd pkgs.php-debug-adapter];
   plugins = {
-    none-ls.enable = true;
+    none-ls = {
+      enable = true;
+      sources.formatting.pint.enable = true;
+    };
 
     dap = {
       adapters.executables = {php = {command = "php-debug-adapter";};};
