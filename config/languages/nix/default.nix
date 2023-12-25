@@ -32,9 +32,4 @@
       };
     }
   ];
-
-  extraFiles = {
-    "queries/nix/injections.scm" =
-      builtins.readFile ./queries/nix/injections.scm;
-  };
 }

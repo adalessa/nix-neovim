@@ -4,6 +4,7 @@
       enable = true;
       indent = true;
       grammarPackages = pkgs.vimPlugins.nvim-treesitter.passthru.allGrammars;
+      nixvimInjections = true;
     };
 
     treesitter-context.enable = true;

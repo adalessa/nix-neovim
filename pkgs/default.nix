@@ -51,7 +51,7 @@
       // {
         blade = pkgs.tree-sitter.buildGrammar {
           language = "blade";
-          version = "0.7.0";
+          version = "0.9.2";
           src = inputs.blade-treesitter;
         };
       };
