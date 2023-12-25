@@ -339,15 +339,15 @@
     "php-treesitter": {
       "flake": false,
       "locked": {
-        "lastModified": 1700577964,
-        "narHash": "sha256-rRnqmkMGQ+iywUyf+sEK7CiMsI1SSNKmt1jHp2SShh4=",
-        "owner": "CalebDW",
+        "lastModified": 1703537427,
+        "narHash": "sha256-wglLwjXJ6i2oJFdBUbgCQWsKFIH4cCOc74qw3P0UvMQ=",
+        "owner": "adalessa",
         "repo": "tree-sitter-php",
-        "rev": "5b8d15442a36086b90c966e6717a9697ef07eaf7",
+        "rev": "64ea97f1c7dfcc7961f6a66bb9500038b8a7edfe",
         "type": "github"
       },
       "original": {
-        "owner": "CalebDW",
+        "owner": "adalessa",
         "ref": "common_parser",
         "repo": "tree-sitter-php",
         "type": "github"

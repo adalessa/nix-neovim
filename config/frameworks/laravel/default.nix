@@ -2,7 +2,7 @@
   imports = [
     ../../languages/php
 
-    ./blade.nix
+    ./blade
   ];
 
   extraPlugins = with pkgs; [
