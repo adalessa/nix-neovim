@@ -27,8 +27,6 @@
 
     ./tools/oil.nix
     ./tools/harpoon.nix
-    ./tools/leetcode.nix
-    ./tools/make-runner.nix
     ./tools/scratch.nix
     ./tools/todo-comments.nix
   ];

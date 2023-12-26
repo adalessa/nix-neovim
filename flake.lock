@@ -389,11 +389,11 @@
     "plugin-laravel": {
       "flake": false,
       "locked": {
-        "lastModified": 1702669135,
-        "narHash": "sha256-Azk0evI6V9MqJBk9N+06/BrW+L9N4lNVk8iEFkfC/xw=",
+        "lastModified": 1703601495,
+        "narHash": "sha256-pi0JFFZWLsmbgzaG/9hqPMLX+rrNWkIjOk3uxkXjPkk=",
         "owner": "adalessa",
         "repo": "laravel.nvim",
-        "rev": "7091842ca605a2ba2733a1c9d2dfc1a82e12811a",
+        "rev": "d4a5eaa48e3dbe6ad0e822aa3b3831a182ef71fb",
         "type": "github"
       },
       "original": {
@@ -406,11 +406,11 @@
     "plugin-leetcode": {
       "flake": false,
       "locked": {
-        "lastModified": 1703100743,
-        "narHash": "sha256-nB9RCO7PQPihUyPrSv+Y3ow+RyATV0FG/0vmnmbK+68=",
+        "lastModified": 1703547625,
+        "narHash": "sha256-UMuPwb1wDqsPHzKXP2xO3rHte+Wht21kiSYoie5uDUU=",
         "owner": "kawre",
         "repo": "leetcode.nvim",
-        "rev": "8b37ad0135cafdf900543e41e826077297ac432c",
+        "rev": "67252a87756f3a985f388164d0e18ad952da7891",
         "type": "github"
       },
       "original": {

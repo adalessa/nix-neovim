@@ -64,6 +64,11 @@
   keymaps = [
     {
       mode = "n";
+      key = "<leader>ll";
+      action = ":Laravel<cr>";
+    }
+    {
+      mode = "n";
       key = "<leader>la";
       action = ":Laravel artisan<cr>";
     }
