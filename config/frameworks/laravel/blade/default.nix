@@ -7,6 +7,8 @@
     ];
   };
 
+  plugins.lsp.servers.emmet_ls.filetypes = ["blade"];
+
   extraFiles = {
     "queries/blade/highlights.scm" =
       builtins.readFile ./highlights.scm;

@@ -1,8 +1,12 @@
 {
-  plugins.lsp.servers.html.enable = true;
-  plugins.emmet = {
-    enable = true;
-    leader = "<c-g>";
-    mode = "i";
+  plugins.lsp.servers = {
+    html.enable = true;
+    emmet_ls = {
+      enable = true;
+      filetypes = [
+        "css"
+        "html"
+      ];
+    };
   };
 }
