@@ -25,10 +25,6 @@
       url = "github:wuelnerdotexe/vim-enfocado";
       flake = false;
     };
-    plugin-cyberdream = {
-      url = "github:scottmckendry/cyberdream.nvim";
-      flake = false;
-    };
     plugin-php-lsp-utils = {
       url = "github:adalessa/php-lsp-utils";
       flake = false;

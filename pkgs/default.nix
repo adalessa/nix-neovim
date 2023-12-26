@@ -18,10 +18,6 @@
       name = "enfocado";
       src = inputs.plugin-enfocado;
     };
-    cyberdream = pkgs.vimUtils.buildVimPlugin {
-      name = "cyberdream";
-      src = inputs.plugin-cyberdream;
-    };
     php-lsp-utils = pkgs.vimUtils.buildVimPlugin {
       name = "php-lsp-utils";
       src = inputs.plugin-php-lsp-utils;
