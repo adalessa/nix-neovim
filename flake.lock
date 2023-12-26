@@ -370,6 +370,22 @@
         "type": "github"
       }
     },
+    "plugin-cyberdream": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1703551512,
+        "narHash": "sha256-6MH+g3afJgimvFqfooQLT9IgT32MlUEX5+pG/8r+aEo=",
+        "owner": "scottmckendry",
+        "repo": "cyberdream.nvim",
+        "rev": "265ed77f93d3378d33c80d9c22b96488f58ab147",
+        "type": "github"
+      },
+      "original": {
+        "owner": "scottmckendry",
+        "repo": "cyberdream.nvim",
+        "type": "github"
+      }
+    },
     "plugin-enfocado": {
       "flake": false,
       "locked": {
@@ -559,6 +575,7 @@
         "php-debug-adapter": "php-debug-adapter",
         "php-treesitter": "php-treesitter",
         "phpactor": "phpactor",
+        "plugin-cyberdream": "plugin-cyberdream",
         "plugin-enfocado": "plugin-enfocado",
         "plugin-laravel": "plugin-laravel",
         "plugin-leetcode": "plugin-leetcode",

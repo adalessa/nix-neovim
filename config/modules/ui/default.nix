@@ -1,7 +1,5 @@
 {pkgs, ...}: {
-  imports = [./dressing.nix ./lualine.nix];
-
-  colorschemes.tokyonight.enable = true;
+  imports = [./dressing.nix ./lualine.nix ./colorscheme.nix];
 
   plugins.nvim-colorizer.enable = true;
 
