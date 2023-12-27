@@ -69,6 +69,11 @@
     }
     {
       mode = "n";
+      key = "<c-g>";
+      action = ":Laravel view-finder<cr>";
+    }
+    {
+      mode = "n";
       key = "<leader>la";
       action = ":Laravel artisan<cr>";
     }
