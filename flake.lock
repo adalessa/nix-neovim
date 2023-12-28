@@ -389,16 +389,15 @@
     "plugin-laravel": {
       "flake": false,
       "locked": {
-        "lastModified": 1703776388,
-        "narHash": "sha256-MQH8G3v1lZDZiGLGchnJzqGGXGLXZj40yXCLRCV5XLw=",
+        "lastModified": 1703795979,
+        "narHash": "sha256-4Uw1NV26ODr5DY69Vo7gu4i9YoZE2Cic3iFfshUeZhM=",
         "owner": "adalessa",
         "repo": "laravel.nvim",
-        "rev": "60d73f96c5f6b4f1691473cc8307f91826537134",
+        "rev": "83f282beef23c95ecbe5f3bce6b7325217bf5574",
         "type": "github"
       },
       "original": {
         "owner": "adalessa",
-        "ref": "v2",
         "repo": "laravel.nvim",
         "type": "github"
       }
