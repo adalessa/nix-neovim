@@ -304,11 +304,11 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1703435563,
-        "narHash": "sha256-BDnoVc9Kvc9wo9lt8GC0kkqwLedP7lnBBdh1UHl4cPw=",
+        "lastModified": 1703760766,
+        "narHash": "sha256-jv6B2+AwfZbYJWkJIY3UMyqnF+TspyUC81vQNcK/nxE=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "c11158c73e9a488d803356127a54af8101fc0051",
+        "rev": "a7144cfbf7e54e99888fa979950e8059efba03cf",
         "type": "github"
       },
       "original": {
@@ -389,11 +389,11 @@
     "plugin-laravel": {
       "flake": false,
       "locked": {
-        "lastModified": 1703675886,
-        "narHash": "sha256-h/xmerxtWnPnHhi+n3NgYq+6XuVc2q5RGeSwE7NdYrU=",
+        "lastModified": 1703763441,
+        "narHash": "sha256-FmtXCRoMtlapapal2dx9I9LSLp0B/j1uyJCWHVl2Pvk=",
         "owner": "adalessa",
         "repo": "laravel.nvim",
-        "rev": "c5e0071529ecfe098aec5354135f9e3b0b132137",
+        "rev": "a251ca372fa260a95725ced1ada9eb935b545810",
         "type": "github"
       },
       "original": {
@@ -406,11 +406,11 @@
     "plugin-leetcode": {
       "flake": false,
       "locked": {
-        "lastModified": 1703607393,
-        "narHash": "sha256-AJsPEEQXawtLEkMvOWsIK0rt3uy8A+nsYa3ADBzCovY=",
+        "lastModified": 1703770392,
+        "narHash": "sha256-yHPYgASWW42IL1IdX0DJLVO26Fv/KViAZEoBDJ6ASW4=",
         "owner": "kawre",
         "repo": "leetcode.nvim",
-        "rev": "f593259dfddd5e1f8ab522a8c715bfbbe9bd8819",
+        "rev": "2a079ff52521ddd9cbe63b07e1523091ffa577fb",
         "type": "github"
       },
       "original": {
@@ -486,11 +486,11 @@
     "plugin-ultimate-autopairs": {
       "flake": false,
       "locked": {
-        "lastModified": 1703164397,
-        "narHash": "sha256-+ENtj2OjLRb0soXXL21UdzWDpH1Ul2HIUreQf5WPWj4=",
+        "lastModified": 1703754243,
+        "narHash": "sha256-LQWKn122+aAflzrGzMhuUxHjkY6L5VzcfMfi3HQ7KSU=",
         "owner": "altermo",
         "repo": "ultimate-autopair.nvim",
-        "rev": "8fb4db507ec80de952ac49f12ae76b3190f485bc",
+        "rev": "4f01418547c7e27c3aa779da8cc30c9998dc6843",
         "type": "github"
       },
       "original": {

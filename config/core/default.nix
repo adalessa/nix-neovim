@@ -12,6 +12,7 @@
     ./easy-align.nix
     ./keymaps.nix
     ./lsp.nix
+    ./neogen.nix
     ./snippets.nix
     ./telescope
     ./transparent.nix
