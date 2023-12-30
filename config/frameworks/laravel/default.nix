@@ -5,6 +5,15 @@
     ./blade
   ];
 
+  languages.php.phpactor = {
+    phpunit.enable = true;
+    prophecy.enable = true;
+    phpstan = {
+      enable = true;
+      level = "7";
+    };
+  };
+
   extraPlugins = with pkgs; [
     extraVimPlugins.laravel
     vimPlugins.nui-nvim
