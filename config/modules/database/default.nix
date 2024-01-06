@@ -6,6 +6,8 @@
     vim-dadbod-ui
   ];
 
+  extraPackages = [pkgs.mariadb];
+
   globals = {
     db_ui_use_nerd_fonts = 1;
     db_ui_show_database_icon = 1;

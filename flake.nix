@@ -58,9 +58,7 @@
       flake = false;
     };
     php-treesitter = {
-      url = "github:adalessa/tree-sitter-php/common_parser";
-      # url = "path:/home/alpha/code/javascript/tree-sitter-php";
-      # url = "github:CalebDW/tree-sitter-php/common_parser";
+      url = "github:adalessa/tree-sitter-php/mine";
       flake = false;
     };
     phpactor = {
