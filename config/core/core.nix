@@ -20,6 +20,7 @@
       incsearch = true;
       ignorecase = true;
       smartcase = true;
+      colorcolumn = "80";
       termguicolors = true;
       scrolloff = 4;
       sidescrolloff = 4;
