@@ -420,15 +420,16 @@
     "plugin-laravel": {
       "flake": false,
       "locked": {
-        "lastModified": 1704547331,
-        "narHash": "sha256-b1mPGI1OqONLlXOcnTO+VmClfSR2hUl1AN2ZwvDByao=",
+        "lastModified": 1704142109,
+        "narHash": "sha256-ffqPHPu5V8I8FG4/0eckJ+btMw80ZDq7pEbkQWy16ew=",
         "owner": "adalessa",
         "repo": "laravel.nvim",
-        "rev": "a4d6f85f2be05aca0b4dd1feb8f28cb8b4e68420",
+        "rev": "418435087c2c8d14cfdf02cf10f10ad4d8767875",
         "type": "github"
       },
       "original": {
         "owner": "adalessa",
+        "ref": "feature/improvements",
         "repo": "laravel.nvim",
         "type": "github"
       }
