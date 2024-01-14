@@ -8,9 +8,9 @@
   modifications = final: prev: {
     phpactor = prev.php.buildComposerProject (finalAttrs: {
       pname = "phpactor";
-      version = "2023.12.03.0";
+      version = "master";
       src = inputs.phpactor;
-      vendorHash = "sha256-0jvWbQubPXDhsXqEp8q5R0Y7rQX3UiccGDF3HDBeh7o=";
+      vendorHash = "sha256-TLxP+BWjQe3gRXuu9Z/gajYcwe/Mj3nJHkiFCB7yocc=";
     });
     php82Packages =
       prev.php82Packages

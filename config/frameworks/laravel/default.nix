@@ -7,7 +7,6 @@
 
   languages.php.phpactor = {
     phpunit.enable = true;
-    prophecy.enable = true;
     phpstan = {
       enable = true;
       level = "7";

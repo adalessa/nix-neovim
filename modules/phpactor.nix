@@ -52,6 +52,14 @@ in {
             "/vendor/**/tests/**/*"
             "/var/cache/**/*"
             "/vendor/composer/**/*"
+            "/vendor/composer/**/*"
+            "/vendor/laravel/fortify/workbench/**/*"
+            "/vendor/filament/forms/\.stubs\.php"
+            "/vendor/filament/notifications/\.stubs\.php"
+            "/vendor/filament/tables/\.stubs\.php"
+            "/vendor/filament/actions/\.stubs\.php"
+            "/storage/framework/cache/**/*"
+            "/storage/framework/views/**/*"
           ];
           "php_code_sniffer.enabled" = cfg.phpcs.enable;
           "php_code_sniffer.bin" = cfg.phpcs.bin;
