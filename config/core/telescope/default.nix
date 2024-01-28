@@ -8,6 +8,14 @@ in {
 
   plugins.telescope = {
     enable = true;
+    defaults = {
+      layout_strategy = "vertical";
+      layout_config = {
+        preview_cutoff = 20;
+        mirror = true;
+        prompt_position = "top";
+      };
+    };
     extensions = {
       file_browser = {
         enable = true;
