@@ -367,23 +367,6 @@
         "url": "https://gitea.ad-impeldown.synology.me/alpha/php-debug-adapter-flake.git"
       }
     },
-    "php-treesitter": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1704540690,
-        "narHash": "sha256-4mtd0+XXRRjeJwgKyoIvU+yrYCtLJWWdNrfKqG+lkxg=",
-        "owner": "adalessa",
-        "repo": "tree-sitter-php",
-        "rev": "bc2729129d7a087ebfa084467b90cb0c17374cec",
-        "type": "github"
-      },
-      "original": {
-        "owner": "adalessa",
-        "ref": "mine",
-        "repo": "tree-sitter-php",
-        "type": "github"
-      }
-    },
     "phpactor": {
       "flake": false,
       "locked": {
@@ -590,7 +573,6 @@
         "nixpkgs-stable": "nixpkgs-stable",
         "nixvim": "nixvim",
         "php-debug-adapter": "php-debug-adapter",
-        "php-treesitter": "php-treesitter",
         "phpactor": "phpactor",
         "plugin-enfocado": "plugin-enfocado",
         "plugin-laravel": "plugin-laravel",

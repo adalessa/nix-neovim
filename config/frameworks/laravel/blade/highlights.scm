@@ -1,7 +1,4 @@
-(directive) @function
-(directive_start) @function
-(directive_end) @function
+(directive) @tag
+(directive_start) @tag
+(directive_end) @tag
 (comment) @comment
-((bracket_start) @constant (#set! "priority" 120))
-((bracket_end) @constant (#set! "priority" 120))
-(keyword) @function

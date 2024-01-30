@@ -57,10 +57,6 @@
       url = "github:EmranMR/tree-sitter-blade";
       flake = false;
     };
-    php-treesitter = {
-      url = "github:adalessa/tree-sitter-php/mine";
-      flake = false;
-    };
     phpactor = {
       url = "github:phpactor/phpactor";
       flake = false;

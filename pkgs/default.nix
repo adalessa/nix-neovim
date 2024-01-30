@@ -54,7 +54,6 @@
           version = "0.9.2";
           src = inputs.blade-treesitter;
         };
-        php-only = pkgs.callPackage ./php-only.nix {inherit inputs;};
       };
   };
 }
