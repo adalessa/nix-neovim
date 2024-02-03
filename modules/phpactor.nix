@@ -66,22 +66,31 @@ in {
           "language_server_phpstan.enabled" = cfg.phpstan.enable;
           "language_server_phpstan.level" = cfg.phpstan.level;
           "language_server_phpstan.bin" = cfg.phpstan.bin;
+          "language_server_phpstan.mem_limit" = "2048M";
         };
-        handlers = {
-          "textDocument/inlayHint".__raw = ''
-            function(err, result, ...)
-              for _, res in ipairs(result) do
-                res.label = res.label .. ": "
-              end
-              vim.lsp.handlers["textDocument/inlayHint"](err, result, ...)
-            end
-          '';
-        };
+        # handlers = {
+        #   "textDocument/inlayHint".__raw = ''
+        #     function(err, result, ...)
+        #       for _, res in ipairs(result) do
+        #         res.label = res.label .. ": "
+        #       end
+        #       vim.lsp.handlers["textDocument/inlayHint"](err, result, ...)
+        #     end
+        #   '';
+        # };
       };
 
       onAttach.function = ''
         vim.api.nvim_buf_create_user_command(bufnr, "LspPhpactorReindex", function()
           vim.lsp.buf_notify(bufnr, "phpactor/index/reindex", {})
+        end, {})
+        vim.api.nvim_buf_create_user_command(bufnr, "LspPhpactorDumpConfig", function()
+          local results, _ = vim.lsp.buf_request_sync(0, "phpactor/debug/config", {["return"]=true})
+          vim.print(results)
+        end, {})
+        vim.api.nvim_buf_create_user_command(bufnr, "LspPhpactorStatus", function()
+          local results, _ = vim.lsp.buf_request_sync(0, "phpactor/status", {["return"]=true})
+          vim.print(results)
         end, {})
       '';
     };

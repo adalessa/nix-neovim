@@ -7,9 +7,12 @@
 
   languages.php.phpactor = {
     phpunit.enable = true;
-    phpstan = {
-      enable = true;
-      level = "7";
+  };
+
+  plugins.efmls-configs = {
+    enable = true;
+    setup.php = {
+      linter = ["php" "phpstan"];
     };
   };
 
