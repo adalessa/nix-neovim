@@ -1,4 +1,9 @@
 {
+  plugins.toggleterm = {
+    enable = true;
+    openMapping = "<C-\\>";
+  };
+
   plugins.floaterm = {
     enable = true;
   };
