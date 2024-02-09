@@ -480,6 +480,22 @@
         "type": "github"
       }
     },
+    "plugin-toggleterm-manager": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1701400122,
+        "narHash": "sha256-7t61kcqeOS9hPXc9y88Sa8D0ZXIqxCXtxFQzmHKFJ8c=",
+        "owner": "ryanmsnyder",
+        "repo": "toggleterm-manager.nvim",
+        "rev": "31318b85a7cc20bf50ce32aedf4e835844133863",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ryanmsnyder",
+        "repo": "toggleterm-manager.nvim",
+        "type": "github"
+      }
+    },
     "plugin-transparent": {
       "flake": false,
       "locked": {
@@ -493,6 +509,22 @@
       "original": {
         "owner": "xiyaowong",
         "repo": "nvim-transparent",
+        "type": "github"
+      }
+    },
+    "plugin-twilight": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1695631985,
+        "narHash": "sha256-WFE8FZU8E8i6mX9bFl80YkIypGXOOhKvGbLrBoPce0g=",
+        "owner": "folke",
+        "repo": "twilight.nvim",
+        "rev": "8b7b50c0cb2dc781b2f4262a5ddd57571556d1e4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "twilight.nvim",
         "type": "github"
       }
     },
@@ -580,7 +612,9 @@
         "plugin-php-lsp-utils": "plugin-php-lsp-utils",
         "plugin-scratch": "plugin-scratch",
         "plugin-telescope-graphql": "plugin-telescope-graphql",
+        "plugin-toggleterm-manager": "plugin-toggleterm-manager",
         "plugin-transparent": "plugin-transparent",
+        "plugin-twilight": "plugin-twilight",
         "plugin-ultimate-autopairs": "plugin-ultimate-autopairs",
         "pre-commit-hooks": "pre-commit-hooks_2"
       }

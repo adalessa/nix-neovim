@@ -30,5 +30,6 @@
     ./tools/scratch.nix
     ./tools/todo-comments.nix
     ./tools/rest.nix
+    ./tools/twilight.nix
   ];
 }

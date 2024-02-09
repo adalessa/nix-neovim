@@ -53,6 +53,14 @@
       url = "github:kawre/leetcode.nvim";
       flake = false;
     };
+    plugin-twilight = {
+      url = "github:folke/twilight.nvim";
+      flake = false;
+    };
+    plugin-toggleterm-manager = {
+      url = "github:ryanmsnyder/toggleterm-manager.nvim";
+      flake = false;
+    };
     blade-treesitter = {
       url = "github:EmranMR/tree-sitter-blade";
       flake = false;

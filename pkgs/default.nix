@@ -46,6 +46,14 @@
       name = "leetcode";
       src = inputs.plugin-leetcode;
     };
+    twilight = pkgs.vimUtils.buildVimPlugin {
+      name = "twilight";
+      src = inputs.plugin-twilight;
+    };
+    toggleterm-manager = pkgs.vimUtils.buildVimPlugin {
+      name = "toggleterm-manager";
+      src = inputs.plugin-toggleterm-manager;
+    };
     nvim-treesitter-parsers =
       pkgs.vimPlugins.nvim-treesitter-parsers
       // {
