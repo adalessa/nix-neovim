@@ -5,6 +5,14 @@
     iconsEnabled = true;
     theme = "auto";
     extensions = ["quickfix"];
+    componentSeparators = {
+      left = "";
+      right = "";
+    };
+    sectionSeparators = {
+      left = "";
+      right = "";
+    };
 
     sections = {
       lualine_a = [
