@@ -27,7 +27,9 @@
     surround.enable = true;
     nvim-lightbulb = {
       enable = true;
-      virtualText.enabled = true;
+      settings = {
+        virtualText.enabled = true;
+      };
     };
 
     comment-nvim.enable = true;
