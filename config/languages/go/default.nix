@@ -1,5 +1,6 @@
 {
   plugins.lsp.servers.gopls.enable = true;
+  plugins.efmls-configs.setup.go.linter = ["golangci_lint"];
 
   autoCmd = [
     {
