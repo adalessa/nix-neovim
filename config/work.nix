@@ -23,5 +23,6 @@
     ./tools/make-runner.nix
     ./tools/scratch.nix
     ./tools/todo-comments.nix
+    ./tools/undotree.nix
   ];
 }

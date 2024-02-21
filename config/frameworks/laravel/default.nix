@@ -9,6 +9,7 @@
     phpunit.enable = true;
   };
 
+  # TODO: quizas remover efmls
   plugins.efmls-configs = {
     enable = true;
     setup.php = {
