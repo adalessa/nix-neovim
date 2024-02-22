@@ -1,9 +1,17 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: let
+  bladeGrammar = pkgs.tree-sitter.buildGrammar {
+    language = "blade";
+    version = "0.9.2";
+    src = inputs.blade-treesitter;
+  };
+in {
   plugins.treesitter = {
     languageRegister.blade = "blade";
-    grammarPackages = [
-      pkgs.extraVimPlugins.nvim-treesitter-parsers.blade
-    ];
+    grammarPackages = [bladeGrammar];
   };
 
   plugins.lsp.servers.emmet_ls.filetypes = ["blade"];

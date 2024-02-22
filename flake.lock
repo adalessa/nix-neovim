@@ -398,22 +398,6 @@
         "type": "github"
       }
     },
-    "plugin-enfocado": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1697862550,
-        "narHash": "sha256-s+6f//aZFeaKLNN9cOXEexiPUO7ocZ/docL2fBBdLMc=",
-        "owner": "wuelnerdotexe",
-        "repo": "vim-enfocado",
-        "rev": "2a8fffdff1a20473f0fbacef10f2fb356e039b31",
-        "type": "github"
-      },
-      "original": {
-        "owner": "wuelnerdotexe",
-        "repo": "vim-enfocado",
-        "type": "github"
-      }
-    },
     "plugin-laravel": {
       "flake": false,
       "locked": {
@@ -621,7 +605,6 @@
         "nixvim": "nixvim",
         "php-debug-adapter": "php-debug-adapter",
         "phpactor": "phpactor",
-        "plugin-enfocado": "plugin-enfocado",
         "plugin-laravel": "plugin-laravel",
         "plugin-leetcode": "plugin-leetcode",
         "plugin-php-lsp-utils": "plugin-php-lsp-utils",

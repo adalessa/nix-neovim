@@ -1,4 +1,4 @@
-{
+{helpers, ...}: {
   plugins.lsp.servers.gopls.enable = true;
   plugins.none-ls.sources.diagnostics.golangci_lint.enable = true;
 
@@ -6,20 +6,18 @@
     {
       event = ["FileType"];
       pattern = ["go"];
-      callback = {
-        __raw = ''
-          function()
-            vim.bo.makeprg = "go build"
+      callback = helpers.mkRaw ''
+        function()
+          vim.bo.makeprg = "go build"
 
-            vim.opt.listchars:append({tab="> "})
+          vim.opt.listchars:append({tab="> "})
 
-            vim.bo.expandtab = false
-            vim.bo.tabstop = 4
-            vim.bo.softtabstop = 4
-            vim.bo.shiftwidth = 4
-          end
-        '';
-      };
+          vim.bo.expandtab = false
+          vim.bo.tabstop = 4
+          vim.bo.softtabstop = 4
+          vim.bo.shiftwidth = 4
+        end
+      '';
     }
   ];
 }

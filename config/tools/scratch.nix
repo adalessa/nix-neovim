@@ -1,8 +1,16 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  inputs,
+  ...
+}: let
   helper = import ../../helper.nix;
   inherit (helper) luaAction;
+  scratch = pkgs.vimUtils.buildVimPlugin {
+    name = "scratch";
+    src = inputs.plugin-scratch;
+  };
 in {
-  extraPlugins = with pkgs.extraVimPlugins; [scratch];
+  extraPlugins = [scratch];
 
   extraConfigLua = ''
     require('scratch').setup()

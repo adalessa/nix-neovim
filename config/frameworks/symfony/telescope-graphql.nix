@@ -1,8 +1,22 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  inputs,
+  ...
+}: let
   heler = import ../../../helper.nix;
   inherit (heler) luaAction;
+
+  telescope-graphql = pkgs.vimUtils.buildVimPlugin {
+    name = "telescope-graphql";
+    src = inputs.plugin-telescope-graphql;
+  };
+
+  php-lsp-utils = pkgs.vimUtils.buildVimPlugin {
+    name = "php-lsp-utils";
+    src = inputs.plugin-php-lsp-utils;
+  };
 in {
-  extraPlugins = with pkgs.extraVimPlugins; [telescope-graphql php-lsp-utils];
+  extraPlugins = [telescope-graphql php-lsp-utils];
   keymaps = [
     {
       mode = "n";

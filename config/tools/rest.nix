@@ -1,4 +1,4 @@
-{
+{helpers, ...}: {
   plugins.rest = {
     enable = true;
   };
@@ -9,13 +9,11 @@
     {
       event = ["FileType"];
       pattern = ["http"];
-      callback = {
-        __raw = ''
-          function (event)
-              vim.keymap.set("n", "<LocalLeader>r", require('rest-nvim').run, { buffer = event.buf, silent = true })
-          end
-        '';
-      };
+      callback = helpers.mkRaw ''
+        function (event)
+            vim.keymap.set("n", "<LocalLeader>r", require('rest-nvim').run, { buffer = event.buf, silent = true })
+        end
+      '';
     }
   ];
 }

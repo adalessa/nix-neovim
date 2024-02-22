@@ -1,4 +1,13 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: let
+  laravelPlugin = pkgs.vimUtils.buildVimPlugin {
+    name = "laravel";
+    src = inputs.plugin-laravel;
+  };
+in {
   imports = [
     ../../languages/php
 
@@ -18,7 +27,7 @@
   };
 
   extraPlugins = with pkgs; [
-    extraVimPlugins.laravel
+    laravelPlugin
     vimPlugins.nui-nvim
     vimPlugins.vim-dotenv
   ];

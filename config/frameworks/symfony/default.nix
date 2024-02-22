@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  helpers,
+  ...
+}: {
   extraPackages = [pkgs.php-debug-adapter];
 
   imports = [
@@ -49,20 +53,18 @@
     {
       event = ["FileType"];
       pattern = ["cucumber"];
-      callback = {
-        __raw = ''
-          function()
-            local set = vim.bo
-            set.expandtab = true
-            set.tabstop = 2
-            set.softtabstop = 2
-            set.shiftwidth = 2
-            set.smartindent = false
-            set.cindent = false
-            set.indentexpr = ""
-          end
-        '';
-      };
+      callback = helpers.mkRaw ''
+        function()
+          local set = vim.bo
+          set.expandtab = true
+          set.tabstop = 2
+          set.softtabstop = 2
+          set.shiftwidth = 2
+          set.smartindent = false
+          set.cindent = false
+          set.indentexpr = ""
+        end
+      '';
     }
   ];
 }

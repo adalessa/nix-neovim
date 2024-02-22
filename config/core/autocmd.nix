@@ -1,4 +1,4 @@
-{
+{helpers, ...}: {
   autoCmd = [
     {
       event = ["BufWritePre"];
@@ -21,40 +21,34 @@
         "startuptime"
         "tsplayground"
       ];
-      callback = {
-        __raw = ''
-          function(event)
-            vim.bo[event.buf].buflisted = false
-            vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = event.buf, silent = true })
-          end
-        '';
-      };
+      callback = helpers.mkRaw ''
+        function(event)
+          vim.bo[event.buf].buflisted = false
+          vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = event.buf, silent = true })
+        end
+      '';
     }
     {
       event = ["FileType"];
       pattern = ["dbout"];
-      callback = {
-        __raw = ''
-          function()
-            vim.cmd([[setlocal nofoldenable]])
-          end
-        '';
-      };
+      callback = helpers.mkRaw ''
+        function()
+          vim.cmd([[setlocal nofoldenable]])
+        end
+      '';
     }
     {
       event = ["FileType"];
       pattern = ["json"];
-      callback = {
-        __raw = ''
-          function()
-            local set = vim.bo
-            set.expandtab = true
-            set.tabstop = 2
-            set.softtabstop = 2
-            set.shiftwidth = 2
-          end
-        '';
-      };
+      callback = helpers.mkRaw ''
+        function()
+          local set = vim.bo
+          set.expandtab = true
+          set.tabstop = 2
+          set.softtabstop = 2
+          set.shiftwidth = 2
+        end
+      '';
     }
   ];
 }

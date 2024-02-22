@@ -21,10 +21,6 @@
       flake = false;
     };
 
-    plugin-enfocado = {
-      url = "github:wuelnerdotexe/vim-enfocado";
-      flake = false;
-    };
     plugin-php-lsp-utils = {
       url = "github:adalessa/php-lsp-utils";
       flake = false;
@@ -92,10 +88,12 @@
         nixvim' = nixvim.legacyPackages.${system};
         nvim = nixvim'.makeNixvimWithModule {
           inherit pkgs;
+          extraSpecialArgs = {inherit inputs;};
           module = ./config/main.nix;
         };
         work' = nixvim'.makeNixvimWithModule {
           inherit pkgs;
+          extraSpecialArgs = {inherit inputs;};
           module = ./config/work.nix;
         };
       in {

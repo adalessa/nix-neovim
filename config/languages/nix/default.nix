@@ -1,4 +1,4 @@
-{
+{helpers, ...}: {
   plugins = {
     nix.enable = true;
 
@@ -18,18 +18,16 @@
     {
       event = ["FileType"];
       pattern = ["nix"];
-      callback = {
-        __raw = ''
-          function()
-            local set = vim.bo
+      callback = helpers.mkRaw ''
+        function()
+          local set = vim.bo
 
-            set.tabstop = 2
-            set.softtabstop = 2
-            set.expandtab = true
-            set.shiftwidth = 2
-          end
-        '';
-      };
+          set.tabstop = 2
+          set.softtabstop = 2
+          set.expandtab = true
+          set.shiftwidth = 2
+        end
+      '';
     }
   ];
 }

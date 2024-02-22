@@ -1,5 +1,14 @@
-{pkgs, ...}: {
-  extraPlugins = with pkgs.extraVimPlugins; [transparent];
+{
+  pkgs,
+  inputs,
+  ...
+}: let
+  transparentPlugin = pkgs.vimUtils.buildVimPlugin {
+    name = "transparent";
+    src = inputs.plugin-transparent;
+  };
+in {
+  extraPlugins = [transparentPlugin];
   extraConfigLua = ''
     require('transparent').setup()
     require('transparent').clear_prefix('Telescope')
