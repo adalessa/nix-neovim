@@ -401,11 +401,11 @@
     "plugin-laravel": {
       "flake": false,
       "locked": {
-        "lastModified": 1708773954,
-        "narHash": "sha256-TiLc9d07BLS4XRHc5iVXJoEyikLyavhkhHcRft1FB2Y=",
+        "lastModified": 1708789834,
+        "narHash": "sha256-V4xBFdALqRHCLVDY7sZtmjhIVUxOjzHSGSyHsC9Ixvs=",
         "owner": "adalessa",
         "repo": "laravel.nvim",
-        "rev": "0ce0a7026aabf7c1f22bf526f8edf5190c19f5f0",
+        "rev": "dc2fbec8c4897a3d88ebbfbf3617c75f9298d40a",
         "type": "github"
       },
       "original": {
