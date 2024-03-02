@@ -4,6 +4,10 @@
 
     lsp.servers.nil_ls.enable = true;
 
+    treesitter = {
+      nixvimInjections = true;
+    };
+
     none-ls = {
       enable = true;
       sources = {formatting.alejandra.enable = true;};
