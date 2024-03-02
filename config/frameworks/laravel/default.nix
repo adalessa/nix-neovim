@@ -36,7 +36,10 @@ in {
   plugins = {
     none-ls = {
       enable = true;
-      sources.formatting.pint.enable = true;
+      sources.formatting.pint = {
+        enable = true;
+        package = null;
+      };
     };
 
     dap = {

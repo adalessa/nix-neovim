@@ -219,22 +219,6 @@
         "type": "github"
       }
     },
-    "htmx-lsp": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1707659144,
-        "narHash": "sha256-YzuYHQzfVVd28WAdGchdOL73y8TkIEPQ/6OkNMwPsyo=",
-        "owner": "ThePrimeagen",
-        "repo": "htmx-lsp",
-        "rev": "0ad57f0f45b0663c1ab271431a0cfe78d18b5f78",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ThePrimeagen",
-        "repo": "htmx-lsp",
-        "type": "github"
-      }
-    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -396,22 +380,6 @@
         "owner": "adalessa",
         "ref": "2.1",
         "repo": "laravel.nvim",
-        "type": "github"
-      }
-    },
-    "plugin-leetcode": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1709221376,
-        "narHash": "sha256-49joL3jkORGbrjaNcm1NnAiFBjoDQ4u3XR+/O+tc9js=",
-        "owner": "kawre",
-        "repo": "leetcode.nvim",
-        "rev": "7cec0d37bad6258d73f2cc2c2f33ffdee9324327",
-        "type": "github"
-      },
-      "original": {
-        "owner": "kawre",
-        "repo": "leetcode.nvim",
         "type": "github"
       }
     },
@@ -583,13 +551,11 @@
       "inputs": {
         "blade-treesitter": "blade-treesitter",
         "flake-parts": "flake-parts",
-        "htmx-lsp": "htmx-lsp",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
         "php-debug-adapter": "php-debug-adapter",
         "phpactor": "phpactor",
         "plugin-laravel": "plugin-laravel",
-        "plugin-leetcode": "plugin-leetcode",
         "plugin-php-lsp-utils": "plugin-php-lsp-utils",
         "plugin-scratch": "plugin-scratch",
         "plugin-telescope-graphql": "plugin-telescope-graphql",

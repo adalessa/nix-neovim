@@ -15,11 +15,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    htmx-lsp = {
-      url = "github:/ThePrimeagen/htmx-lsp";
-      flake = false;
-    };
-
     plugin-php-lsp-utils = {
       url = "github:adalessa/php-lsp-utils";
       flake = false;
@@ -42,10 +37,6 @@
     };
     plugin-ultimate-autopairs = {
       url = "github:altermo/ultimate-autopair.nvim";
-      flake = false;
-    };
-    plugin-leetcode = {
-      url = "github:kawre/leetcode.nvim";
       flake = false;
     };
     plugin-twilight = {
