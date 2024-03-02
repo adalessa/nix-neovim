@@ -6,13 +6,6 @@
     cmp_luasnip.enable = true;
     cmp-cmdline.enable = true;
     cmp-git.enable = true;
-    # temporary disable copilot since i lost the license
-    # copilot-cmp.enable = true;
-    # copilot-lua = {
-    #   enable = true;
-    #   panel.enabled = false;
-    #   suggestion.enabled = false;
-    # };
     lspkind = {
       enable = true;
       cmp.enable = true;
@@ -22,7 +15,6 @@
         nvim_lua = "[api]";
         path = "[path]";
         luasnip = "[snip]";
-        # copilot = "[ﮧ]";
         "vim-dadbod-completion" = "[DB]";
       };
     };
@@ -43,7 +35,6 @@
         {name = "path";}
         {name = "buffer";}
         {name = "luasnip";}
-        # { name = "copilot"; }
       ];
     };
   };
