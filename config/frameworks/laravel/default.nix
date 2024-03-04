@@ -111,5 +111,20 @@ in {
       key = "<leader>lh";
       action = ":Artisan docs<cr>";
     }
+    {
+      mode = "n";
+      key = "<leader>lm";
+      action = ":Laravel make<cr>";
+    }
+    {
+      mode = "n";
+      key = "<leader>lq";
+      action = ":Laravel history<cr>";
+    }
+    {
+      mode = "n";
+      key = "<leader>lc";
+      action = ":Laravel commands<cr>";
+    }
   ];
 }
