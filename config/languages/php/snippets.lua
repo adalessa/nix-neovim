@@ -50,8 +50,8 @@ return {
     fmt(
       [[$this->{} = $this->prophesize({}::class);]],
       {
-        i(1, ""),
-        i(2, ""),
+        i(1),
+        i(2),
       }
     )),
 
@@ -66,7 +66,7 @@ public function it_{}(): void
     {}
 }}
 ]],
-      { i(1, ""), i(0, "") }
+      { i(1), i(0) }
     )),
   s(
     { trig = "fn", desc = "Creates a function" },
@@ -93,15 +93,19 @@ public function it_{}(): void
 
   s(
     { trig = "pro", desc = "Creates propmoted property param" },
-    fmt([[{} {}{} ${},]], {
-      visibility(1, "private"),
-      c(2, {
-        t "readonly ",
-        t "",
-      }),
-      i(3, "Type"),
-      d(4, var_name, { 3 }),
-    })),
+    fmt(
+      [[{} {}{} ${},]],
+      {
+        visibility(1, "private"),
+        c(2, {
+          t "readonly ",
+          t "",
+        }),
+        i(3, "Type"),
+        d(4, var_name, { 3 }),
+      }
+    )
+  ),
 
   s(
     { trig = "strict", desc = "Sets the declare strict" },
@@ -109,13 +113,26 @@ public function it_{}(): void
   ),
 
   s(
-    { trig = "sfn", desc = "Creates an static function" }, fmt(
+    { trig = "sfn", desc = "Creates an static function" },
+    fmt(
       [[{} static function {}({}): {}
 {{
   {}
 }}]],
       { visibility(1, "public"), i(2), i(3), i(4, "void"), i(0) }
-    )),
+    )
+  ),
+
+  s(
+    { trig = "if", desc = "Creates an if conditional" },
+    fmt(
+      [[if ({}) {{
+  {}
+}}]],
+      { i(1), i(0) }
+    )
+  ),
+
 }, {
   -- AUTOTRIGGER
 }
