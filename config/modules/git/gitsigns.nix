@@ -2,8 +2,8 @@
   plugins.gitsigns = {
     enable = true;
     linehl = false;
-    signcolumn = false;
-    numhl = true;
+    signcolumn = true;
+    numhl = false;
     onAttach.function = ''
       function(bufnr)
         local gitsigns = require "gitsigns"
