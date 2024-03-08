@@ -21,7 +21,11 @@
     cmp = {
       enable = true;
       settings = {
-        snippet.expand = "luasnip";
+        snippet.expand = ''
+          function(args)
+            require('luasnip').lsp_expand(args.body)
+          end
+        '';
         mapping = {
           "<c-y>" = "cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert })";
           "<c-d>" = "cmp.mapping.scroll_docs(-4)";

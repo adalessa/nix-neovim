@@ -94,17 +94,20 @@ in {
     {
       mode = "n";
       key = "<c-g>";
-      action = ":Laravel view-finder<cr>";
+      lua = true;
+      action = "function() require('laravel').viewFinder() end";
     }
     {
       mode = "n";
       key = "<leader>la";
-      action = ":Laravel artisan<cr>";
+      lua = true;
+      action = "function() require('laravel').artisan() end";
     }
     {
       mode = "n";
       key = "<leader>lr";
-      action = ":Laravel routes<cr>";
+      lua = true;
+      action = "function() require('laravel').routes() end";
     }
     {
       mode = "n";
@@ -114,17 +117,26 @@ in {
     {
       mode = "n";
       key = "<leader>lm";
-      action = ":Laravel make<cr>";
+      lua = true;
+      action = "function() require('laravel').make() end";
     }
     {
       mode = "n";
       key = "<leader>lq";
-      action = ":Laravel history<cr>";
+      lua = true;
+      action = "function() require('laravel').history() end";
     }
     {
       mode = "n";
       key = "<leader>lc";
-      action = ":Laravel commands<cr>";
+      lua = true;
+      action = "function() require('laravel').commands() end";
+    }
+    {
+      mode = "n";
+      key = "<leader>lo";
+      lua = true;
+      action = "function() require('laravel').resources() end";
     }
   ];
 }

@@ -11,8 +11,8 @@ in {
   plugins.toggleterm = {
     enable = true;
     openMapping = "<C-\\>";
-    winbar.enabled = true;
-    size = 18;
+    winbar.enabled = false;
+    size = 11;
   };
   extraPlugins = [toggleterm-manager];
   extraConfigLua = ''
