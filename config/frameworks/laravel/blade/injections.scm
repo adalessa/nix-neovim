@@ -12,6 +12,8 @@
 
 
 ((php_only) @injection.content
-    (#set! injection.language php_only))
+    (#set! injection.language php_only)
+    (#set! "priority" 105)
+    )
 ((parameter) @injection.content
     (#set! injection.language php_only))
