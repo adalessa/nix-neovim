@@ -10,7 +10,7 @@
       pname = "phpactor";
       version = "master";
       src = inputs.phpactor;
-      vendorHash = "sha256-cfbDeadjfIrGCz7pZpIDNQLoF7ym8FhQj/kNGWs+haw=";
+      vendorHash = "sha256-9YN+fy+AvNnF0Astrirpewjmh/bSINAhW9fLvN5HGGI=";
     });
   };
 in
