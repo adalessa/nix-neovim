@@ -33,10 +33,10 @@
     };
 
     comment-nvim.enable = true;
+    direnv.enable = true;
   };
 
   extraPlugins = with pkgs.vimPlugins; [
     vim-eunuch
-    direnv-vim
   ];
 }

@@ -18,14 +18,6 @@ in {
     phpunit.enable = true;
   };
 
-  # TODO: quizas remover efmls
-  plugins.efmls-configs = {
-    enable = true;
-    setup.php = {
-      linter = ["php" "phpstan"];
-    };
-  };
-
   extraPlugins = with pkgs; [
     laravelPlugin
     vimPlugins.nui-nvim
@@ -36,9 +28,12 @@ in {
   plugins = {
     none-ls = {
       enable = true;
-      sources.formatting.pint = {
-        enable = true;
-        package = null;
+      sources = {
+        formatting.pint = {
+          enable = true;
+          package = null;
+        };
+        diagnostics.phpstan.enable = true;
       };
     };
 
