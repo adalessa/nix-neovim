@@ -32,6 +32,7 @@
   plugins.none-ls = {
     enable = true;
     sources.formatting.phpcbf.enable = true;
+    sources.diagnostics.yamllint.enable = true;
   };
 
   plugins.dap = {
