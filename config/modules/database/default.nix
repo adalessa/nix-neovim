@@ -6,7 +6,7 @@
     vim-dadbod-ui
   ];
 
-  extraPackages = [pkgs.mariadb];
+  extraPackages = [pkgs.mariadb pkgs.sqlite];
 
   globals = {
     db_ui_use_nerd_fonts = 1;
