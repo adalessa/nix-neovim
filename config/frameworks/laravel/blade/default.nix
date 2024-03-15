@@ -9,18 +9,19 @@
     src = inputs.blade-treesitter;
   };
 in {
-  plugins.treesitter = {
-    languageRegister.blade = "blade";
-    grammarPackages = [bladeGrammar];
+  plugins = {
+    treesitter = {
+      languageRegister.blade = "blade";
+      grammarPackages = [bladeGrammar];
+    };
+
+    none-ls.sources.formatting.blade_formatter = {
+      enable = true;
+      package = pkgs.blade-formatter;
+    };
+
+    lsp.servers.emmet_ls.filetypes = ["blade"];
   };
-
-  plugins.lsp.servers.emmet_ls.filetypes = ["blade"];
-
-  extraConfigLuaPost = ''
-    require("null-ls").register(require('null-ls').builtins.formatting.blade_formatter.with {
-      command = "./node_modules/blade-formatter/bin/blade-formatter.js"
-    })
-  '';
 
   extraFiles = {
     "queries/blade/highlights.scm" =
