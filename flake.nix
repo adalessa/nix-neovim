@@ -20,7 +20,7 @@
       flake = false;
     };
     plugin-laravel = {
-      url = "github:adalessa/laravel.nvim/2.1";
+      url = "github:adalessa/laravel.nvim/development";
       flake = false;
     };
     plugin-scratch = {
