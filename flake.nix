@@ -55,9 +55,6 @@
       url = "github:phpactor/phpactor";
       flake = false;
     };
-    php-debug-adapter = {
-      url = "git+https://gitea.ad-impeldown.synology.me/alpha/php-debug-adapter-flake.git";
-    };
   };
 
   outputs = {

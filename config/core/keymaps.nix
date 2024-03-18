@@ -1,7 +1,4 @@
-let
-  helper = import ../../helper.nix;
-  inherit (helper) luaAction;
-in {
+{
   keymaps = [
     {
       mode = "t";
@@ -33,10 +30,12 @@ in {
       key = "<leader>p";
       options.desc = "Special paste, paste without replacing copy register";
       lua = true;
-      action = luaAction ''
-        local val = vim.fn.getreg '+'
-        vim.api.nvim_command [[normal! p]]
-        vim.fn.setreg('+', val)
+      action = ''
+        function()
+          local val = vim.fn.getreg '+'
+          vim.api.nvim_command [[normal! p]]
+          vim.fn.setreg('+', val)
+        end
       '';
     }
     {
