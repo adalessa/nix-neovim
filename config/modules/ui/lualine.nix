@@ -18,6 +18,12 @@
       lualine_a = [
         {
           name = "mode";
+          icon = {
+            icon = " ";
+            color = {
+              fg = "008A3D";
+            };
+          };
           extraConfig = {
             upper = true;
           };
