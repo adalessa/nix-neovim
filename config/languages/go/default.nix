@@ -1,4 +1,9 @@
-{helpers, ...}: {
+{
+  pkgs,
+  helpers,
+  ...
+}: {
+  extraPackages = [pkgs.go];
   plugins.lsp.servers.gopls.enable = true;
   plugins.none-ls.sources.diagnostics.golangci_lint.enable = true;
 

@@ -19,7 +19,7 @@
       bin = "%project_root%\/bin\/phpcs";
     };
     phpstan = {
-      enable = true;
+      enable = false;
       bin = "%project_root%\/bin\/phpstan";
       level = "7";
     };
