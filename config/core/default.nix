@@ -32,7 +32,7 @@
       };
     };
 
-    comment-nvim.enable = true;
+    comment.enable = true;
     direnv.enable = true;
   };
 

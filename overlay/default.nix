@@ -10,7 +10,7 @@
       pname = "phpactor";
       version = "master";
       src = inputs.phpactor;
-      vendorHash = "sha256-9YN+fy+AvNnF0Astrirpewjmh/bSINAhW9fLvN5HGGI=";
+      vendorHash = "sha256-onUhRO6d2osf7n5QlYY86eamlCCslQMVltAv1shskgI=";
     });
     blade-formatter = prev.mkYarnPackage rec {
       pname = "blade-formatter";
