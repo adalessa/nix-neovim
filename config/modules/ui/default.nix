@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  imports = [./dressing.nix ./lualine.nix ./colorscheme.nix];
+  imports = [./dressing.nix ./lualine.nix ./colorscheme.nix ./borders.nix];
 
   plugins.nvim-colorizer.enable = true;
 
