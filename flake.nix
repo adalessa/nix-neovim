@@ -47,6 +47,10 @@
       url = "github:ryanmsnyder/toggleterm-manager.nvim";
       flake = false;
     };
+    plugin-neotest-pest = {
+      url = "github:V13Axel/neotest-pest";
+      flake = false;
+    };
     blade-treesitter = {
       url = "github:EmranMR/tree-sitter-blade";
       flake = false;
