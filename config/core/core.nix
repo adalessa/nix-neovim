@@ -1,6 +1,6 @@
 {
   config = {
-    options = {
+    opts = {
       number = true;
       relativenumber = true;
       splitbelow = true;
