@@ -7,10 +7,6 @@
     name = "laravel";
     src = inputs.plugin-laravel;
   };
-  pestNeotest = pkgs.vimUtils.buildVimPlugin {
-    name = "neotest-pest";
-    src = inputs.plugin-neotest-pest;
-  };
 in {
   imports = [
     ../../languages/php
@@ -77,10 +73,6 @@ in {
           };
         }
       ];
-    };
-    neotest.adapters.pest = {
-      enable = true;
-      package = pestNeotest;
     };
   };
 

@@ -23,9 +23,9 @@
     ./modules/git
     ./modules/notes
     ./modules/terminal
+    ./modules/tests
     ./modules/ui
 
-    ./tools/neotest.nix
     ./tools/harpoon.nix
     ./tools/oil.nix
     ./tools/rest.nix

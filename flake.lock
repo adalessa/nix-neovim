@@ -372,22 +372,6 @@
         "type": "github"
       }
     },
-    "plugin-neotest-pest": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1709563801,
-        "narHash": "sha256-S36yvNrg6rroZbySOt9SKrHGSV6HUgRlSPUh79RNZ7M=",
-        "owner": "V13Axel",
-        "repo": "neotest-pest",
-        "rev": "25501800b5b8da578a03bb178a007d6f8abe7ae3",
-        "type": "github"
-      },
-      "original": {
-        "owner": "V13Axel",
-        "repo": "neotest-pest",
-        "type": "github"
-      }
-    },
     "plugin-php-lsp-utils": {
       "flake": false,
       "locked": {
@@ -560,7 +544,6 @@
         "nixvim": "nixvim",
         "phpactor": "phpactor",
         "plugin-laravel": "plugin-laravel",
-        "plugin-neotest-pest": "plugin-neotest-pest",
         "plugin-php-lsp-utils": "plugin-php-lsp-utils",
         "plugin-scratch": "plugin-scratch",
         "plugin-telescope-graphql": "plugin-telescope-graphql",
