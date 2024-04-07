@@ -372,6 +372,23 @@
         "type": "github"
       }
     },
+    "plugin-neorg": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1703783667,
+        "narHash": "sha256-Q5V3ru+fgPYS3OxN5jDMh+4Vi9eJOuq5cC/kJ6neJ3I=",
+        "owner": "nvim-neorg",
+        "repo": "neorg",
+        "rev": "4cbedbbdd4ccb6f45a2045477f5658a1311dffa3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-neorg",
+        "ref": "v7.0.0",
+        "repo": "neorg",
+        "type": "github"
+      }
+    },
     "plugin-php-lsp-utils": {
       "flake": false,
       "locked": {
@@ -544,6 +561,7 @@
         "nixvim": "nixvim",
         "phpactor": "phpactor",
         "plugin-laravel": "plugin-laravel",
+        "plugin-neorg": "plugin-neorg",
         "plugin-php-lsp-utils": "plugin-php-lsp-utils",
         "plugin-scratch": "plugin-scratch",
         "plugin-telescope-graphql": "plugin-telescope-graphql",

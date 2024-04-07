@@ -1,8 +1,4 @@
-{
-  pkgs,
-  helpers,
-  ...
-}: {
+{pkgs, ...}: {
   extraPackages = [pkgs.php-debug-adapter];
 
   imports = [
@@ -50,22 +46,17 @@
     };
   };
 
-  autoCmd = [
-    {
-      event = ["FileType"];
-      pattern = ["cucumber"];
-      callback = helpers.mkRaw ''
-        function()
-          local set = vim.bo
-          set.expandtab = true
-          set.tabstop = 2
-          set.softtabstop = 2
-          set.shiftwidth = 2
-          set.smartindent = false
-          set.cindent = false
-          set.indentexpr = ""
-        end
-      '';
-    }
-  ];
+  files = {
+    "ftplugin/cucumber.lua" = {
+      opts = {
+        tabstop = 2;
+        softtabstop = 2;
+        expandtab = true;
+        shiftwidth = 2;
+        smartindent = false;
+        cindent = false;
+        indentexpr = "";
+      };
+    };
+  };
 }

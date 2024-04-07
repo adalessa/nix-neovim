@@ -51,6 +51,10 @@
       url = "github:EmranMR/tree-sitter-blade";
       flake = false;
     };
+    plugin-neorg = {
+      url = "github:nvim-neorg/neorg/v7.0.0";
+      flake = false;
+    };
     phpactor = {
       # url = "github:phpactor/phpactor";
       url = "github:mamazu/phpactor/anonymous_classes";

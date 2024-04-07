@@ -1,4 +1,4 @@
-{helpers, ...}: {
+{
   plugins = {
     nix.enable = true;
 
@@ -22,20 +22,14 @@
     "luasnippets/nix/nix.lua" = builtins.readFile ./snippets.lua;
   };
 
-  autoCmd = [
-    {
-      event = ["FileType"];
-      pattern = ["nix"];
-      callback = helpers.mkRaw ''
-        function()
-          local set = vim.bo
-
-          set.tabstop = 2
-          set.softtabstop = 2
-          set.expandtab = true
-          set.shiftwidth = 2
-        end
-      '';
-    }
-  ];
+  files = {
+    "ftplugin/nix.lua" = {
+      opts = {
+        tabstop = 2;
+        softtabstop = 2;
+        expandtab = true;
+        shiftwidth = 2;
+      };
+    };
+  };
 }

@@ -1,8 +1,4 @@
-{
-  pkgs,
-  helpers,
-  ...
-}: {
+{pkgs, ...}: {
   extraPlugins = with pkgs.vimPlugins; [neodev-nvim neoconf-nvim];
 
   extraConfigLuaPre = ''
@@ -16,20 +12,14 @@
 
   plugins.lsp.servers.lua-ls.enable = true;
 
-  autoCmd = [
-    {
-      event = ["FileType"];
-      pattern = ["lua"];
-      callback = helpers.mkRaw ''
-        function()
-          local set = vim.bo
-
-          set.tabstop = 2
-          set.softtabstop = 2
-          set.expandtab = true
-          set.shiftwidth = 2
-        end
-      '';
-    }
-  ];
+  files = {
+    "ftplugin/lua.lua" = {
+      opts = {
+        tabstop = 2;
+        softtabstop = 2;
+        expandtab = true;
+        shiftwidth = 2;
+      };
+    };
+  };
 }
