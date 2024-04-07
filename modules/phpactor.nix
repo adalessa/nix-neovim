@@ -68,16 +68,28 @@ in {
           "language_server_phpstan.bin" = cfg.phpstan.bin;
           "language_server_phpstan.mem_limit" = "2048M";
         };
-        # handlers = {
-        #   "textDocument/inlayHint".__raw = ''
-        #     function(err, result, ...)
-        #       for _, res in ipairs(result) do
-        #         res.label = res.label .. ": "
-        #       end
-        #       vim.lsp.handlers["textDocument/inlayHint"](err, result, ...)
-        #     end
-        #   '';
-        # };
+        handlers = {
+          #   "textDocument/inlayHint".__raw = ''
+          #     function(err, result, ...)
+          #       for _, res in ipairs(result) do
+          #         res.label = res.label .. ": "
+          #       end
+          #       vim.lsp.handlers["textDocument/inlayHint"](err, result, ...)
+          #     end
+          #   '';
+
+          # Remove the namespace error on tests for using pest
+          "textDocument/publishDiagnostics".__raw = ''
+            function(err, result, ...)
+              if vim.endswith(result.uri, "Test.php") then
+                result.diagnostics = vim.tbl_filter(function(diagnostic)
+                  return not vim.startswith(diagnostic.message, 'Namespace should probably be "Tests')
+                end, result.diagnostics)
+              end
+              vim.lsp.diagnostic.on_publish_diagnostics(err, result, ...)
+            end
+          '';
+        };
       };
 
       onAttach.function = ''
