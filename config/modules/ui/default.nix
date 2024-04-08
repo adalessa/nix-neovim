@@ -63,10 +63,11 @@ in {
             }
             {
               name = "Version";
-              action = helpers.mkRaw ''                function()
-                                local version = vim.version()
-                                vim.notify(string.format("Neovim version %d.%d.%d", version.major, version.minor, version.patch))
-                              end
+              action = helpers.mkRaw ''
+                function()
+                  local version = vim.version()
+                  vim.notify(string.format("Neovim version %d.%d.%d", version.major, version.minor, version.patch))
+                end
               '';
               section = "Neovim";
             }
