@@ -71,6 +71,21 @@ in {
               '';
               section = "Neovim";
             }
+            {
+              name = "Health";
+              action = helpers.mkRaw ''
+                function()
+                  local checks = vim.health._complete()
+                  vim.ui.select(checks, { prompt = "HealthCheck" }, function(check)
+                    if not check then
+                      return
+                    end
+                    vim.cmd("checkhealth " .. check)
+                  end)
+                end
+              '';
+              section = "Neovim";
+            }
           ];
         };
       };
