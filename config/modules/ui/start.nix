@@ -38,6 +38,11 @@ in {
             section = "Telescope";
           }
           {
+            name = "Branches";
+            action = ":Telescope git_branches";
+            section = "Telescope";
+          }
+          {
             name = "Oil";
             action = ":Oil";
             section = "Files";
