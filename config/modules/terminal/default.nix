@@ -10,9 +10,11 @@
 in {
   plugins.toggleterm = {
     enable = true;
-    openMapping = "<C-\\>";
-    winbar.enabled = false;
-    size = 11;
+    settings = {
+      open_mapping = "'<C-\\>'";
+      winbar.enabled = false;
+      size = 11;
+    };
   };
   extraPlugins = [toggleterm-manager];
   extraConfigLua = ''

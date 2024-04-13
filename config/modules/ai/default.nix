@@ -3,6 +3,7 @@
     enable = true;
     url = "http://10.27.22.101:11434";
   };
+
   extraConfigLua = ''
     function ollama_lualine_status()
       local status = require("ollama").status()

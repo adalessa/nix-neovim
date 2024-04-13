@@ -8,7 +8,7 @@ in {
 
   plugins.telescope = {
     enable = true;
-    defaults = {
+    settings.defaults = {
       layout_strategy = "vertical";
       layout_config = {
         preview_cutoff = 20;
@@ -17,29 +17,32 @@ in {
       };
     };
     extensions = {
-      file_browser = {
-        enable = true;
-        path = "%:p:h";
-        mappings = {"i" = {"<c-y>" = "create_from_prompt";};};
-      };
       fzf-native.enable = true;
     };
     keymaps = {
       "<leader>fg" = {
         action = "live_grep";
-        desc = "Telescope Live Greoup";
+        options = {
+          desc = "Telescope Live Greoup";
+        };
       };
       "<leader>ph" = {
         action = "help_tags";
-        desc = "Telescope Help";
+        options = {
+          desc = "Telescope Help";
+        };
       };
       "<leader>pe" = {
         action = "buffers";
-        desc = "Telescope Buffers";
+        options = {
+          desc = "Telescope Buffers";
+        };
       };
       "<leader>pr" = {
         action = "treesitter";
-        desc = "Telescope Treesitter";
+        options = {
+          desc = "Telescope Treesitter";
+        };
       };
     };
   };
