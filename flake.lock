@@ -228,11 +228,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1712759992,
-        "narHash": "sha256-2APpO3ZW4idlgtlb8hB04u/rmIcKA8O7pYqxF66xbNY=",
+        "lastModified": 1712989663,
+        "narHash": "sha256-r2X/DIAyKOLiHoncjcxUk1TENWDTTaigRBaY53Cts/w=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "31357486b0ef6f4e161e002b6893eeb4fafc3ca9",
+        "rev": "40ab43ae98cb3e6f07eaeaa3f3ed56d589da21b0",
         "type": "github"
       },
       "original": {
@@ -325,11 +325,11 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1713008785,
-        "narHash": "sha256-fblaj6/83OQYrD1UHBjLapxjGQaC4edouX4g2X8CVhk=",
+        "lastModified": 1713087347,
+        "narHash": "sha256-RpRIJcbAjR3SF6tarvdG0ErN9afifG/zjxNlntRQrw4=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "21c233919d747d3375e3a173b65f7f26ccf01256",
+        "rev": "ad6a08b69528fdaf7e12c90da06f9a34f32d7ea6",
         "type": "github"
       },
       "original": {
@@ -358,11 +358,11 @@
     "plugin-laravel": {
       "flake": false,
       "locked": {
-        "lastModified": 1712697689,
-        "narHash": "sha256-oiIzpTzkkC85okteI7k6y7NfqGePnOvmXnIKbhQuulE=",
+        "lastModified": 1713114208,
+        "narHash": "sha256-BaF65WCH2w2zi69BIsXb0ggSWKYfdas6+W6kXajCM9g=",
         "owner": "adalessa",
         "repo": "laravel.nvim",
-        "rev": "441d1c4b39794d0efda367896185b6efc4f5c990",
+        "rev": "338b6a4ead1c43ddd21cc3bade4345a6d8ce4617",
         "type": "github"
       },
       "original": {
@@ -434,22 +434,6 @@
       "original": {
         "owner": "adalessa",
         "repo": "telescope-graphql",
-        "type": "github"
-      }
-    },
-    "plugin-toggleterm-manager": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1701400122,
-        "narHash": "sha256-7t61kcqeOS9hPXc9y88Sa8D0ZXIqxCXtxFQzmHKFJ8c=",
-        "owner": "ryanmsnyder",
-        "repo": "toggleterm-manager.nvim",
-        "rev": "31318b85a7cc20bf50ce32aedf4e835844133863",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ryanmsnyder",
-        "repo": "toggleterm-manager.nvim",
         "type": "github"
       }
     },
@@ -565,7 +549,6 @@
         "plugin-php-lsp-utils": "plugin-php-lsp-utils",
         "plugin-scratch": "plugin-scratch",
         "plugin-telescope-graphql": "plugin-telescope-graphql",
-        "plugin-toggleterm-manager": "plugin-toggleterm-manager",
         "plugin-transparent": "plugin-transparent",
         "plugin-twilight": "plugin-twilight",
         "plugin-ultimate-autopairs": "plugin-ultimate-autopairs",

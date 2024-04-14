@@ -134,5 +134,21 @@ in {
       lua = true;
       action = "function() require('laravel').resources() end";
     }
+    {
+      mode = "n";
+      key = "<leader>rr";
+      options.desc = "Load Laravel plugin from local";
+      lua = true;
+      action = ''
+        function()
+          vim.opt.runtimepath:prepend("~/code/plugins/laravel.nvim")
+          local reload = require("plenary.reload")
+          reload.reload_module("laravel")
+          reload.reload_module("telescope")
+          local laravel = require("laravel")
+          laravel.setup({})
+        end
+      '';
+    }
   ];
 }
