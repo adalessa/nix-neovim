@@ -264,11 +264,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1712791164,
-        "narHash": "sha256-3sbWO1mbpWsLepZGbWaMovSO7ndZeFqDSdX0hZ9nVyw=",
+        "lastModified": 1712963716,
+        "narHash": "sha256-WKm9CvgCldeIVvRz87iOMi8CFVB1apJlkUT4GGvA0iM=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "1042fd8b148a9105f3c0aca3a6177fd1d9360ba5",
+        "rev": "cfd6b5fc90b15709b780a5a1619695a88505a176",
         "type": "github"
       },
       "original": {
@@ -325,11 +325,11 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1713087347,
-        "narHash": "sha256-RpRIJcbAjR3SF6tarvdG0ErN9afifG/zjxNlntRQrw4=",
+        "lastModified": 1713180353,
+        "narHash": "sha256-zDILiXCByN7gVgPrgt7iBS9YHrOFN6ar1+AYzcYDk5I=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "ad6a08b69528fdaf7e12c90da06f9a34f32d7ea6",
+        "rev": "6440f4af878150b501befdb91a73ef7e92a52bee",
         "type": "github"
       },
       "original": {
@@ -358,11 +358,11 @@
     "plugin-laravel": {
       "flake": false,
       "locked": {
-        "lastModified": 1713114208,
-        "narHash": "sha256-BaF65WCH2w2zi69BIsXb0ggSWKYfdas6+W6kXajCM9g=",
+        "lastModified": 1713206353,
+        "narHash": "sha256-qioQkdYcazsaYhL21n/O+k8L41Nnfv8s+6y1yygCOAE=",
         "owner": "adalessa",
         "repo": "laravel.nvim",
-        "rev": "338b6a4ead1c43ddd21cc3bade4345a6d8ce4617",
+        "rev": "4e2a832a07e5abc6f67d0c3f5601c5cecbd73459",
         "type": "github"
       },
       "original": {
