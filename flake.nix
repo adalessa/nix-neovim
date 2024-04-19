@@ -52,8 +52,7 @@
       flake = false;
     };
     phpactor = {
-      # url = "github:phpactor/phpactor";
-      url = "github:mamazu/phpactor/anonymous_classes";
+      url = "github:phpactor/phpactor";
       flake = false;
     };
   };

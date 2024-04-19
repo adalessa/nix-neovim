@@ -341,16 +341,15 @@
     "phpactor": {
       "flake": false,
       "locked": {
-        "lastModified": 1713445545,
-        "narHash": "sha256-LGvXo7+mrz4WJ+ESuEv3LpobsW7pU7bB+DNozDg6mYM=",
-        "owner": "mamazu",
+        "lastModified": 1712411024,
+        "narHash": "sha256-EBWZRgKBPsjN3QEQpcY/eq7TUnEdDhYL28+yLs4djl4=",
+        "owner": "phpactor",
         "repo": "phpactor",
-        "rev": "011b09561839eb14dfa4ce98750aee42f1cda578",
+        "rev": "b890cfbaec6996ee98696c2bfe4a5e0cdc790401",
         "type": "github"
       },
       "original": {
-        "owner": "mamazu",
-        "ref": "anonymous_classes",
+        "owner": "phpactor",
         "repo": "phpactor",
         "type": "github"
       }
