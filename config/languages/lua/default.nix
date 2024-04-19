@@ -10,7 +10,13 @@
     "luasnippets/lua/lua.lua" = builtins.readFile ./snippets.lua;
   };
 
-  plugins.lsp.servers.lua-ls.enable = true;
+  plugins = {
+    lsp.servers.lua-ls.enable = true;
+    none-ls.sources = {
+      formatting.stylua.enable = true;
+      diagnostics.selene.enable = true;
+    };
+  };
 
   files = {
     "ftplugin/lua.lua" = {
