@@ -29,7 +29,6 @@
 
     ./tools/harpoon.nix
     ./tools/oil.nix
-    ./tools/rest.nix
     ./tools/scratch.nix
     ./tools/todo-comments.nix
     ./tools/twilight.nix
