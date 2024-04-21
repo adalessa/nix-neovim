@@ -1,9 +1,4 @@
 {
-  plugins.ollama = {
-    enable = true;
-    url = "http://10.27.22.101:11434";
-  };
-
   extraConfigLua = ''
     function ollama_lualine_status()
       local status = require("ollama").status()
@@ -16,18 +11,25 @@
       end
     end
   '';
+  plugins = {
+    ollama = {
+      enable = true;
+      model = "llama3";
+      url = "http://10.27.22.101:11434";
+    };
 
-  plugins.lualine.sections.lualine_y = [
-    {
-      name = "ollama_lualine_status()";
-      icon = {
-        icon = "󰚩 ";
-        color = {
-          fg = "ffffff";
+    lualine.sections.lualine_y = [
+      {
+        name = "ollama_lualine_status()";
+        icon = {
+          icon = "󰚩 ";
+          color = {
+            fg = "ffffff";
+          };
         };
-      };
-    }
-  ];
+      }
+    ];
+  };
 
   keymaps = [
     {

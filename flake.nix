@@ -15,6 +15,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    plugin-cmp-ai = {
+      url = "github:tzachar/cmp-ai";
+      flake = false;
+    };
+
     plugin-php-lsp-utils = {
       url = "github:adalessa/php-lsp-utils";
       flake = false;
