@@ -7,7 +7,7 @@
     ./core.nix
 
     ./autocmd.nix
-    ./cmp.nix
+    ./cmp
     ./diagnostic.nix
     ./easy-align.nix
     ./keymaps.nix
