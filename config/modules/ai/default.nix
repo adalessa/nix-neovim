@@ -1,13 +1,17 @@
 {
   extraConfigLua = ''
+    ollama_lualine_status_char = 0
     function ollama_lualine_status()
       local status = require("ollama").status()
-      local loading = {".  ", ".. ", "..."}
+      -- local loading = {".  ", ".. ", "..."}
+      local spinner_chars = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" }
 
       if status == "IDLE" then
-        return "󰒲  "
+        ollama_lualine_status_char = 1
+        return "󰒲"
       elseif status == "WORKING" then
-        return loading[math.random(#loading) % #loading + 1]
+        ollama_lualine_status_char = ollama_lualine_status_char % #spinner_chars + 1
+        return spinner_chars[ollama_lualine_status_char]
       end
     end
   '';
@@ -16,6 +20,16 @@
       enable = true;
       model = "llama3";
       url = "http://10.27.22.101:11434";
+      prompts = {
+        laravel_review = {
+          system = "Act as a code review tool specialize in php focus in Laravel applications.";
+          prompt = ''
+            Review the following and respond EXACTLY in the format:\n `<line_number>: <your comment>`\n
+            Code: ```$ftype\n$buf\n```\n
+          '';
+          action = "display";
+        };
+      };
     };
 
     lualine.sections.lualine_y = [

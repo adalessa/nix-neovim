@@ -9,6 +9,7 @@
     ./languages/lua
     ./languages/nix
     ./languages/php
+    ./languages/python
     ./languages/rust
     ./languages/typescript
 
