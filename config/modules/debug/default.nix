@@ -57,7 +57,9 @@
             color = "blue",
             invoke_on_body = true,
             hint = {
-              border = "rounded",
+              float_opts = {
+                border = "rounded"
+              },
               position = "bottom",
             },
           },
