@@ -22,12 +22,37 @@
       url = "http://10.27.22.101:11434";
       prompts = {
         laravel_review = {
-          system = "Act as a code review tool specialize in php focus in Laravel applications.";
+          system = "Act as a code review tool specialize in PHP focus in Laravel applications.";
           prompt = ''
-            Review the following and respond EXACTLY in the format:\n `<line_number>: <your comment>`\n
+            Review the following code and respond EXACTLY in the format:\n `<line_number>: <your comment>`.
+            NOT add beggining or end comments only add comment if there is an error.
             Code: ```$ftype\n$buf\n```\n
           '';
           action = "display";
+        };
+        rename_variable = {
+          system = "Act as a code review tool.";
+          prompt = ''
+            In the following code provide a better name for the variable $sel, respond EXACTLY and ONLY with a list of new names, split by `,`.
+            Code: ```$ftype\n$buf\n```\n
+          '';
+          action = {
+            fn = ''
+              function (prompt)
+                return function (body)
+                  local response = body.response:gsub("`", ""):gsub("%s", "")
+                  local list = vim.split(response, ",")
+
+                  vim.ui.select(list, {prompt = "Select new Name"}, function (value)
+                    if not value then
+                      return
+                    end
+                    vim.lsp.buf.rename(value)
+                  end)
+                end
+              end
+            '';
+          };
         };
       };
     };

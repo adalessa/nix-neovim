@@ -1,7 +1,4 @@
-vim.g["test#strategy"] = "neovim"
-vim.g["test#neovim#term_position"] = "vert"
-vim.g["test#preserve_screen"] = 0
--- vim.g["test#php#pest#executable"] = "./vendor/bin/sail test"
+vim.g["test#strategy"] = "toggleterm"
 
 local function dockerComposeTransform(cmd)
   local uid = vim.fn.system("id -u"):gsub("%s*$", "")
