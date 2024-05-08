@@ -35,6 +35,7 @@
           {name = "path";}
           {name = "buffer";}
           {name = "luasnip";}
+          {name = "copilot";}
         ];
       };
       filetype = {
