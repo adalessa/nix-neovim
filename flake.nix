@@ -15,8 +15,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    plugin-cmp-ai = {
-      url = "github:tzachar/cmp-ai";
+    colorscheme-oldworld = {
+      url = "github:dgox16/oldworld.nvim";
       flake = false;
     };
 
@@ -48,12 +48,12 @@
       url = "github:folke/twilight.nvim";
       flake = false;
     };
-    blade-treesitter = {
-      url = "github:EmranMR/tree-sitter-blade";
-      flake = false;
-    };
     plugin-neorg = {
       url = "github:nvim-neorg/neorg/v7.0.0";
+      flake = false;
+    };
+    blade-treesitter = {
+      url = "github:EmranMR/tree-sitter-blade";
       flake = false;
     };
     phpactor = {

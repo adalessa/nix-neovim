@@ -16,6 +16,22 @@
         "type": "github"
       }
     },
+    "colorscheme-oldworld": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1715025354,
+        "narHash": "sha256-+xTInJ7qhLeWlNyg55Gqi3dAPNpikTPV/AcpGkLkZDc=",
+        "owner": "dgox16",
+        "repo": "oldworld.nvim",
+        "rev": "04e9909bc893cedd8f55b3c8af200526adf396d0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "dgox16",
+        "repo": "oldworld.nvim",
+        "type": "github"
+      }
+    },
     "devshell": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -348,22 +364,6 @@
         "type": "github"
       }
     },
-    "plugin-cmp-ai": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1710504430,
-        "narHash": "sha256-bzF2G888Q/euR8Xnhgp3M4zWXODw4rMojR71yeUSROE=",
-        "owner": "tzachar",
-        "repo": "cmp-ai",
-        "rev": "70ab6d97110224c1ed1a023cd5f18efcaeefb1df",
-        "type": "github"
-      },
-      "original": {
-        "owner": "tzachar",
-        "repo": "cmp-ai",
-        "type": "github"
-      }
-    },
     "plugin-laravel": {
       "flake": false,
       "locked": {
@@ -549,11 +549,11 @@
     "root": {
       "inputs": {
         "blade-treesitter": "blade-treesitter",
+        "colorscheme-oldworld": "colorscheme-oldworld",
         "flake-parts": "flake-parts",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
         "phpactor": "phpactor",
-        "plugin-cmp-ai": "plugin-cmp-ai",
         "plugin-laravel": "plugin-laravel",
         "plugin-neorg": "plugin-neorg",
         "plugin-php-lsp-utils": "plugin-php-lsp-utils",
