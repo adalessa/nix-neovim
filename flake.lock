@@ -494,6 +494,23 @@
         "type": "github"
       }
     },
+    "plugin-worktree": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1714420982,
+        "narHash": "sha256-CC9+h1i+l9TbE60LABZnwjkHy94VGQ7Hqd5jVHEW+mw=",
+        "owner": "awerebea",
+        "repo": "git-worktree.nvim",
+        "rev": "a3917d0b7ca32e7faeed410cd6b0c572bf6384ac",
+        "type": "github"
+      },
+      "original": {
+        "owner": "awerebea",
+        "ref": "handle_changes_in_telescope_api",
+        "repo": "git-worktree.nvim",
+        "type": "github"
+      }
+    },
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat_2",
@@ -562,6 +579,7 @@
         "plugin-transparent": "plugin-transparent",
         "plugin-twilight": "plugin-twilight",
         "plugin-ultimate-autopairs": "plugin-ultimate-autopairs",
+        "plugin-worktree": "plugin-worktree",
         "pre-commit-hooks": "pre-commit-hooks_2"
       }
     },

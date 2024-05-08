@@ -1,5 +1,14 @@
-{pkgs, ...}: {
-  extraPlugins = with pkgs.vimPlugins; [git-worktree-nvim];
+{
+  pkgs,
+  inputs,
+  ...
+}: let
+  worktree = pkgs.vimUtils.buildVimPlugin {
+    name = "worktree";
+    src = inputs.plugin-worktree;
+  };
+in {
+  extraPlugins = [worktree];
 
   extraConfigLua = ''
     require("git-worktree").setup({})

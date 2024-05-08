@@ -48,6 +48,10 @@
       url = "github:folke/twilight.nvim";
       flake = false;
     };
+    plugin-worktree = {
+      url = "github:awerebea/git-worktree.nvim/handle_changes_in_telescope_api";
+      flake = false;
+    };
     plugin-neorg = {
       url = "github:nvim-neorg/neorg/v7.0.0";
       flake = false;
