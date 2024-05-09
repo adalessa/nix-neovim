@@ -27,6 +27,7 @@
     ./modules/tests
     ./modules/ui
     ./modules/ai
+    ./modules/godot
 
     ./tools/harpoon.nix
     ./tools/oil.nix
