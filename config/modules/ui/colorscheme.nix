@@ -18,8 +18,8 @@ in {
 
   highlightOverride = {
     # NeogitDiffAddHighlight xxx cterm= gui= guifg=#90b99f guibg=#90b99f
-    NeogitDiffAddHighlight = {
-      fg = "#8d84aa";
-    };
+    NeogitDiffAddHighlight.fg = "#8d84aa";
+    # NeogitDiffDeleteHighlight xxx cterm= gui= guifg=#f5a191 guibg=#f5a191
+    NeogitDiffDeleteHighlight.fg = "#737374";
   };
 }
