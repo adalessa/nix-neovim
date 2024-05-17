@@ -18,6 +18,7 @@
     ./transparent.nix
     ./treesitter.nix
     ./ultimate-autopairs.nix
+    ./bqf.nix
   ];
 
   globals.mapleader = " ";
