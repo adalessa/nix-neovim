@@ -82,6 +82,13 @@
         ...
       }: let
         nixvim' = nixvim.legacyPackages.${system};
+
+        core = nixvim'.makeNixvimWithModule {
+          module = ./config/main.nix;
+        };
+
+        alpha = core.nixvimExtend ./config/alpha.nix;
+
         nvim = nixvim'.makeNixvimWithModule {
           inherit pkgs;
           extraSpecialArgs = {inherit inputs;};

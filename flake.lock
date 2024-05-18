@@ -19,11 +19,11 @@
     "colorscheme-oldworld": {
       "flake": false,
       "locked": {
-        "lastModified": 1715924105,
-        "narHash": "sha256-gqfRXwMovXN+YUnymvMRVoxuCKfMBxioSjQ+IsNXO9g=",
+        "lastModified": 1715987730,
+        "narHash": "sha256-1MM8xaBWVdJ1he+XwnfLXXY15g3/viFYUcsN9bCyYho=",
         "owner": "dgox16",
         "repo": "oldworld.nvim",
-        "rev": "c27318f9667ecb4dbce5da42856aa24d5f1df1f4",
+        "rev": "95efd072bdfbb98d539e588b7fdc414c4fbac19f",
         "type": "github"
       },
       "original": {
@@ -277,11 +277,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1715787315,
-        "narHash": "sha256-cYApT0NXJfqBkKcci7D9Kr4CBYZKOQKDYA23q8XNuWg=",
+        "lastModified": 1715961556,
+        "narHash": "sha256-+NpbZRCRisUHKQJZF3CT+xn14ZZQO+KjxIIanH3Pvn4=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "33d1e753c82ffc557b4a585c77de43d4c922ebb5",
+        "rev": "4a6b83b05df1a8bd7d99095ec4b4d271f2956b64",
         "type": "github"
       },
       "original": {
@@ -334,11 +334,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1715891811,
-        "narHash": "sha256-HC3JxKLeXDL2NpHjD+GD+XxvGmYsq/yqSX8TCLa3atA=",
+        "lastModified": 1715976947,
+        "narHash": "sha256-cfU0THstf6phd6vpzIzsew89Ns5JdPq7CyeiLRajE1g=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "72ff1489c7f40dae829fafc689fb6a57099a9739",
+        "rev": "7c4fe30f814595bc617d6b1b682ab9cbfe535d33",
         "type": "github"
       },
       "original": {

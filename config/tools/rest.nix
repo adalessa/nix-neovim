@@ -1,0 +1,3 @@
+{
+  plugins.rest.enable = true;
+}
