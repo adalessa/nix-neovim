@@ -35,6 +35,5 @@
     ./tools/todo-comments.nix
     ./tools/twilight.nix
     ./tools/undotree.nix
-    ./tools/rest.nix
   ];
 }
