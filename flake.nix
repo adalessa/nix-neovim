@@ -84,21 +84,23 @@
         nixvim' = nixvim.legacyPackages.${system};
 
         core = nixvim'.makeNixvimWithModule {
-          module = ./config/main.nix;
+          inherit pkgs;
+          extraSpecialArgs = {inherit inputs;};
+          module = ./config/core.nix;
         };
 
         alpha = core.nixvimExtend ./config/alpha.nix;
-
-        nvim = nixvim'.makeNixvimWithModule {
-          inherit pkgs;
-          extraSpecialArgs = {inherit inputs;};
-          module = ./config/main.nix;
-        };
-        work' = nixvim'.makeNixvimWithModule {
-          inherit pkgs;
-          extraSpecialArgs = {inherit inputs;};
-          module = ./config/work.nix;
-        };
+        work = core.nixvimExtend ./config/work.nix;
+        # nvim = nixvim'.makeNixvimWithModule {
+        #   inherit pkgs;
+        #   extraSpecialArgs = {inherit inputs;};
+        #   module = ./config/main.nix;
+        # };
+        # work' = nixvim'.makeNixvimWithModule {
+        #   inherit pkgs;
+        #   extraSpecialArgs = {inherit inputs;};
+        #   module = ./config/work.nix;
+        # };
       in {
         _module.args.pkgs = import inputs.nixpkgs {
           inherit system;
@@ -109,7 +111,7 @@
 
         checks = {
           default = pkgs.nixvimLib.check.mkTestDerivationFromNvim {
-            inherit nvim;
+            inherit alpha;
             name = "A nixvim configuration";
           };
           pre-commit-check = inputs.pre-commit-hooks.lib.${system}.run {
@@ -123,10 +125,9 @@
 
         formatter = pkgs.alejandra;
 
-        packages = rec {
-          default = main;
-          main = nvim;
-          work = work';
+        packages = {
+          inherit alpha core work;
+          default = alpha;
         };
 
         devShells = {

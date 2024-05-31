@@ -12,6 +12,8 @@
         mirror = true;
         prompt_position = "top";
       };
+      prompt_prefix = "🔍 ";
+      selection_caret = "👉 ";
     };
     extensions = {
       fzf-native.enable = true;

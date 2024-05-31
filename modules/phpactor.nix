@@ -43,6 +43,7 @@ in {
         init_options = {
           "language_server_configuration.auto_config" = cfg.auto_config;
           "language_server_worse_reflection.inlay_hints.enable" = true;
+          "language_server_worse_reflection.inlay_hints.types" = true;
           "language_server_worse_reflection.inlay_hints.params" = true;
           "code_transform.import_globals" = true;
           "prophecy.enabled" = cfg.prophecy.enable;
@@ -69,14 +70,17 @@ in {
           "language_server_phpstan.mem_limit" = "2048M";
         };
         handlers = {
-          #   "textDocument/inlayHint".__raw = ''
-          #     function(err, result, ...)
-          #       for _, res in ipairs(result) do
-          #         res.label = res.label .. ": "
-          #       end
-          #       vim.lsp.handlers["textDocument/inlayHint"](err, result, ...)
-          #     end
-          #   '';
+          "textDocument/inlayHint".__raw = ''
+            function(err, result, ...)
+              for _, res in ipairs(result) do
+                if res.kind == 2 then
+                  res.label = res.label .. ":"
+                end
+                res.label = res.label ..  " "
+              end
+              vim.lsp.handlers["textDocument/inlayHint"](err, result, ...)
+            end
+          '';
 
           # Remove the namespace error on tests for using pest
           "textDocument/publishDiagnostics".__raw = ''

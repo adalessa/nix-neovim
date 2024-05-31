@@ -1,7 +1,5 @@
 {
   imports = [
-    ./core
-
     ./languages/gleam
     ./languages/go
     ./languages/html

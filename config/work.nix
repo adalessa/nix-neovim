@@ -1,7 +1,5 @@
 {
   imports = [
-    ./core
-
     ./languages/go
     ./languages/json
     ./languages/lua

@@ -4,9 +4,9 @@
 
     lsp.servers.nil_ls.enable = true;
 
-    treesitter = {
-      nixvimInjections = true;
-    };
+    # treesitter = {
+    #   nixvimInjections = true;
+    # };
 
     none-ls = {
       enable = true;
@@ -20,6 +20,26 @@
 
   extraFiles = {
     "luasnippets/nix/nix.lua" = builtins.readFile ./snippets.lua;
+    "queries/nix/injections.scm" = ''
+      ;; extends
+
+      (binding
+        attrpath: (attrpath (identifier) @_path)
+        expression: [
+          (string_expression (string_fragment) @injection.content (#set! injection.language "lua"))
+          (indented_string_expression (string_fragment) @injection.content (#set! injection.language "lua"))
+        ]
+        (#match? @_path "^extraConfigLua(Pre|Post)?$"))
+
+
+      (binding
+        attrpath: (attrpath (identifier) @_path)
+        expression: [
+          (string_expression (string_fragment) @vim)
+          (indented_string_expression (string_fragment) @vim)
+        ]
+        (#match? @_path "^extraConfigVim(Pre|Post)?$"))
+    '';
   };
 
   files = {
