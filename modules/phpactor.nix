@@ -43,7 +43,7 @@ in {
         init_options = {
           "language_server_configuration.auto_config" = cfg.auto_config;
           "language_server_worse_reflection.inlay_hints.enable" = true;
-          "language_server_worse_reflection.inlay_hints.types" = true;
+          "language_server_worse_reflection.inlay_hints.types" = false;
           "language_server_worse_reflection.inlay_hints.params" = true;
           "code_transform.import_globals" = true;
           "prophecy.enabled" = cfg.prophecy.enable;
