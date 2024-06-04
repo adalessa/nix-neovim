@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  helpers,
+  ...
+}: {
   extraPlugins = [pkgs.vimPlugins.vim-dispatch];
 
   keymaps = [
@@ -6,8 +10,7 @@
       mode = "n";
       key = "<leader>mm";
       options.desc = "Runs make command";
-      lua = true;
-      action = ''
+      action = helpers.mkRaw ''
         function()
           local items =
             vim.fn.systemlist "make -qp | awk -F':' '/^[a-zA-Z0-9][^$#\\/\t=]*:([^=]|$)/ {split($1,A,/ /);print A[1]}'"

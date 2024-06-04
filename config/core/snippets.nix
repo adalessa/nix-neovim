@@ -1,4 +1,4 @@
-{
+{helpers, ...}: {
   plugins.luasnip = {
     enable = true;
 
@@ -15,8 +15,7 @@
     {
       mode = ["i" "s"];
       key = "<c-k>";
-      lua = true;
-      action = ''
+      action = helpers.mkRaw ''
         function()
           local ls = require('luasnip')
           if ls.expand_or_jumpable() then
@@ -29,8 +28,7 @@
     {
       mode = ["i" "s"];
       key = "<c-j>";
-      lua = true;
-      action = ''
+      action = helpers.mkRaw ''
         function()
           local ls = require('luasnip')
           if ls.jumpable(-1) then
@@ -43,8 +41,7 @@
     {
       mode = ["i" "s"];
       key = "<c-l>";
-      lua = true;
-      action = ''
+      action = helpers.mkRaw ''
         function()
           local ls = require('luasnip')
           if ls.choice_active() then

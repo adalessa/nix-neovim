@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  helpers,
+  ...
+}: {
   imports = [./telescope-ui.nix];
 
   extraPackages = [pkgs.fd pkgs.ripgrep];
@@ -51,8 +55,7 @@
       mode = "n";
       key = "<leader>pp";
       options.desc = "Telescope Git Files";
-      lua = true;
-      action = ''
+      action = helpers.mkRaw ''
         function()
           local opts = { show_untracked = true }
           local ok = pcall(require("telescope.builtin").git_files, opts)
@@ -66,8 +69,7 @@
       mode = "n";
       key = "<leader>pd";
       options.desc = "Telescope Document symbol";
-      lua = true;
-      action = ''
+      action = helpers.mkRaw ''
         function()
           require('telescope.builtin').lsp_document_symbols()
         end
@@ -77,8 +79,7 @@
       mode = "n";
       key = "<leader>pw";
       options.desc = "Grep current word";
-      lua = true;
-      action = ''
+      action = helpers.mkRaw ''
         function()
           require('telescope.builtin').grep_string { search = vim.fn.expand '<cword>' }
         end
@@ -88,8 +89,7 @@
       mode = "n";
       key = "<leader>ps";
       options.desc = "Grep in project";
-      lua = true;
-      action = ''
+      action = helpers.mkRaw ''
         function()
           vim.ui.input({ prompt = "Grep for > " }, function(input)
             if input == nil then
@@ -104,8 +104,7 @@
       mode = "n";
       key = "<leader>gc";
       options.desc = "Telescope Git Branches";
-      lua = true;
-      action = ''
+      action = helpers.mkRaw ''
         function()
           local actions = require "telescope.actions"
           require("telescope.builtin").git_branches {
@@ -122,8 +121,7 @@
       mode = "n";
       key = "<leader>gs";
       options.desc = "Telescope Git Status";
-      lua = true;
-      action = ''
+      action = helpers.mkRaw ''
         function()
           require("telescope.builtin").git_status()
         end

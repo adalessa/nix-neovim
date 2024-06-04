@@ -1,18 +1,16 @@
-{
+{helpers, ...}: {
   keymaps = [
     {
       mode = "n";
       key = "<leader>vn";
       options.desc = "Go to next diagnostic problem";
-      lua = true;
-      action = "vim.diagnostic.goto_next";
+      action = helpers.mkRaw "vim.diagnostic.goto_next";
     }
     {
       mode = "n";
       key = "<leader>vp";
       options.desc = "Go to previous diagnostic problem";
-      lua = true;
-      action = "vim.diagnostic.goto_prev";
+      action = helpers.mkRaw "vim.diagnostic.goto_prev";
     }
   ];
   extraConfigLua = ''

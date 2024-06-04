@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  helpers,
   ...
 }: let
   laravelPlugin = pkgs.vimUtils.buildVimPlugin {
@@ -90,20 +91,17 @@ in {
     {
       mode = "n";
       key = "<c-g>";
-      lua = true;
-      action = "function() require('laravel').viewFinder() end";
+      action = helpers.mkRaw "function() require('laravel').viewFinder() end";
     }
     {
       mode = "n";
       key = "<leader>la";
-      lua = true;
-      action = "function() require('laravel').artisan() end";
+      action = helpers.mkRaw "function() require('laravel').artisan() end";
     }
     {
       mode = "n";
       key = "<leader>lr";
-      lua = true;
-      action = "function() require('laravel').routes() end";
+      action = helpers.mkRaw "function() require('laravel').routes() end";
     }
     {
       mode = "n";
@@ -113,33 +111,28 @@ in {
     {
       mode = "n";
       key = "<leader>lm";
-      lua = true;
-      action = "function() require('laravel').make() end";
+      action = helpers.mkRaw "function() require('laravel').make() end";
     }
     {
       mode = "n";
       key = "<leader>lq";
-      lua = true;
-      action = "function() require('laravel').history() end";
+      action = helpers.mkRaw "function() require('laravel').history() end";
     }
     {
       mode = "n";
       key = "<leader>lc";
-      lua = true;
-      action = "function() require('laravel').commands() end";
+      action = helpers.mkRaw "function() require('laravel').commands() end";
     }
     {
       mode = "n";
       key = "<leader>lo";
-      lua = true;
-      action = "function() require('laravel').resources() end";
+      action = helpers.mkRaw "function() require('laravel').resources() end";
     }
     {
       mode = "n";
       key = "<leader>rr";
       options.desc = "Load Laravel plugin from local";
-      lua = true;
-      action = ''
+      action = helpers.mkRaw ''
         function()
           vim.opt.runtimepath:prepend("~/code/plugins/laravel.nvim")
           local reload = require("plenary.reload")

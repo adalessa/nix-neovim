@@ -1,4 +1,4 @@
-{
+{helpers, ...}: {
   keymaps = [
     {
       mode = "t";
@@ -29,8 +29,7 @@
       mode = "v";
       key = "<leader>p";
       options.desc = "Special paste, paste without replacing copy register";
-      lua = true;
-      action = ''
+      action = helpers.mkRaw ''
         function()
           local val = vim.fn.getreg '+'
           vim.api.nvim_command [[normal! p]]

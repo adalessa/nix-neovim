@@ -91,16 +91,6 @@
 
         alpha = core.nixvimExtend ./config/alpha.nix;
         work = core.nixvimExtend ./config/work.nix;
-        # nvim = nixvim'.makeNixvimWithModule {
-        #   inherit pkgs;
-        #   extraSpecialArgs = {inherit inputs;};
-        #   module = ./config/main.nix;
-        # };
-        # work' = nixvim'.makeNixvimWithModule {
-        #   inherit pkgs;
-        #   extraSpecialArgs = {inherit inputs;};
-        #   module = ./config/work.nix;
-        # };
       in {
         _module.args.pkgs = import inputs.nixpkgs {
           inherit system;

@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  helpers,
   ...
 }: let
   worktree = pkgs.vimUtils.buildVimPlugin {
@@ -19,14 +20,12 @@ in {
     {
       mode = "n";
       key = "<leader>gt";
-      action = "require('telescope').extensions.git_worktree.git_worktrees";
-      lua = true;
+      action = helpers.mkRaw "require('telescope').extensions.git_worktree.git_worktrees";
     }
     {
       mode = "n";
       key = "<leader>gn";
-      action = "require('telescope').extensions.git_worktree.create_git_worktree";
-      lua = true;
+      action = helpers.mkRaw "require('telescope').extensions.git_worktree.create_git_worktree";
     }
   ];
 }

@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  helpers,
+  ...
+}: {
   imports = [
     ./dressing.nix
     ./lualine.nix
@@ -20,8 +24,7 @@
       mode = "n";
       key = "<leader>q";
       options.desc = "Dismiss notifications";
-      lua = true;
-      action = ''
+      action = helpers.mkRaw ''
         function()
           require('notify').dismiss()
         end
