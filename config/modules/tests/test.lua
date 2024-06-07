@@ -1,12 +1,9 @@
-vim.g["test#strategy"] = "toggleterm"
-
 local function dockerComposeTransform(cmd)
   local uid = vim.fn.system("id -u"):gsub("%s*$", "")
   local gid = vim.fn.system("id -g"):gsub("%s*$", "")
   return string.format("docker compose exec -u %s:%s php-fpm %s", uid, gid, cmd)
 end
 
-vim.g["test#php#behat#executable"] = "bin/behat --colors"
 vim.g["test#custom_transformations"] = { docker = dockerComposeTransform }
 
 vim.api.nvim_create_autocmd({ "DirChanged", "UIEnter" }, {
