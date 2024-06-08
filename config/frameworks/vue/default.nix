@@ -1,4 +1,4 @@
 {
   plugins.lsp.servers.volar.enable = true;
-  plugins.lsp.servers.emmet_ls.filetypes = ["vue"];
+  plugins.lsp.servers.emmet-ls.filetypes = ["vue"];
 }

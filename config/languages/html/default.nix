@@ -1,7 +1,7 @@
 {
   plugins.lsp.servers = {
     html.enable = true;
-    emmet_ls = {
+    emmet-ls = {
       enable = true;
       filetypes = [
         "css"
