@@ -5,23 +5,23 @@
     enable = true;
     signs = {
       dapStopped = {
-        text = "→";
+        text = "👉";
         texthl = "DiagnosticWarn";
       };
       dapBreakpoint = {
-        text = "B";
+        text = "🛑";
         texthl = "DiagnosticInfo";
       };
       dapBreakpointRejected = {
-        text = "R";
+        text = "🚫";
         texthl = "DiagnosticError";
       };
       dapBreakpointCondition = {
-        text = "C";
+        text = "🔍";
         texthl = "DiagnosticInfo";
       };
       dapLogPoint = {
-        text = "L";
+        text = "📝";
         texthl = "DiagnosticInfo";
       };
     };
