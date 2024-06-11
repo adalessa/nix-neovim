@@ -6,7 +6,7 @@
   imports = [
     ./dressing.nix
     ./lualine.nix
-    ./colorscheme.nix
+    # ./colorscheme.nix
     ./borders.nix
     ./start.nix
   ];

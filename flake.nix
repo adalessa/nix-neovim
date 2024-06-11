@@ -15,11 +15,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    colorscheme-oldworld = {
-      url = "github:dgox16/oldworld.nvim";
-      flake = false;
-    };
-
     plugin-php-lsp-utils = {
       url = "github:adalessa/php-lsp-utils";
       flake = false;
