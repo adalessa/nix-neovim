@@ -10,6 +10,8 @@
 in {
   extraPlugins = [ultimate-autopairs];
   extraConfigLua = ''
-    require('ultimate-autopair').setup()
+    require('ultimate-autopair').setup({
+      cmap = false,
+    })
   '';
 }
