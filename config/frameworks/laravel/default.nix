@@ -48,6 +48,12 @@ in {
             request = "launch";
             name = "Laravel";
             port = 9003;
+          }
+          {
+            type = "php";
+            request = "launch";
+            name = "Laravel Sail";
+            port = 9003;
             pathMappings = {"/var/www/html" = ''''${workspaceFolder}'';};
           }
         ];
