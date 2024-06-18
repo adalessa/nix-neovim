@@ -1,4 +1,4 @@
-{
+{ollama, ...}: {
   extraConfigLua = ''
     ollama_lualine_status_char = 0
     function ollama_lualine_status()
@@ -19,8 +19,7 @@
     ollama = {
       enable = true;
       model = "llama3";
-      # TODO remove the IP from the config
-      url = "http://10.27.22.20:11434";
+      inherit (ollama) url;
       prompts = {
         laravel_review = {
           system = "Act as a code review tool specialize in PHP focus in Laravel applications.";

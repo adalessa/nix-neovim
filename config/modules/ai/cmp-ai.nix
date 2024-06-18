@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  ollama,
   ...
 }: let
   cmp-ai = pkgs.vimUtils.buildVimPlugin {
@@ -26,7 +27,7 @@ in {
         provider_options = {
           stream = true,
           --TODO remove ip from the base file
-          base_url = 'http://10.27.22.20:11434/api/generate',
+          base_url = '${ollama.url}/api/generate',
           model = 'codellama:7b-code',
         },
         notify = true,

@@ -80,7 +80,12 @@
 
         core = nixvim'.makeNixvimWithModule {
           inherit pkgs;
-          extraSpecialArgs = {inherit inputs;};
+          extraSpecialArgs = {
+            inherit inputs;
+            ollama = {
+              url = "http://10.27.22.20:11434";
+            };
+          };
           module = ./config/core.nix;
         };
 
