@@ -19,7 +19,8 @@
     ollama = {
       enable = true;
       model = "llama3";
-      url = "http://10.27.22.101:11434";
+      # TODO remove the IP from the config
+      url = "http://10.27.22.20:11434";
       prompts = {
         laravel_review = {
           system = "Act as a code review tool specialize in PHP focus in Laravel applications.";

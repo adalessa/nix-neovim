@@ -25,7 +25,8 @@ in {
         provider = 'Ollama',
         provider_options = {
           stream = true,
-          base_url = 'http://10.27.22.101:11434/api/generate',
+          --TODO remove ip from the base file
+          base_url = 'http://10.27.22.20:11434/api/generate',
           model = 'codellama:7b-code',
         },
         notify = true,
