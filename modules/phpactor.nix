@@ -72,7 +72,7 @@ in {
         handlers = {
           "textDocument/inlayHint".__raw = ''
             function(err, result, ...)
-              for _, res in ipairs(result) do
+              for _, res in ipairs(result or {}) do
                 if res.kind == 2 then
                   res.label = res.label .. ":"
                 end
