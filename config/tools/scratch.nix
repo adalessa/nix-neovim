@@ -12,7 +12,9 @@ in {
   extraPlugins = [scratch];
 
   extraConfigLua = ''
-    require('scratch').setup()
+    require('scratch').setup({
+      path = "/home/alpha/.local/share/nvim/scratch/lua"
+    })
   '';
 
   keymaps = [
@@ -20,7 +22,7 @@ in {
       mode = "n";
       key = "<leader>rs";
       options.desc = "Telescope scratch";
-      action = helpers.mkRaw "require('scratch').open";
+      action = helpers.mkRaw "function() require('scratch').open() end";
     }
   ];
 }

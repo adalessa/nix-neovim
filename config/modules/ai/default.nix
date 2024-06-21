@@ -33,7 +33,7 @@
         rename_variable = {
           system = "Act as a code review tool.";
           prompt = ''
-            In the following code provide a better name for the variable $sel, respond EXACTLY and ONLY with a list of new names, split by `,`.
+            In the following $ftype code provide a better name for the variable $sel, respond EXACTLY and ONLY with a list of new names, split by `,`.
             Code: ```$ftype\n$buf\n```\n
           '';
           action = {
@@ -82,6 +82,12 @@
       key = "<leader>oG";
       options.desc = "Ollama Generate Code";
       action = ":<c-u>lua require('ollama').prompt('Generate_Code')<cr>";
+    }
+    {
+      mode = ["v"];
+      key = "<leader>ov";
+      options.desc = "Ollama rename variable";
+      action = ":<c-u>lua require('ollama').prompt('rename_variable')<cr>";
     }
   ];
 }
