@@ -17,6 +17,11 @@ in {
 
   languages.php.phpactor = {
     phpunit.enable = true;
+    phpstan = {
+      enable = true;
+      level = "6";
+      bin = "${pkgs.phpPackages.phpstan}/bin/phpstan";
+    };
   };
 
   extraPlugins = with pkgs; [
@@ -35,7 +40,7 @@ in {
           enable = true;
           package = null;
         };
-        diagnostics.phpstan.enable = true;
+        # diagnostics.phpstan.enable = true;
       };
     };
 

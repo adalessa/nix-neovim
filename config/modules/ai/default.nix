@@ -31,9 +31,9 @@
           action = "display";
         };
         rename_variable = {
-          system = "Act as a code review tool.";
+          system = "Act as a cli tool, do not add phrases nor comments, just the reply with the required format.";
           prompt = ''
-            In the following $ftype code provide a better name for the variable $sel, respond EXACTLY and ONLY with a list of new names, split by `,`.
+            In the following $ftype code provide a better name for the variable $sel, respond EXACTLY and ONLY with a list of new names split by `,`.
             Code: ```$ftype\n$buf\n```\n
           '';
           action = {
@@ -61,7 +61,7 @@
       {
         name = "ollama_lualine_status()";
         icon = {
-          icon = "󰚩 ";
+          icon = "🦙";
           color = {
             fg = "ffffff";
           };
