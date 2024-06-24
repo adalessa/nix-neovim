@@ -12,11 +12,11 @@
     prophecy.enable = true;
     phpcs = {
       enable = true;
-      bin = "%project_root%\/bin\/phpcs";
+      bin = "${pkgs.phpPackages.php-codesniffer}/bin/phpcs";
     };
     phpstan = {
       enable = true;
-      bin = "%project_root%\/bin\/phpstan";
+      bin = "${pkgs.phpPackages.phpstan}/bin/phpstan";
       level = "7";
     };
   };

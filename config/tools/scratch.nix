@@ -12,9 +12,7 @@ in {
   extraPlugins = [scratch];
 
   extraConfigLua = ''
-    require('scratch').setup({
-      path = "/home/alpha/.local/share/nvim/scratch/lua"
-    })
+    require('scratch').setup()
   '';
 
   keymaps = [
