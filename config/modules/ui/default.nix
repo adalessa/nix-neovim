@@ -34,4 +34,15 @@
   extraPlugins = with pkgs.vimPlugins; [
     nvim-web-devicons
   ];
+  extraConfigLua = ''
+    require'nvim-web-devicons'.setup {
+      override_by_extension = {
+        ["tinker"] = {
+          icon = "󰞷",
+          color = "#f9322c",
+          name = "Tinker"
+        }
+       }
+     }
+  '';
 }
