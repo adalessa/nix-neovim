@@ -1,25 +1,14 @@
 {
-  pkgs,
-  inputs,
-  ...
-}: let
-  neorg = pkgs.vimUtils.buildVimPlugin {
-    name = "neorg";
-    src = inputs.plugin-neorg;
-  };
-in {
-  plugins.neorg = {
+  plugins.obsidian = {
     enable = true;
-    package = neorg;
-    modules = {
-      "core.defaults" = {__empty = null;};
-      "core.concealer" = {__empty = null;};
-      "core.dirman" = {
-        config = {
-          workspaces = {notes = "~/notes";};
-          default_workspace = "notes";
-        };
-      };
+    settings = {
+      workspaces = [
+        {
+          name = "Auto1";
+          path = "~/vaults/auto1";
+        }
+      ];
+      picker.name = "telescope.nvim";
     };
   };
 }

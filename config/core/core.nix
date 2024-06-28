@@ -5,7 +5,7 @@
       relativenumber = true;
       splitbelow = true;
       mouse = "";
-      conceallevel = 3;
+      conceallevel = 2;
       hidden = true;
       expandtab = true;
       tabstop = 4;
