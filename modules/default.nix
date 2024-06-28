@@ -1,3 +1,6 @@
 {
-  imports = [./phpactor.nix];
+  imports = [
+    ./phpactor.nix
+    ./notes.nix
+  ];
 }

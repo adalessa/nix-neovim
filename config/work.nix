@@ -11,7 +11,6 @@
     ./modules/database
     ./modules/debug
     ./modules/git
-    ./modules/notes
     ./modules/tests
     ./modules/ui
     ./modules/terminal
@@ -24,4 +23,14 @@
     ./tools/todo-comments.nix
     ./tools/undotree.nix
   ];
+
+  modules.notes = {
+    enable = true;
+    workspaces = [
+      {
+        name = "Auto1";
+        path = "~/vaults/auto1";
+      }
+    ];
+  };
 }

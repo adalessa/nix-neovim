@@ -20,7 +20,6 @@
     ./modules/database
     ./modules/debug
     ./modules/git
-    ./modules/notes
     ./modules/terminal
     ./modules/tests
     ./modules/ui
@@ -34,4 +33,14 @@
     ./tools/twilight.nix
     ./tools/undotree.nix
   ];
+
+  modules.notes = {
+    enable = true;
+    workspaces = [
+      {
+        name = "Alpha";
+        path = "~/vaults/alpha";
+      }
+    ];
+  };
 }
