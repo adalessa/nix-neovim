@@ -1,11 +1,10 @@
-{
-  pkgs,
-  helpers,
-  ...
-}: {
+{pkgs, ...}: {
   extraPackages = [pkgs.go];
-  plugins.lsp.servers.gopls.enable = true;
-  plugins.none-ls.sources.diagnostics.golangci_lint.enable = true;
+  plugins = {
+    lsp.servers.gopls.enable = true;
+    dap.extensions.dap-go.enable = true;
+    none-ls.sources.diagnostics.golangci_lint.enable = true;
+  };
 
   files = {
     "ftplugin/go.lua" = {

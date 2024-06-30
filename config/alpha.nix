@@ -34,9 +34,9 @@
     ./tools/undotree.nix
   ];
 
-  modules.notes = {
+  plugins.obsidian = {
     enable = true;
-    workspaces = [
+    settings.workspaces = [
       {
         name = "Alpha";
         path = "~/vaults/alpha";

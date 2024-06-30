@@ -24,9 +24,9 @@
     ./tools/undotree.nix
   ];
 
-  modules.notes = {
+  plugins.obsidian = {
     enable = true;
-    workspaces = [
+    settings.workspaces = [
       {
         name = "Auto1";
         path = "~/vaults/auto1";

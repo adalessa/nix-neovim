@@ -21,6 +21,8 @@
     ./bqf.nix
   ];
 
+  plugins.obsidian.settings.picker.name = "telescope.nvim";
+
   globals.mapleader = " ";
   clipboard.register = "unnamedplus";
   editorconfig.enable = false;
