@@ -35,8 +35,8 @@
       (binding
         attrpath: (attrpath (identifier) @_path)
         expression: [
-          (string_expression (string_fragment) @vim)
-          (indented_string_expression (string_fragment) @vim)
+          (string_expression (string_fragment) @injection.content (#set! injection.language "vim"))
+          (indented_string_expression (string_fragment) @injection.content (#set! injection.language "vim"))
         ]
         (#match? @_path "^extraConfigVim(Pre|Post)?$"))
     '';

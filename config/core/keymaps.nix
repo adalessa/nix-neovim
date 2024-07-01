@@ -1,4 +1,14 @@
 {helpers, ...}: {
+  extraConfigVim = ''
+    function! AlphaReplace(type)
+      let commands = #{
+        \ line: "'[V']",
+        \ char: "`[v`]",
+        \ block: "`[\<C-V>`]",
+        \ }[a:type]
+      execute 'normal! ' .. commands .. '"_dP'
+    endfunction
+  '';
   keymaps = [
     {
       mode = "t";
@@ -66,6 +76,15 @@
       key = "N";
       options.desc = "Goes to prev result on the search and put the cursor in the middle";
       action = "Nzzzv";
+    }
+    {
+      mode = "n";
+      key = "<leader>r";
+      options = {
+        desc = "Special replace, allows to quickly replace inside a word";
+        silent = true;
+      };
+      action = ":set opfunc=AlphaReplace<CR>g@";
     }
   ];
 }
