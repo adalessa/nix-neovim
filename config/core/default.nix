@@ -35,7 +35,6 @@
       };
     };
 
-    comment.enable = true;
     direnv.enable = true;
   };
 
