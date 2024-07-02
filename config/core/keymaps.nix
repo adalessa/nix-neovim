@@ -22,6 +22,11 @@
     }
     {
       mode = "n";
+      key = "<c-l>";
+      action = ":cabo<CR>zz";
+    }
+    {
+      mode = "n";
       key = "<c-k>";
       action = ":cprev<CR>zz";
     }
