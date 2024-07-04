@@ -85,8 +85,8 @@
           module = ./config/core.nix;
         };
 
-        alpha = core.nixvimExtend ./config/alpha.nix;
-        work = core.nixvimExtend ./config/work.nix;
+        alpha = core.extend ./config/alpha.nix;
+        work = core.extend ./config/work.nix;
       in {
         _module.args.pkgs = import inputs.nixpkgs {
           inherit system;
