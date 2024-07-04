@@ -39,10 +39,6 @@
       url = "github:altermo/ultimate-autopair.nvim";
       flake = false;
     };
-    plugin-twilight = {
-      url = "github:folke/twilight.nvim";
-      flake = false;
-    };
     plugin-worktree = {
       url = "github:awerebea/git-worktree.nvim/handle_changes_in_telescope_api";
       flake = false;

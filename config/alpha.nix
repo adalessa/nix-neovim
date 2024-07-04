@@ -30,7 +30,6 @@
     ./tools/oil.nix
     ./tools/scratch.nix
     ./tools/todo-comments.nix
-    ./tools/twilight.nix
     ./tools/undotree.nix
   ];
 

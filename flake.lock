@@ -420,22 +420,6 @@
         "type": "github"
       }
     },
-    "plugin-twilight": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1695631985,
-        "narHash": "sha256-WFE8FZU8E8i6mX9bFl80YkIypGXOOhKvGbLrBoPce0g=",
-        "owner": "folke",
-        "repo": "twilight.nvim",
-        "rev": "8b7b50c0cb2dc781b2f4262a5ddd57571556d1e4",
-        "type": "github"
-      },
-      "original": {
-        "owner": "folke",
-        "repo": "twilight.nvim",
-        "type": "github"
-      }
-    },
     "plugin-ultimate-autopairs": {
       "flake": false,
       "locked": {
@@ -504,7 +488,6 @@
         "plugin-scratch": "plugin-scratch",
         "plugin-telescope-graphql": "plugin-telescope-graphql",
         "plugin-transparent": "plugin-transparent",
-        "plugin-twilight": "plugin-twilight",
         "plugin-ultimate-autopairs": "plugin-ultimate-autopairs",
         "plugin-worktree": "plugin-worktree",
         "pre-commit-hooks": "pre-commit-hooks"
