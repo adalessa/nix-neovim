@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   extraPlugins = with pkgs.vimPlugins; [
-    hydra-nvim
     vim-test
     vim-dispatch
   ];
@@ -60,5 +59,31 @@
       let &cpoptions = s:cpo_save
       unlet s:cpo_save
     '';
+  };
+
+  plugins.hydra = {
+    enable = true;
+    hydras = [
+      {
+        body = "<leader>t";
+        mode = "n";
+        name = "Tests";
+        config = {
+          color = "teal";
+          invoke_on_body = true;
+        };
+        heads = [
+          ["n" ":TestNearest<CR>" {desc = "Nearest";}]
+          ["f" ":TestFile<CR>" {desc = "File";}]
+          ["s" ":TestSuit<CR>" {desc = "Suit";}]
+          ["l" ":TestLast<CR>" {desc = "Last";}]
+          [
+            "<Esc>"
+            null
+            {exit = true;}
+          ]
+        ];
+      }
+    ];
   };
 }
