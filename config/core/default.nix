@@ -19,9 +19,8 @@
     ./treesitter.nix
     ./ultimate-autopairs.nix
     ./bqf.nix
+    ./obsidian.nix
   ];
-
-  plugins.obsidian.settings.picker.name = "telescope.nvim";
 
   globals.mapleader = " ";
   clipboard.register = "unnamedplus";
