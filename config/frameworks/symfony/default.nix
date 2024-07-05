@@ -21,6 +21,10 @@
     };
   };
 
+  extraConfigLua = ''
+    vim.opt.path:append("tests/**/httpstubs/**/")
+  '';
+
   extraFiles = {
     "luasnippets/php/symfony.lua" = builtins.readFile ./snippets.lua;
   };

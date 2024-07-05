@@ -11,6 +11,10 @@
 
   extraConfigLua = builtins.readFile ./test.lua;
 
+  # TODO: configure it so can add from different files
+  # to have a dedicated behat, and pest files, that can be added
+  # from laravel or symfony or configuration
+  # can be modules if I want
   extraConfigVim = ''
     let g:dispatch_compilers = {
       \ './vendor/bin/pest': 'pest',
@@ -20,6 +24,7 @@
       \}
   '';
 
+  # TODO: extract to dedicated files
   extraFiles = {
     "compiler/pest.vim" = ''
       if exists('current_compiler')
