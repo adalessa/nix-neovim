@@ -7,7 +7,7 @@
   '';
 
   extraFiles = {
-    "luasnippets/lua/lua.lua" = builtins.readFile ./snippets.lua;
+    "luasnippets/lua/lua.lua".source = ./snippets.lua;
   };
 
   plugins = {

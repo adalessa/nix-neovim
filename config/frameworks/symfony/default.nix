@@ -26,7 +26,7 @@
   '';
 
   extraFiles = {
-    "luasnippets/php/symfony.lua" = builtins.readFile ./snippets.lua;
+    "luasnippets/php/symfony.lua".source = ./snippets.lua;
   };
 
   plugins.none-ls = {

@@ -26,7 +26,7 @@
 
   # TODO: extract to dedicated files
   extraFiles = {
-    "compiler/pest.vim" = ''
+    "compiler/pest.vim".text = ''
       if exists('current_compiler')
         finish
       endif
@@ -45,7 +45,7 @@
       let &cpoptions = s:cpo_save
       unlet s:cpo_save
     '';
-    "compiler/behat.vim" = ''
+    "compiler/behat.vim".text = ''
       if exists('current_compiler')
         finish
       endif

@@ -4,7 +4,7 @@
   languages.php.phpactor.enable = true;
 
   extraFiles = {
-    "luasnippets/php/php.lua" = builtins.readFile ./snippets.lua;
+    "luasnippets/php/php.lua".source = ./snippets.lua;
   };
 
   files = {

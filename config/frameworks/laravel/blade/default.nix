@@ -25,11 +25,9 @@ in {
   };
 
   extraFiles = {
-    "queries/blade/highlights.scm" =
-      builtins.readFile ./highlights.scm;
-    "queries/blade/injections.scm" =
-      builtins.readFile ./injections.scm;
-    "after/queries/html/injections.scm" = ''
+    "queries/blade/highlights.scm".source = ./highlights.scm;
+    "queries/blade/injections.scm".source = ./injections.scm;
+    "after/queries/html/injections.scm".text = ''
       ;; extends
       ; AlpineJS attributes
       (attribute
