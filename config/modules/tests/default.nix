@@ -6,64 +6,6 @@
 
   globals = {
     "test#strategy" = "dispatch";
-    "test#php#behat#executable" = "bin/behat";
-  };
-
-  extraConfigLua = builtins.readFile ./test.lua;
-
-  # TODO: configure it so can add from different files
-  # to have a dedicated behat, and pest files, that can be added
-  # from laravel or symfony or configuration
-  # can be modules if I want
-  extraConfigVim = ''
-    let g:dispatch_compilers = {
-      \ './vendor/bin/pest': 'pest',
-      \ 'bin/behat': 'behat',
-      \ 'behat': 'behat',
-      \ './vendor/bin/behat': 'behat',
-      \}
-  '';
-
-  # TODO: extract to dedicated files
-  extraFiles = {
-    "compiler/pest.vim".text = ''
-      if exists('current_compiler')
-        finish
-      endif
-      let g:current_compiler = 'pest'
-
-      if exists(':CompilerSet') != 2  " older Vim always used :setlocal
-        command -nargs=* CompilerSet setlocal <args>
-      endif
-
-      let s:cpo_save = &cpoptions
-      set cpoptions-=C
-
-      CompilerSet makeprg=pest
-      CompilerSet errorformat=\ \ at\ %f:%l
-
-      let &cpoptions = s:cpo_save
-      unlet s:cpo_save
-    '';
-    "compiler/behat.vim".text = ''
-      if exists('current_compiler')
-        finish
-      endif
-      let g:current_compiler = 'behat'
-
-      if exists(':CompilerSet') != 2  " older Vim always used :setlocal
-        command -nargs=* CompilerSet setlocal <args>
-      endif
-
-      let s:cpo_save = &cpoptions
-      set cpoptions-=C
-
-      CompilerSet makeprg=behat
-      CompilerSet errorformat=\ \ \ \ %f:%l
-
-      let &cpoptions = s:cpo_save
-      unlet s:cpo_save
-    '';
   };
 
   plugins.hydra = {

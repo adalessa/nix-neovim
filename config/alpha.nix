@@ -17,6 +17,8 @@
     ./frameworks/tailwindcss
     ./frameworks/vue
 
+    ./libraries/pest
+
     ./modules/database
     ./modules/debug
     ./modules/git
