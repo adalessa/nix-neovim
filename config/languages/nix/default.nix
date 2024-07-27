@@ -1,12 +1,8 @@
-{lib, ...}: {
+{
   plugins = {
     nix.enable = true;
 
     lsp.servers.nil-ls.enable = true;
-
-    treesitter = {
-      nixvimInjections = true;
-    };
 
     none-ls = {
       enable = true;
@@ -20,8 +16,6 @@
 
   extraFiles = {
     "luasnippets/nix/nix.lua".source = ./snippets.lua;
-    "queries/nix/injections.scm".enable = true;
-    "queries/nix/injections.scm".source = lib.mkForce ./injections.scm;
   };
 
   files = {

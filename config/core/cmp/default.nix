@@ -33,6 +33,7 @@
         };
         sources = [
           {name = "nvim_lsp";}
+          {name = "laravel";}
           {name = "path";}
           {name = "buffer";}
           {name = "luasnip";}

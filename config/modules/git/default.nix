@@ -1,8 +1,8 @@
 {
   imports = [
     ./gitsigns.nix
-    ./neogit.nix
     ./worktree.nix
+    ./lazygit.nix
   ];
 
   plugins.mini = {

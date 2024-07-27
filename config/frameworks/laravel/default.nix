@@ -68,7 +68,7 @@ in {
     lualine.sections = {
       lualine_x = [
         {
-          name = "require('laravel.status').get('php')";
+          name = "require('laravel.app')('status'):get('php')";
           icon = {
             icon = " ";
             color = {
@@ -77,7 +77,7 @@ in {
           };
         }
         {
-          name = "require('laravel.status').get('laravel')";
+          name = "require('laravel.app')('status'):get('laravel')";
           icon = {
             icon = " ";
             color = {

@@ -3,6 +3,7 @@
     treesitter = {
       enable = true;
       settings.indent.enable = true;
+      settings.highlight.enable = true;
       grammarPackages = pkgs.vimPlugins.nvim-treesitter.passthru.allGrammars;
     };
 

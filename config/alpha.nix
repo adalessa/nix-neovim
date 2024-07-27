@@ -35,6 +35,8 @@
     ./tools/undotree.nix
   ];
 
+  plugins.lsp.servers.astro.enable = true;
+
   plugins.obsidian = {
     enable = true;
     settings.workspaces = [
