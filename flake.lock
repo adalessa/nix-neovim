@@ -354,6 +354,22 @@
         "type": "github"
       }
     },
+    "plugin-gp": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1722254194,
+        "narHash": "sha256-mc6T+DhE3ZbEsLdO8YSoEteGklVOETXOqXeN7jlTPaU=",
+        "owner": "robitx",
+        "repo": "gp.nvim",
+        "rev": "df7eb5bd0f85689eac2ce42f0252157a0fd389f3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "robitx",
+        "repo": "gp.nvim",
+        "type": "github"
+      }
+    },
     "plugin-laravel": {
       "flake": false,
       "locked": {
@@ -497,6 +513,7 @@
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
         "phpactor": "phpactor",
+        "plugin-gp": "plugin-gp",
         "plugin-laravel": "plugin-laravel",
         "plugin-php-lsp-utils": "plugin-php-lsp-utils",
         "plugin-scratch": "plugin-scratch",

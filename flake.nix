@@ -52,6 +52,11 @@
       url = "github:phpactor/phpactor";
       flake = false;
     };
+
+    plugin-gp = {
+      url = "github:robitx/gp.nvim";
+      flake = false;
+    };
   };
 
   outputs = {
