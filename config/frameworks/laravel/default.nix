@@ -104,38 +104,38 @@ in {
     {
       mode = "n";
       key = "<leader>la";
-      action = helpers.mkRaw "function() require('laravel').artisan() end";
+      action = ":Laravel art<cr>";
     }
     {
       mode = "n";
       key = "<leader>lr";
-      action = helpers.mkRaw "function() require('laravel').routes() end";
+      action = ":Laravel routes<cr>";
     }
     {
       mode = "n";
       key = "<leader>lh";
-      action = ":Artisan docs<cr>";
+      action = ":Laravel art docs<cr>";
     }
-    {
-      mode = "n";
-      key = "<leader>lm";
-      action = helpers.mkRaw "function() require('laravel').make() end";
-    }
-    {
-      mode = "n";
-      key = "<leader>lq";
-      action = helpers.mkRaw "function() require('laravel').history() end";
-    }
-    {
-      mode = "n";
-      key = "<leader>lc";
-      action = helpers.mkRaw "function() require('laravel').commands() end";
-    }
-    {
-      mode = "n";
-      key = "<leader>lo";
-      action = helpers.mkRaw "function() require('laravel').resources() end";
-    }
+    # {
+    #   mode = "n";
+    #   key = "<leader>lm";
+    #   action = helpers.mkRaw "function() require('laravel').make() end";
+    # }
+    # {
+    #   mode = "n";
+    #   key = "<leader>lq";
+    #   action = helpers.mkRaw "function() require('laravel').history() end";
+    # }
+    # {
+    #   mode = "n";
+    #   key = "<leader>lc";
+    #   action = helpers.mkRaw "function() require('laravel').commands() end";
+    # }
+    # {
+    #   mode = "n";
+    #   key = "<leader>lo";
+    #   action = helpers.mkRaw "function() require('laravel').resources() end";
+    # }
     {
       mode = "n";
       key = "<leader>rr";
