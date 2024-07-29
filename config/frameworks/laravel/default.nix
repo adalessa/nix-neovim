@@ -10,8 +10,6 @@
   };
 in {
   imports = [
-    ../../languages/php
-
     ./blade
   ];
 
@@ -28,7 +26,6 @@ in {
     laravelPlugin
     vimPlugins.nui-nvim
     vimPlugins.vim-dotenv
-    vimPlugins.sqlite-lua
   ];
 
   extraPackages = [pkgs.fd pkgs.php-debug-adapter];
