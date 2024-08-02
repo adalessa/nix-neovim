@@ -59,7 +59,6 @@
   };
 
   outputs = {
-    nixpkgs,
     nixvim,
     flake-parts,
     ...
@@ -110,7 +109,7 @@
           };
         };
 
-        formatter = pkgs.alejandra;
+        formatter = pkgs.nixpkgs-fmt;
 
         packages = {
           inherit alpha core work;
@@ -118,8 +117,8 @@
         };
 
         devShells = {
-          default = with pkgs;
-            mkShell {inherit (self'.checks.pre-commit-check) shellHook;};
+          default =
+            pkgs.mkShell {inherit (self'.checks.pre-commit-check) shellHook;};
         };
       };
     };

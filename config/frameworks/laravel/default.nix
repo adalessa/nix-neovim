@@ -22,10 +22,10 @@ in {
     };
   };
 
-  extraPlugins = with pkgs; [
+  extraPlugins = [
     laravelPlugin
-    vimPlugins.nui-nvim
-    vimPlugins.vim-dotenv
+    pkgs.vimPlugins.nui-nvim
+    pkgs.vimPlugins.vim-dotenv
   ];
 
   extraPackages = [pkgs.fd pkgs.php-debug-adapter];
