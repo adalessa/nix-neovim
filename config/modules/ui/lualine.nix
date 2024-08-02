@@ -4,7 +4,7 @@
     globalstatus = true;
     iconsEnabled = true;
     theme = "auto";
-    extensions = ["quickfix"];
+    extensions = [ "quickfix" ];
     componentSeparators = {
       left = "";
       right = "";
@@ -51,8 +51,8 @@
         "diff"
       ];
 
-      lualine_y = ["filetype"];
-      lualine_z = ["location"];
+      lualine_y = [ "filetype" ];
+      lualine_z = [ "location" ];
     };
     # inactiveWinbar = {
     #   lualine_c = [

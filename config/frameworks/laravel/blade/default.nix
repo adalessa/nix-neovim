@@ -3,17 +3,19 @@
   inputs,
   helpers,
   ...
-}: let
+}:
+let
   bladeGrammar = pkgs.tree-sitter.buildGrammar {
     language = "blade";
     version = "0.9.2";
     src = inputs.blade-treesitter;
   };
-in {
+in
+{
   plugins = {
     treesitter = {
       languageRegister.blade = "blade";
-      grammarPackages = [bladeGrammar];
+      grammarPackages = [ bladeGrammar ];
     };
 
     none-ls.sources.formatting.blade_formatter = {
@@ -21,7 +23,7 @@ in {
       package = pkgs.blade-formatter;
     };
 
-    lsp.servers.emmet-ls.filetypes = ["blade"];
+    lsp.servers.emmet-ls.filetypes = [ "blade" ];
   };
 
   extraFiles = {
@@ -76,8 +78,11 @@ in {
 
   autoCmd = [
     {
-      event = ["BufRead" "BufNewFile"];
-      pattern = ["*.blade.php"];
+      event = [
+        "BufRead"
+        "BufNewFile"
+      ];
+      pattern = [ "*.blade.php" ];
       group = "blade";
       callback = helpers.mkRaw ''
         function()
@@ -91,8 +96,8 @@ in {
       '';
     }
     {
-      event = ["LspAttach"];
-      pattern = ["*.blade.php"];
+      event = [ "LspAttach" ];
+      pattern = [ "*.blade.php" ];
       callback = helpers.mkRaw ''
         function(args)
           vim.schedule(function()

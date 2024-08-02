@@ -1,5 +1,6 @@
-{pkgs, ...}: {
-  extraPackages = [pkgs.lazygit];
+{ pkgs, ... }:
+{
+  extraPackages = [ pkgs.lazygit ];
 
   extraConfigLuaPost = ''
     do

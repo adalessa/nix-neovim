@@ -3,7 +3,8 @@
   inputs,
   helpers,
   ...
-}: let
+}:
+let
   telescope-graphql = pkgs.vimUtils.buildVimPlugin {
     name = "telescope-graphql";
     src = inputs.plugin-telescope-graphql;
@@ -13,8 +14,12 @@
     name = "php-lsp-utils";
     src = inputs.plugin-php-lsp-utils;
   };
-in {
-  extraPlugins = [telescope-graphql php-lsp-utils];
+in
+{
+  extraPlugins = [
+    telescope-graphql
+    php-lsp-utils
+  ];
 
   extraFiles = {
     "lua/graphql_picker.lua".source = ./graphql-picker.lua;

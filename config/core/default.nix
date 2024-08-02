@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   imports = [
     #nix-modules
     ../../modules
@@ -37,7 +38,5 @@
     direnv.enable = true;
   };
 
-  extraPlugins = with pkgs.vimPlugins; [
-    vim-eunuch
-  ];
+  extraPlugins = with pkgs.vimPlugins; [ vim-eunuch ];
 }

@@ -1,5 +1,6 @@
-{pkgs, ...}: {
-  extraPackages = [pkgs.go];
+{ pkgs, ... }:
+{
+  extraPackages = [ pkgs.go ];
   plugins = {
     lsp.servers.gopls.enable = true;
     dap.extensions.dap-go.enable = true;

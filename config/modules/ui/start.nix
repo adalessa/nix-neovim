@@ -1,4 +1,5 @@
-{helpers, ...}: let
+{ helpers, ... }:
+let
   header = ''
         _    _       _
        / \  | |_ __ | |__   __ _
@@ -15,7 +16,8 @@
     |____/ \___| \_/ \___|_|\___/| .__/ \___|_|
                                  |_|
   '';
-in {
+in
+{
   plugins.mini = {
     enable = true;
     modules = {

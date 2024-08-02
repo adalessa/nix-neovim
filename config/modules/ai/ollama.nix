@@ -1,4 +1,5 @@
-{ollama, ...}: {
+{ ollama, ... }:
+{
   extraConfigLua = ''
     ollama_lualine_status_char = 0
     function ollama_lualine_status()
@@ -72,19 +73,25 @@
 
   keymaps = [
     {
-      mode = ["n" "v"];
+      mode = [
+        "n"
+        "v"
+      ];
       key = "<leader>oo";
       options.desc = "Ollama Prompt";
       action = ":<c-u>lua require('ollama').prompt()<cr>";
     }
     {
-      mode = ["n" "v"];
+      mode = [
+        "n"
+        "v"
+      ];
       key = "<leader>oG";
       options.desc = "Ollama Generate Code";
       action = ":<c-u>lua require('ollama').prompt('Generate_Code')<cr>";
     }
     {
-      mode = ["v"];
+      mode = [ "v" ];
       key = "<leader>ov";
       options.desc = "Ollama rename variable";
       action = ":<c-u>lua require('ollama').prompt('rename_variable')<cr>";

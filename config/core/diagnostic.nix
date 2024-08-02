@@ -1,4 +1,5 @@
-{helpers, ...}: {
+{ helpers, ... }:
+{
   keymaps = [
     {
       mode = "n";

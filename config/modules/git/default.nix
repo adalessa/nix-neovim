@@ -6,7 +6,7 @@
   ];
 
   plugins.mini = {
-    modules.git = {};
+    modules.git = { };
     enable = true;
   };
 }

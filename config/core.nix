@@ -1,5 +1,1 @@
-{
-  imports = [
-    ./core
-  ];
-}
+{ imports = [ ./core ]; }

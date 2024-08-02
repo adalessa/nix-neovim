@@ -1,5 +1,1 @@
-{
-  imports = [
-    ./phpactor.nix
-  ];
-}
+{ imports = [ ./phpactor.nix ]; }

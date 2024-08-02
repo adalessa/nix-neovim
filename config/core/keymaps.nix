@@ -1,4 +1,5 @@
-{helpers, ...}: {
+{ helpers, ... }:
+{
   extraConfigVim = ''
     function! AlphaReplace(type)
       let commands = #{

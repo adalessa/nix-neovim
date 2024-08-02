@@ -3,7 +3,11 @@
     window.completion.border = "rounded";
     window.documentation.border = "rounded";
     formatting = {
-      fields = ["menu" "abbr" "kind"];
+      fields = [
+        "menu"
+        "abbr"
+        "kind"
+      ];
       format = ''
           function (entry, vim_item)
             local KIND_ICONS = {

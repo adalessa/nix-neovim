@@ -3,13 +3,15 @@
   inputs,
   helpers,
   ...
-}: let
+}:
+let
   worktree = pkgs.vimUtils.buildVimPlugin {
     name = "worktree";
     src = inputs.plugin-worktree;
   };
-in {
-  extraPlugins = [worktree];
+in
+{
+  extraPlugins = [ worktree ];
 
   extraConfigLua = ''
     require("git-worktree").setup({})

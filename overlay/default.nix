@@ -1,5 +1,7 @@
-{inputs, ...}: let
-  additions = final: _prev:
+{ inputs, ... }:
+let
+  additions =
+    final: _prev:
     import ../pkgs {
       inherit inputs;
       pkgs = final;
@@ -33,9 +35,12 @@
         sha256 = "sha256-oN9xhG8BkK/jLS9aRV4Ff+EHsLcWe60Z2GDlvgkh5HM=";
       };
 
-      buildInputs = [prev.unzip];
+      buildInputs = [ prev.unzip ];
 
-      phases = ["unpackPhase" "installPhase"];
+      phases = [
+        "unpackPhase"
+        "installPhase"
+      ];
 
       unpackPhase = ''
         mkdir -p $out/extracted
@@ -52,7 +57,7 @@
     };
   };
 in
-  inputs.nixpkgs.lib.composeManyExtensions [
-    additions
-    modifications
-  ]
+inputs.nixpkgs.lib.composeManyExtensions [
+  additions
+  modifications
+]

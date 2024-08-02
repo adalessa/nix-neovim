@@ -1,5 +1,6 @@
-{pkgs, ...}: {
-  extraPackages = [pkgs.php-debug-adapter];
+{ pkgs, ... }:
+{
+  extraPackages = [ pkgs.php-debug-adapter ];
 
   imports = [
     ../../languages/php
@@ -36,7 +37,11 @@
   };
 
   plugins.dap = {
-    adapters.executables = {php = {command = "php-debug-adapter";};};
+    adapters.executables = {
+      php = {
+        command = "php-debug-adapter";
+      };
+    };
     configurations = {
       php = [
         {
@@ -44,7 +49,9 @@
           request = "launch";
           name = "Symfony";
           port = 9003;
-          pathMappings = {"/app" = ''''${workspaceFolder}'';};
+          pathMappings = {
+            "/app" = "\${workspaceFolder}";
+          };
         }
       ];
     };

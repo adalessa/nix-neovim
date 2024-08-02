@@ -1,1 +1,1 @@
-{plugins.lsp.servers.tsserver.enable = true;}
+{ plugins.lsp.servers.tsserver.enable = true; }

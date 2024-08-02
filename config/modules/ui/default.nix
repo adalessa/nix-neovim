@@ -1,8 +1,5 @@
+{ pkgs, helpers, ... }:
 {
-  pkgs,
-  helpers,
-  ...
-}: {
   imports = [
     ./dressing.nix
     ./lualine.nix
@@ -31,9 +28,7 @@
     }
   ];
 
-  extraPlugins = with pkgs.vimPlugins; [
-    nvim-web-devicons
-  ];
+  extraPlugins = with pkgs.vimPlugins; [ nvim-web-devicons ];
   extraConfigLua = ''
     require'nvim-web-devicons'.setup {
       override_by_extension = {

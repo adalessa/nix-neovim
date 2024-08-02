@@ -1,9 +1,6 @@
+{ pkgs, helpers, ... }:
 {
-  pkgs,
-  helpers,
-  ...
-}: {
-  extraPlugins = [pkgs.vimPlugins.vim-dispatch];
+  extraPlugins = [ pkgs.vimPlugins.vim-dispatch ];
 
   keymaps = [
     {

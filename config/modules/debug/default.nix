@@ -67,31 +67,31 @@
         heads = [
           [
             "d"
-            {__raw = "require('dap').continue";}
+            { __raw = "require('dap').continue"; }
           ]
           [
             "bp"
-            {__raw = "require('dap').toggle_breakpoint";}
+            { __raw = "require('dap').toggle_breakpoint"; }
           ]
           [
             "l"
-            {__raw = "require('dap').step_into";}
+            { __raw = "require('dap').step_into"; }
           ]
           [
             "j"
-            {__raw = "require('dap').step_over";}
+            { __raw = "require('dap').step_over"; }
           ]
           [
             "k"
-            {__raw = "require('dap').step_out";}
+            { __raw = "require('dap').step_out"; }
           ]
           [
             "h"
-            {__raw = "require('dapui').eval";}
+            { __raw = "require('dapui').eval"; }
           ]
           [
             "c"
-            {__raw = "require('dap').run_to_cursor";}
+            { __raw = "require('dap').run_to_cursor"; }
           ]
           [
             "bc"
@@ -138,7 +138,7 @@
           [
             "<Esc>"
             null
-            {exit = true;}
+            { exit = true; }
           ]
         ];
       }

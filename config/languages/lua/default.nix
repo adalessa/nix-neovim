@@ -1,5 +1,9 @@
-{pkgs, ...}: {
-  extraPlugins = with pkgs.vimPlugins; [neodev-nvim neoconf-nvim];
+{ pkgs, ... }:
+{
+  extraPlugins = with pkgs.vimPlugins; [
+    neodev-nvim
+    neoconf-nvim
+  ];
 
   extraConfigLuaPre = ''
     require('neoconf').setup()

@@ -1,11 +1,11 @@
+{ pkgs, helpers, ... }:
 {
-  pkgs,
-  helpers,
-  ...
-}: {
-  imports = [./telescope-ui.nix];
+  imports = [ ./telescope-ui.nix ];
 
-  extraPackages = [pkgs.fd pkgs.ripgrep];
+  extraPackages = [
+    pkgs.fd
+    pkgs.ripgrep
+  ];
 
   plugins.telescope = {
     enable = true;

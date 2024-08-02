@@ -1,11 +1,9 @@
-{
-  lib,
-  config,
-  ...
-}:
-with lib; let
+{ lib, config, ... }:
+with lib;
+let
   cfg = config.languages.php.phpactor;
-in {
+in
+{
   options = {
     languages.php.phpactor = {
       enable = mkEnableOption "phpactor";
@@ -16,7 +14,7 @@ in {
         enable = mkEnableOption "phpcs";
         bin = lib.mkOption {
           type = lib.types.str; # Specify the type as string
-          default = "%project_root%\/vendor\/bin\/phpcs"; # Set the default value
+          default = "%project_root%/vendor/bin/phpcs"; # Set the default value
           description = "Binary for phpcs";
         };
       };
@@ -24,7 +22,7 @@ in {
         enable = mkEnableOption "phpstan";
         bin = lib.mkOption {
           type = lib.types.str; # Specify the type as string
-          default = "%project_root%\/vendor\/bin\/phpstan"; # Set the default value
+          default = "%project_root%/vendor/bin/phpstan"; # Set the default value
           description = "Binary for phpstan";
         };
         level = lib.mkOption {
@@ -38,7 +36,10 @@ in {
   config = mkIf cfg.enable {
     plugins.lsp.servers.phpactor = {
       enable = true;
-      filetypes = ["php" "blade"];
+      filetypes = [
+        "php"
+        "blade"
+      ];
       extraOptions = {
         init_options = {
           "language_server_configuration.auto_config" = cfg.auto_config;
@@ -55,10 +56,10 @@ in {
             "/vendor/composer/**/*"
             "/vendor/composer/**/*"
             "/vendor/laravel/fortify/workbench/**/*"
-            "/vendor/filament/forms/\.stubs\.php"
-            "/vendor/filament/notifications/\.stubs\.php"
-            "/vendor/filament/tables/\.stubs\.php"
-            "/vendor/filament/actions/\.stubs\.php"
+            "/vendor/filament/forms/.stubs.php"
+            "/vendor/filament/notifications/.stubs.php"
+            "/vendor/filament/tables/.stubs.php"
+            "/vendor/filament/actions/.stubs.php"
             "/storage/framework/cache/**/*"
             "/storage/framework/views/**/*"
           ];

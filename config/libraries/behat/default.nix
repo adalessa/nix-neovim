@@ -1,4 +1,5 @@
-{helpers, ...}: {
+{ helpers, ... }:
+{
   globals = {
     "test#php#behat#executable" = "bin/behat";
     "dispatch_compilers" = {
@@ -23,7 +24,10 @@
 
   autoCmd = [
     {
-      event = ["DirChanged" "UIEnter"];
+      event = [
+        "DirChanged"
+        "UIEnter"
+      ];
       desc = "Set behat executable";
       callback = helpers.mkRaw ''
         function()

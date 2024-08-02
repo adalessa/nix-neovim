@@ -1,20 +1,14 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: let
+{ pkgs, inputs, ... }:
+let
   gp = pkgs.vimUtils.buildVimPlugin {
     name = "gp";
     src = inputs.plugin-gp;
   };
-in {
-  extraPlugins = [
-    gp
-  ];
+in
+{
+  extraPlugins = [ gp ];
 
-  extraPackages = [
-    (pkgs.sox.override {enableLame = true;})
-  ];
+  extraPackages = [ (pkgs.sox.override { enableLame = true; }) ];
 
   extraConfigLua = ''
     require('gp').setup({

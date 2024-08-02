@@ -1,9 +1,13 @@
-{ pkgs, ... }: {
-  extraPackages = [ pkgs.nixpkgs-fmt ];
+{ pkgs, ... }:
+{
+  extraPackages = [ pkgs.nixfmt-rfc-style ];
   plugins = {
     nix.enable = true;
 
-    lsp.servers.nixd.enable = true;
+    lsp.servers.nixd = {
+      enable = true;
+      settings.formatting.command = [ "nixfmt" ];
+    };
 
     none-ls = {
       enable = true;
@@ -14,7 +18,9 @@
     };
   };
 
-  extraFiles = { "luasnippets/nix/nix.lua".source = ./snippets.lua; };
+  extraFiles = {
+    "luasnippets/nix/nix.lua".source = ./snippets.lua;
+  };
 
   files = {
     "ftplugin/nix.lua" = {

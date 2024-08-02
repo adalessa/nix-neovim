@@ -3,15 +3,15 @@
   inputs,
   ollama,
   ...
-}: let
+}:
+let
   cmp-ai = pkgs.vimUtils.buildVimPlugin {
     name = "cmp-ai";
     src = inputs.plugin-cmp-ai;
   };
-in {
-  extraPlugins = [
-    cmp-ai
-  ];
+in
+{
+  extraPlugins = [ cmp-ai ];
 
   plugins.cmp.settings.mapping = {
     "<c-x>" = "cmp.mapping(cmp.mapping.complete({config = {sources = cmp.config.sources({{name = 'cmp_ai'}})}}),{ 'i' })";

@@ -1,4 +1,5 @@
-{helpers, ...}: {
+{ helpers, ... }:
+{
   plugins.luasnip = {
     enable = true;
 
@@ -8,12 +9,15 @@
       enable_autosnippets = true;
     };
 
-    fromLua = [{}];
+    fromLua = [ { } ];
   };
 
   keymaps = [
     {
-      mode = ["i" "s"];
+      mode = [
+        "i"
+        "s"
+      ];
       key = "<c-k>";
       action = helpers.mkRaw ''
         function()
@@ -26,7 +30,10 @@
       options.silent = true;
     }
     {
-      mode = ["i" "s"];
+      mode = [
+        "i"
+        "s"
+      ];
       key = "<c-j>";
       action = helpers.mkRaw ''
         function()
@@ -39,7 +46,10 @@
       options.silent = true;
     }
     {
-      mode = ["i" "s"];
+      mode = [
+        "i"
+        "s"
+      ];
       key = "<c-l>";
       action = helpers.mkRaw ''
         function()

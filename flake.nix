@@ -58,20 +58,12 @@
     };
   };
 
-  outputs =
-    { nixvim
-    , flake-parts
-    , ...
-    } @ inputs:
+  outputs = { nixvim, flake-parts, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = [ "aarch64-linux" "x86_64-linux" "aarch64-darwin" "x86_64-darwin" ];
+      systems =
+        [ "aarch64-linux" "x86_64-linux" "aarch64-darwin" "x86_64-darwin" ];
 
-      perSystem =
-        { system
-        , pkgs
-        , self'
-        , ...
-        }:
+      perSystem = { system, pkgs, self', ... }:
         let
           nixvim' = nixvim.legacyPackages.${system};
 
@@ -79,17 +71,14 @@
             inherit pkgs;
             extraSpecialArgs = {
               inherit inputs;
-              ollama = {
-                url = "http://10.27.22.20:11434";
-              };
+              ollama = { url = "http://10.27.22.20:11434"; };
             };
             module = ./config/core.nix;
           };
 
           alpha = core.extend ./config/alpha.nix;
           work = core.extend ./config/work.nix;
-        in
-        {
+        in {
           _module.args.pkgs = import inputs.nixpkgs {
             inherit system;
             overlays = builtins.attrValues {
@@ -104,13 +93,11 @@
             };
             pre-commit-check = inputs.pre-commit-hooks.lib.${system}.run {
               src = ./.;
-              hooks = {
-                statix.enable = true;
-              };
+              hooks = { statix.enable = true; };
             };
           };
 
-          formatter = pkgs.nixpkgs-fmt;
+          formatter = pkgs.nixfmt-rfc-style;
 
           packages = {
             inherit alpha core work;
@@ -118,8 +105,9 @@
           };
 
           devShells = {
-            default =
-              pkgs.mkShell { inherit (self'.checks.pre-commit-check) shellHook; };
+            default = pkgs.mkShell {
+              inherit (self'.checks.pre-commit-check) shellHook;
+            };
           };
         };
     };

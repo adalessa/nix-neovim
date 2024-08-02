@@ -1,7 +1,8 @@
-{ pkgs
-, inputs
-, helpers
-, ...
+{
+  pkgs,
+  inputs,
+  helpers,
+  ...
 }:
 let
   laravelPlugin = pkgs.vimUtils.buildVimPlugin {
@@ -10,9 +11,7 @@ let
   };
 in
 {
-  imports = [
-    ./blade
-  ];
+  imports = [ ./blade ];
 
   languages.php.phpactor = {
     phpunit.enable = true;
@@ -29,7 +28,10 @@ in
     pkgs.vimPlugins.vim-dotenv
   ];
 
-  extraPackages = [ pkgs.fd pkgs.php-debug-adapter ];
+  extraPackages = [
+    pkgs.fd
+    pkgs.php-debug-adapter
+  ];
   plugins = {
     none-ls = {
       enable = true;
@@ -43,7 +45,11 @@ in
     };
 
     dap = {
-      adapters.executables = { php = { command = "php-debug-adapter"; }; };
+      adapters.executables = {
+        php = {
+          command = "php-debug-adapter";
+        };
+      };
       configurations = {
         php = [
           {
@@ -57,7 +63,9 @@ in
             request = "launch";
             name = "Laravel Sail";
             port = 9003;
-            pathMappings = { "/var/www/html" = ''''${workspaceFolder}''; };
+            pathMappings = {
+              "/var/www/html" = "\${workspaceFolder}";
+            };
           }
         ];
       };

@@ -1,5 +1,5 @@
 {
-  imports = [./format.nix];
+  imports = [ ./format.nix ];
   plugins = {
     cmp-buffer.enable = true;
     cmp-emoji.enable = true;
@@ -32,26 +32,26 @@
           "<c-p>" = "cmp.mapping.select_prev_item()";
         };
         sources = [
-          {name = "nvim_lsp";}
-          {name = "laravel";}
-          {name = "path";}
-          {name = "buffer";}
-          {name = "luasnip";}
-          {name = "copilot";}
-          {name = "emoji";}
+          { name = "nvim_lsp"; }
+          { name = "laravel"; }
+          { name = "path"; }
+          { name = "buffer"; }
+          { name = "luasnip"; }
+          { name = "copilot"; }
+          { name = "emoji"; }
         ];
       };
       filetype = {
         gitcommit = {
           sources = [
-            {name = "cmp_git";}
-            {name = "buffer";}
+            { name = "cmp_git"; }
+            { name = "buffer"; }
           ];
         };
         sql = {
           sources = [
-            {name = "vim-dadbod-completion";}
-            {name = "buffer";}
+            { name = "vim-dadbod-completion"; }
+            { name = "buffer"; }
           ];
         };
       };
@@ -60,25 +60,21 @@
           mapping = {
             __raw = "cmp.mapping.preset.cmdline()";
           };
-          sources = [
-            {name = "buffer";}
-          ];
+          sources = [ { name = "buffer"; } ];
         };
         "?" = {
           mapping = {
             __raw = "cmp.mapping.preset.cmdline()";
           };
-          sources = [
-            {name = "buffer";}
-          ];
+          sources = [ { name = "buffer"; } ];
         };
         ":" = {
           mapping = {
             __raw = "cmp.mapping.preset.cmdline()";
           };
           sources = [
-            {name = "path";}
-            {name = "cmdline";}
+            { name = "path"; }
+            { name = "cmdline"; }
           ];
         };
       };

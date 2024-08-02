@@ -1,5 +1,9 @@
-{pkgs, ...}: {
-  extraPackages = [pkgs.php83 pkgs.php83Packages.composer];
+{ pkgs, ... }:
+{
+  extraPackages = [
+    pkgs.php83
+    pkgs.php83Packages.composer
+  ];
 
   languages.php.phpactor.enable = true;
 

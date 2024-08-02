@@ -1,3 +1,1 @@
-{
-  plugins.lsp.servers.htmx.enable = true;
-}
+{ plugins.lsp.servers.htmx.enable = true; }

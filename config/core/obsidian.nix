@@ -6,7 +6,10 @@
     hydras = [
       {
         body = "<leader><leader>o";
-        mode = ["n" "v"];
+        mode = [
+          "n"
+          "v"
+        ];
         config = {
           color = "blue";
           invoke_on_body = true;
@@ -24,13 +27,22 @@
           _x_: Extract to Note
         '';
         heads = [
-          ["q" ":ObsidianQuickSwitch<CR>"]
-          ["t" ":ObsidianToday<CR>"]
-          ["x" ":ObsidianExtract<CR>"]
+          [
+            "q"
+            ":ObsidianQuickSwitch<CR>"
+          ]
+          [
+            "t"
+            ":ObsidianToday<CR>"
+          ]
+          [
+            "x"
+            ":ObsidianExtract<CR>"
+          ]
           [
             "<Esc>"
             null
-            {exit = true;}
+            { exit = true; }
           ]
         ];
       }

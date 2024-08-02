@@ -3,13 +3,15 @@
   inputs,
   helpers,
   ...
-}: let
+}:
+let
   scratch = pkgs.vimUtils.buildVimPlugin {
     name = "scratch";
     src = inputs.plugin-scratch;
   };
-in {
-  extraPlugins = [scratch];
+in
+{
+  extraPlugins = [ scratch ];
 
   extraConfigLua = ''
     require('scratch').setup()

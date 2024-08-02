@@ -1,3 +1,1 @@
-{
-  plugins.nvim-bqf.enable = true;
-}
+{ plugins.nvim-bqf.enable = true; }

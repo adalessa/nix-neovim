@@ -1,12 +1,13 @@
-{helpers, ...}: {
+{ helpers, ... }:
+{
   autoCmd = [
     {
-      event = ["BufWritePre"];
+      event = [ "BufWritePre" ];
       desc = "Remove trailing whitespace";
       command = ":%s/\\s\\+$//e";
     }
     {
-      event = ["FileType"];
+      event = [ "FileType" ];
       pattern = [
         "dbout"
         "fugitive"
@@ -29,8 +30,8 @@
       '';
     }
     {
-      event = ["FileType"];
-      pattern = ["dbout"];
+      event = [ "FileType" ];
+      pattern = [ "dbout" ];
       callback = helpers.mkRaw ''
         function()
           vim.cmd([[setlocal nofoldenable]])
@@ -38,8 +39,8 @@
       '';
     }
     {
-      event = ["FileType"];
-      pattern = ["json"];
+      event = [ "FileType" ];
+      pattern = [ "json" ];
       callback = helpers.mkRaw ''
         function()
           local set = vim.bo
