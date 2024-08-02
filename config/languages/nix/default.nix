@@ -1,5 +1,5 @@
-{pkgs, ...}: {
-  extraPackages = [pkgs.nixpkgs-fmt];
+{ pkgs, ... }: {
+  extraPackages = [ pkgs.nixpkgs-fmt ];
   plugins = {
     nix.enable = true;
 
@@ -14,7 +14,7 @@
     };
   };
 
-  extraFiles = {"luasnippets/nix/nix.lua".source = ./snippets.lua;};
+  extraFiles = { "luasnippets/nix/nix.lua".source = ./snippets.lua; };
 
   files = {
     "ftplugin/nix.lua" = {

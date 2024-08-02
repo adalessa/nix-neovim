@@ -58,68 +58,69 @@
     };
   };
 
-  outputs = {
-    nixvim,
-    flake-parts,
-    ...
-  } @ inputs:
-    flake-parts.lib.mkFlake {inherit inputs;} {
-      systems = ["aarch64-linux" "x86_64-linux" "aarch64-darwin" "x86_64-darwin"];
+  outputs =
+    { nixvim
+    , flake-parts
+    , ...
+    } @ inputs:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = [ "aarch64-linux" "x86_64-linux" "aarch64-darwin" "x86_64-darwin" ];
 
-      perSystem = {
-        system,
-        pkgs,
-        self',
-        ...
-      }: let
-        nixvim' = nixvim.legacyPackages.${system};
+      perSystem =
+        { system
+        , pkgs
+        , self'
+        , ...
+        }:
+        let
+          nixvim' = nixvim.legacyPackages.${system};
 
-        core = nixvim'.makeNixvimWithModule {
-          inherit pkgs;
-          extraSpecialArgs = {
-            inherit inputs;
-            ollama = {
-              url = "http://10.27.22.20:11434";
+          core = nixvim'.makeNixvimWithModule {
+            inherit pkgs;
+            extraSpecialArgs = {
+              inherit inputs;
+              ollama = {
+                url = "http://10.27.22.20:11434";
+              };
+            };
+            module = ./config/core.nix;
+          };
+
+          alpha = core.extend ./config/alpha.nix;
+          work = core.extend ./config/work.nix;
+        in
+        {
+          _module.args.pkgs = import inputs.nixpkgs {
+            inherit system;
+            overlays = builtins.attrValues {
+              default = import ./overlay { inherit inputs; };
             };
           };
-          module = ./config/core.nix;
-        };
 
-        alpha = core.extend ./config/alpha.nix;
-        work = core.extend ./config/work.nix;
-      in {
-        _module.args.pkgs = import inputs.nixpkgs {
-          inherit system;
-          overlays = builtins.attrValues {
-            default = import ./overlay {inherit inputs;};
-          };
-        };
-
-        checks = {
-          default = pkgs.nixvimLib.check.mkTestDerivationFromNvim {
-            inherit alpha;
-            name = "A nixvim configuration";
-          };
-          pre-commit-check = inputs.pre-commit-hooks.lib.${system}.run {
-            src = ./.;
-            hooks = {
-              statix.enable = true;
-              alejandra.enable = true;
+          checks = {
+            default = pkgs.nixvimLib.check.mkTestDerivationFromNvim {
+              inherit alpha;
+              name = "A nixvim configuration";
+            };
+            pre-commit-check = inputs.pre-commit-hooks.lib.${system}.run {
+              src = ./.;
+              hooks = {
+                statix.enable = true;
+              };
             };
           };
-        };
 
-        formatter = pkgs.nixpkgs-fmt;
+          formatter = pkgs.nixpkgs-fmt;
 
-        packages = {
-          inherit alpha core work;
-          default = alpha;
-        };
+          packages = {
+            inherit alpha core work;
+            default = alpha;
+          };
 
-        devShells = {
-          default =
-            pkgs.mkShell {inherit (self'.checks.pre-commit-check) shellHook;};
+          devShells = {
+            default =
+              pkgs.mkShell { inherit (self'.checks.pre-commit-check) shellHook; };
+          };
         };
-      };
     };
 }
