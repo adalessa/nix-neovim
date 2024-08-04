@@ -21,6 +21,7 @@
     };
     plugin-laravel = {
       url = "github:adalessa/laravel.nvim/feature/container";
+      # url = "path:/home/alpha/code/plugins/laravel.nvim";
       flake = false;
     };
     plugin-scratch = {

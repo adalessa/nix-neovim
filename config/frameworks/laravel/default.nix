@@ -74,7 +74,7 @@ in
     lualine.sections = {
       lualine_x = [
         {
-          name = "require('laravel.app')('status'):get('php')";
+          name = "require('laravel').app('status'):get('php')";
           icon = {
             icon = " ";
             color = {
@@ -83,7 +83,7 @@ in
           };
         }
         {
-          name = "require('laravel.app')('status'):get('laravel')";
+          name = "require('laravel').app('status'):get('laravel')";
           icon = {
             icon = " ";
             color = {
@@ -108,7 +108,7 @@ in
     {
       mode = "n";
       key = "<c-g>";
-      action = helpers.mkRaw "function() require('laravel').viewFinder() end";
+      action = ":Laravel view_finder<cr>";
     }
     {
       mode = "n";
@@ -125,11 +125,16 @@ in
       key = "<leader>lh";
       action = ":Laravel art docs<cr>";
     }
-    # {
-    #   mode = "n";
-    #   key = "<leader>lm";
-    #   action = helpers.mkRaw "function() require('laravel').make() end";
-    # }
+    {
+      mode = "n";
+      key = "<leader>lm";
+      action = ":Laravel make<cr>";
+    }
+    {
+      mode = "n";
+      key = "<leader>ln";
+      action = ":Laravel related<cr>";
+    }
     # {
     #   mode = "n";
     #   key = "<leader>lq";
