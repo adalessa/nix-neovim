@@ -15,7 +15,7 @@ in
       providers = {
         openai = {
           endpoint = "https://delorean-app.prod.apps.auto1.team/proxy-api/openai/v1/chat/completions",
-          secret = { "bw", "get", "password", "delorean" },
+          secret = { "rbw", "get", "delorean" },
         },
       },
       whisper = {
