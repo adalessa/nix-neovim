@@ -3,7 +3,7 @@
   plugins.luasnip = {
     enable = true;
 
-    extraConfig = {
+    settings = {
       history = true;
       updateevents = "TextChanged,TextChangedI";
       enable_autosnippets = true;

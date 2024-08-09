@@ -11,11 +11,12 @@
     ./languages/rust
     ./languages/typescript
 
-    ./frameworks/htmx
+    ./frameworks/htmx.nix
     ./frameworks/laravel
-    ./frameworks/svelte
-    ./frameworks/tailwindcss
-    ./frameworks/vue
+    ./frameworks/svelte.nix
+    ./frameworks/tailwindcss.nix
+    ./frameworks/vue.nix
+    ./frameworks/astro.nix
 
     ./libraries/pest
 
@@ -34,8 +35,6 @@
     ./tools/todo-comments.nix
     ./tools/undotree.nix
   ];
-
-  plugins.lsp.servers.astro.enable = true;
 
   plugins.obsidian = {
     enable = true;

@@ -7,6 +7,7 @@
 
     nixvim = {
       url = "github:nix-community/nixvim";
+      # url = "path:/home/alpha/code/nix/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
