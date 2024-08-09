@@ -1,17 +1,16 @@
 { lib, config, ... }:
-with lib;
 let
   cfg = config.languages.php.phpactor;
 in
 {
   options = {
     languages.php.phpactor = {
-      enable = mkEnableOption "phpactor";
-      phpunit.enable = mkEnableOption "phpunit";
-      prophecy.enable = mkEnableOption "prophecy";
-      auto_config = mkEnableOption "auto_config";
+      enable = lib.mkEnableOption "phpactor";
+      phpunit.enable = lib.mkEnableOption "phpunit";
+      prophecy.enable = lib.mkEnableOption "prophecy";
+      auto_config = lib.mkEnableOption "auto_config";
       phpcs = {
-        enable = mkEnableOption "phpcs";
+        enable = lib.mkEnableOption "phpcs";
         bin = lib.mkOption {
           type = lib.types.str; # Specify the type as string
           default = "%project_root%/vendor/bin/phpcs"; # Set the default value
@@ -19,7 +18,7 @@ in
         };
       };
       phpstan = {
-        enable = mkEnableOption "phpstan";
+        enable = lib.mkEnableOption "phpstan";
         bin = lib.mkOption {
           type = lib.types.str; # Specify the type as string
           default = "%project_root%/vendor/bin/phpstan"; # Set the default value
@@ -33,7 +32,7 @@ in
       };
     };
   };
-  config = mkIf cfg.enable {
+  config = lib.mkIf cfg.enable {
     plugins.lsp.servers.phpactor = {
       enable = true;
       filetypes = [

@@ -8,9 +8,38 @@
       float_opts.border = "rounded";
     };
   };
-  # What I want to be easy with the toogle term ?
-  # Should be using a make a selector with hydra ?
-  # could C-\ be the head ? or that is the simple
-  # and other keybinding be the head.
-  # could enable the hydra with <leader><c-\>
+
+  keymaps =
+    builtins.map
+      (index: {
+        mode = [
+          "n"
+          "t"
+        ];
+        key = "<F${toString (index + 5)}>";
+        action = "<Cmd> ${toString index}ToggleTerm direction=float<cr>";
+        options.silent = true;
+      })
+      [
+        1
+        2
+        3
+        4
+      ]
+    ++ builtins.map
+      (index: {
+        mode = [
+          "n"
+          "t"
+        ];
+        key = "<leader><F${toString (index + 5)}>";
+        action = "<Cmd> ${toString index}ToggleTerm direction=horizontal<cr>";
+        options.silent = true;
+      })
+      [
+        1
+        2
+        3
+        4
+      ];
 }

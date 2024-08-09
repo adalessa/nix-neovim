@@ -1,1 +1,1 @@
-{ imports = [ ./phpactor.nix ]; }
+{ imports = [ ./phpactor.nix ./terminals.nix]; }

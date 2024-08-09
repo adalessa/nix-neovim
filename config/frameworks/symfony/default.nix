@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, helpers, ... }:
 {
   extraPackages = [ pkgs.php-debug-adapter ];
 
@@ -70,4 +70,26 @@
       };
     };
   };
+
+  tools.toggleterm.terminals = [
+    {
+      cmd = "make php-cli";
+      direction = "float";
+      on_open = helpers.mkRaw ''
+        function(term)
+          vim.cmd("startinsert!")
+          vim.keymap.set({"t"}, "<F10>", function() term:toggle() end, {
+            buffer = term.bufnr,
+            silent = true,
+          })
+        end
+      '';
+      on_close = helpers.mkRaw ''
+        function(term)
+          vim.cmd("startinsert!")
+        end
+      '';
+      keymap = "<F10>";
+    }
+  ];
 }
