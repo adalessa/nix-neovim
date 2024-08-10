@@ -23,6 +23,7 @@
     ./tools/scratch.nix
     ./tools/todo-comments.nix
     ./tools/undotree.nix
+    ./modules/ai/gp.nix
   ];
 
   plugins.obsidian = {
