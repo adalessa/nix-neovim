@@ -30,7 +30,6 @@
       (index: {
         mode = [
           "n"
-          "t"
         ];
         key = "<leader><F${toString (index + 5)}>";
         action = "<Cmd> ${toString index}ToggleTerm direction=horizontal<cr>";
