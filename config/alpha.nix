@@ -18,13 +18,10 @@
     ./frameworks/vue.nix
     ./frameworks/astro.nix
 
-    ./libraries/pest
-
     ./modules/database
     ./modules/debug
     ./modules/git
     ./modules/terminal
-    ./modules/tests
     ./modules/ui
     ./modules/ai
     ./modules/godot

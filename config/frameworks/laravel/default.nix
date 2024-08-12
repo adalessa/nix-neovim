@@ -11,7 +11,7 @@ let
   };
 in
 {
-  imports = [ ./blade ];
+  imports = [ ./blade ./test.nix];
 
   languages.php.phpactor = {
     phpunit.enable = true;
@@ -32,6 +32,7 @@ in
     pkgs.fd
     pkgs.php-debug-adapter
   ];
+
   plugins = {
     none-ls = {
       enable = true;
