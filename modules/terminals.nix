@@ -31,6 +31,9 @@
           local term = Terminal:new({
             cmd = _terminal.cmd,
             dir = _terminal.dir,
+            float_opts = {
+              border = "rounded",
+            },
             direction = _terminal.direction,
             on_open = _terminal.on_open,
             on_close = _terminal.on_close,
