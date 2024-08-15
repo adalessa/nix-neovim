@@ -7,7 +7,6 @@
     ./languages/php
 
     ./frameworks/symfony
-    ./libraries/behat
 
     ./modules/database
     ./modules/debug
