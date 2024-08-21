@@ -1,6 +1,5 @@
 {
   imports = [
-    ./languages/gleam
     ./languages/go
     ./languages/html
     ./languages/json

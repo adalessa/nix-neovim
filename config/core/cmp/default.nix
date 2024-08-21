@@ -1,3 +1,4 @@
+{ helpers, ... }:
 {
   imports = [ ./format.nix ];
   plugins = {
@@ -11,7 +12,7 @@
     cmp = {
       enable = true;
       settings = {
-        snippet.expand = ''
+        snippet.expand = helpers.mkRaw ''
           function(args)
             require('luasnip').lsp_expand(args.body)
           end

@@ -1,14 +1,17 @@
+{ helpers, ... }:
 {
   plugins.cmp.settings = {
-    window.completion.border = "rounded";
-    window.documentation.border = "rounded";
+    window = {
+      completion.border = "rounded";
+      documentation.border = "rounded";
+    };
     formatting = {
       fields = [
         "menu"
         "abbr"
         "kind"
       ];
-      format = ''
+      format = helpers.mkRaw ''
           function (entry, vim_item)
             local KIND_ICONS = {
               Tailwind = '󰹞󰹞󰹞󰹞󰹞󰹞󰹞󰹞',

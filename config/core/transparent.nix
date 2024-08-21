@@ -8,7 +8,7 @@ in
 {
   extraPlugins = [ transparentPlugin ];
   extraConfigLua = ''
-    require('transparent').setup()
+    require('transparent').setup({})
     require('transparent').clear_prefix('Telescope')
     require('transparent').clear_prefix('Laravel')
   '';
