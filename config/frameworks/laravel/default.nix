@@ -11,7 +11,10 @@ let
   };
 in
 {
-  imports = [ ./blade ./test.nix];
+  imports = [
+    ./blade
+    ./test.nix
+  ];
 
   languages.php.phpactor = {
     phpunit.enable = true;
@@ -44,6 +47,8 @@ in
         # diagnostics.phpstan.enable = true;
       };
     };
+
+    cmp.settings.sources = [ { name = "laravel"; } ];
 
     dap = {
       adapters.executables = {

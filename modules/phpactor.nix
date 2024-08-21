@@ -97,7 +97,18 @@ in
         before_init.__raw = ''
           function(params, config)
             -- check if there is a phpstan file and get the level from there
-            config.init_options["language_server_phpstan.level"] = vim.fn.filereadable("phpstan.neon.dist") == 1 and vim.fn.systemlist("grep -oP 'level: \\K[0-9]+' phpstan.neon.dist", {}, 0)[1] or config.init_options["language_server_phpstan.level"]
+            local file = nil
+            if vim.fn.filereadable("phpstan.neon.dist") == 1 then
+              file = "phpstan.neon.dist"
+            elseif vim.fn.filereadable("phpstan.neon") == 1 then
+              file = "phpstan.neon"
+            end
+
+            if not file then
+              config.init_options["language_server_phpstan.enabled"] = false
+            else
+              config.init_options["language_server_phpstan.level"] = vim.fn.systemlist("grep -oP 'level: \\K[0-9]+' " .. file, {}, 0)[1] or config.init_options["language_server_phpstan.level"]
+            end
           end
         '';
       };

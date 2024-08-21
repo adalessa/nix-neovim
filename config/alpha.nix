@@ -31,6 +31,7 @@
     ./tools/scratch.nix
     ./tools/todo-comments.nix
     ./tools/undotree.nix
+    ./tools/kulala.nix
   ];
 
   plugins.obsidian = {

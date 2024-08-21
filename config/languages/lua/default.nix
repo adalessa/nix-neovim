@@ -1,13 +1,9 @@
 { pkgs, ... }:
 {
-  extraPlugins = with pkgs.vimPlugins; [
-    neodev-nvim
-    neoconf-nvim
-  ];
+  extraPlugins = with pkgs.vimPlugins; [ lazydev-nvim ];
 
   extraConfigLuaPre = ''
-    require('neoconf').setup()
-    require('neodev').setup()
+    require('lazydev').setup({})
   '';
 
   extraFiles = {
@@ -20,6 +16,13 @@
       formatting.stylua.enable = true;
       diagnostics.selene.enable = true;
     };
+
+    cmp.settings.sources = [
+      {
+        name = "lazydev";
+        group_index = 0;
+      }
+    ];
   };
 
   files = {

@@ -10,8 +10,7 @@ return {
     mode = "{}";
     key = "{}";
     options.desc = "{}";
-    lua = true;
-    action = ''
+    action = helpers.mkRaw ''
       function()
         {}
       end

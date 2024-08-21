@@ -7,12 +7,6 @@
     cmp-nvim-lsp.enable = true;
     cmp_luasnip.enable = true;
     cmp-cmdline.enable = true;
-    copilot-cmp.enable = true;
-    copilot-lua = {
-      enable = true;
-      panel.enabled = false;
-      suggestion.enabled = false;
-    };
     cmp-git.enable = true;
     cmp = {
       enable = true;
@@ -33,11 +27,9 @@
         };
         sources = [
           { name = "nvim_lsp"; }
-          { name = "laravel"; }
           { name = "path"; }
           { name = "buffer"; }
           { name = "luasnip"; }
-          { name = "copilot"; }
           { name = "emoji"; }
         ];
       };

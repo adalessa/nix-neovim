@@ -365,6 +365,22 @@
         "type": "github"
       }
     },
+    "plugin-kulala": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1724199811,
+        "narHash": "sha256-gk1e6b6wB4rIgjFjq1Tp27Y+UybSM6HTnJUlSe9osmo=",
+        "owner": "mistweaverco",
+        "repo": "kulala.nvim",
+        "rev": "f50fc2d414e4df3656a7782e8f7763a567097088",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mistweaverco",
+        "repo": "kulala.nvim",
+        "type": "github"
+      }
+    },
     "plugin-laravel": {
       "flake": false,
       "locked": {
@@ -510,6 +526,7 @@
         "nixvim": "nixvim",
         "phpactor": "phpactor",
         "plugin-gp": "plugin-gp",
+        "plugin-kulala": "plugin-kulala",
         "plugin-laravel": "plugin-laravel",
         "plugin-php-lsp-utils": "plugin-php-lsp-utils",
         "plugin-scratch": "plugin-scratch",

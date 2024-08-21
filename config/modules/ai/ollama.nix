@@ -19,7 +19,7 @@
   plugins = {
     ollama = {
       enable = true;
-      model = "llama3";
+      model = "llama3.1";
       inherit (ollama) url;
       prompts = {
         laravel_review = {

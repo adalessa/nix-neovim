@@ -57,6 +57,10 @@
       url = "github:robitx/gp.nvim";
       flake = false;
     };
+    plugin-kulala = {
+      url = "github:mistweaverco/kulala.nvim";
+      flake = false;
+    };
   };
 
   outputs =
